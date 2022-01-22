@@ -1,23 +1,30 @@
+
+.body{
+    overflow-x: hidden; 
+}
+
 /*Couleur*/
-.bg_vert1{background-color: #33985d;}
+.bg_green1{background-color: #33985d!important;}
 
-.bg_vert2{background-color: #79bb94;}
+.bg_green2{background-color: #79bb94!important;}
 
-.bg_vert3{background-color: #c0dfcd;}
+.bg_green3{background-color: #c0dfcd!important;}
 
-.bg_noir{background-color: black;}
+.bg_black{background-color: black!important;}
 
-.bg_gris1{background-color: #929090;}
+.bg_gray1{background-color: #929090!important;}
 
-.bg_gris2{background-color: #E9E9E9;}
+.bg_gray2{background-color: #E9E9E9!important;}
 
-.bg_gris3{background-color: #E5E4E4;}
+.bg_gray3{background-color: #E5E4E4!important;}
 
-.bg_rouge1{background: #BC1823;}
+.bg_red1{background: #BC1823!important;}
 
-.bg_rouge2{background: #CC5E65;}
+.bg_red2{background: #CC5E65!important;}
 
-.txt_vert1{color: #33985d;}
+.color_green1{color: #33985d!important;}
+
+.color_white{color: white!important;}
 
 /*Border*/
 .border10{

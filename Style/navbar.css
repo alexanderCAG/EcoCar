@@ -1,0 +1,30 @@
+.navbar{
+    height: 75px;
+}
+
+.img_logo{
+    width: 200px;
+    height: 65px;
+}
+
+.nav_ul{
+    float: right;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    margin-left: 50px;
+}
+
+.nav-link:hover{
+    color: #33985d!important;
+}
+
+.dropdown-item:hover{
+    background-color: #33985d!important;
+}
+
+#icone_con{
+    margin-left: 50px;
+}

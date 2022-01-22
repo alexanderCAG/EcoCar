@@ -13,6 +13,8 @@
     </title>
     <!-- CSS -->
     <link rel="stylesheet" href="../Style/general.css">
+    <link rel="stylesheet" href="../Style/navbar.css">
+    <link rel="stylesheet" href="../Style/carousel.css">
     <link rel="shortcut icon" href="../Image/">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
