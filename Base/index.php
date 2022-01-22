@@ -15,14 +15,9 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img_carousel position-relative" src="../Image/voiture_test.jpg" alt="" class="test">
+                    <img class="img_carousel position-relative" src="../Image/voiture_test.jpg" alt="" class="test" sty>
                 </div>
-                <div class="carousel-item">
-                    <img class="img_carousel" src="" class="" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img class="img_carousel" src="" class="" alt="">
-                </div>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
@@ -49,7 +44,6 @@
 
     </div> -->
 
-    
 </section>
 
 <!-- Footer -->
