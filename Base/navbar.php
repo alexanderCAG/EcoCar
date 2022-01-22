@@ -28,7 +28,7 @@
           <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
         </li>
         <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Contact</a>
+          <a class="color_white nav-link" aria-current="page" href="#">Avis</a>
         </li>
         <li class="nav-item" >
             <a href=""><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
