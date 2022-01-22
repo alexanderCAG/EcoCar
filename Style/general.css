@@ -1,0 +1,59 @@
+/*Couleur*/
+.bg_vert1{background-color: #33985d;}
+
+.bg_vert2{background-color: #79bb94;}
+
+.bg_vert3{background-color: #c0dfcd;}
+
+.bg_noir{background-color: black;}
+
+.bg_gris1{background-color: #929090;}
+
+.bg_gris2{background-color: #E9E9E9;}
+
+.bg_gris3{background-color: #E5E4E4;}
+
+.bg_rouge1{background: #BC1823;}
+
+.bg_rouge2{background: #CC5E65;}
+
+.txt_vert1{color: #33985d;}
+
+/*Border*/
+.border10{
+    border-radius: 10px;
+    border: none;
+}
+
+.border_ligne{
+    border: none;
+    border-bottom: solid 2px black;
+}
+
+/*Bouton*/
+.btn_vert30{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    background-color: #33985d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn_vert30:hover{
+    color: white;
+}
+
+.btn_vert10{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    background-color: #33985d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn_vert10:hover{
+    color: white;
+}
+
