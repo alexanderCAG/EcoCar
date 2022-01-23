@@ -65,11 +65,12 @@
 
 </section>
 
-<section class="presentation_tot mt-5 mb-5">
+<section class="presentation_tot ">
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <h1 class="titre_presentation">Presentation</h1>
+                <h1 class="titre_presentation text-uppercase">Presentation</h1>
+                <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
                 <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
                 <a href="" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
@@ -78,8 +79,27 @@
             </div>
         </div>
     </div>
-
 </section>
+
+<section>
+    <div class="shape_marque">
+        <!-- <div class="top_div_marque1"></div> -->
+        <div class="top_div_marque2"></div>
+        <div class="bottom_div_marque"></div>
+        <div class="marque_titre color_white text-center">
+            <h1 class="text-uppercase text_marque_gen">Nos Marques</h1>
+            <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
+        </div>
+    </div>
+</section>
+
+<div class="double-border">
+    <div class="marque_titre  text-center">
+        <h1 class="text-uppercase text_marque_gen">Nos Marques</h1>
+        <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <?php require('footer.php'); ?>
