@@ -19,9 +19,10 @@
             Categorie
           </a>
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item color_white" href="#">Action</a></li>
-            <li><a class="dropdown-item color_white" href="#">Another action</a></li>
-            <li><a class="dropdown-item color_white" href="#">Something else here</a></li>
+            <li><a class="dropdown-item color_white" href="#">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
+            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="#">Tout</a></li>
           </ul>
         </li>
         <li class="nav-item">

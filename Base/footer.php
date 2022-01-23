@@ -1,6 +1,7 @@
 <footer class="mt-4 pt-4 bg_black">
     <div class="container mb-5">
         <div class="row">
+
             <div class="col-7">
                <img src="../Image/logo.png" class="img-fluid img-responsive w-25"/>
                <div class="row mt-3">
@@ -23,7 +24,9 @@
                     </div>
                 </div>
             </div>
-<div class="col-1 droite_footer"></div>
+
+            <div class="col-1 droite_footer"></div>
+
             <div class="col-4 border-0 pl-5" >
                 <h2 class="titre text-center">Commentaire</h2>
                 <small><p class="text-center text-light"><i>Laissez-nous un commentaire</i> </p></small>
@@ -43,9 +46,6 @@
 
         </div>
     </div>
-
-
-
 
     <div class="container-fluid bg_green1">
         <div class="row">

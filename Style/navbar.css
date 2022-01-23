@@ -23,6 +23,7 @@
 
 .dropdown-item:hover{
     background-color: #33985d!important;
+    transition-duration: .4s;
 }
 
 #icone_con{
