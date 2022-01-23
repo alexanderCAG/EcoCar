@@ -1,0 +1,14 @@
+
+.titre{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.float_right{
+    float:right!important;
+}
+
+.droite_footer{
+    border-right:solid 2px white!important
+}
