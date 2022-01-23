@@ -1,0 +1,70 @@
+<footer class="mt-4 pt-4 bg_black">
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-7">
+               <img src="../Image/logo.png" class="img-fluid img-responsive w-25"/>
+               <div class="row mt-3">
+                    <div class="col-5">
+                        <ul class="text-light text-uppercase list-unstyled">
+                            <li class="my-2"><small><a>Accueil</a></small></li>
+                            <li class="my-2"><small><a>Présentation</a></small></li>
+                            <li class="my-2"><small><a>Promotion</a></small></li>
+                            <li class="my-2"><small><a>Voiture hybride</a></small></li>
+                            <li class="my-2"><small><a>Voiture électrique</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="text-light text-uppercase list-unstyled">
+                            <li class="my-2"><small><a>Mentions Légales</a></small></li>
+                            <li class="my-2"><small><a>Politique en matière de cookie</a></small></li>
+                            <li class="my-2"><small><a>Politique de confidentialité</a></small></li>
+                            <li class="my-2"><small><a>Condition d'utilisation</a></small></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<div class="col-1 droite_footer"></div>
+            <div class="col-4 border-0 pl-5" >
+                <h2 class="titre text-center">Commentaire</h2>
+                <small><p class="text-center text-light"><i>Laissez-nous un commentaire</i> </p></small>
+                <form class="pl-5">
+                    <div class="row ll-5" >
+                        <div class="col-6">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="col-6">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <button class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid bg_green1">
+        <div class="row">
+            <div class="col">
+                <p class="text-center text-white ">&copy; Site internet Marine Alexander</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Boostrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- JS -->
+<script src="../Style/"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+
+.body{
+    overflow-x: hidden; 
+}
+
+/*Couleur*/
+.bg_green1{background-color: #33985d!important;}
+
+.bg_green2{background-color: #79bb94!important;}
+
+.bg_green3{background-color: #c0dfcd!important;}
+
+.bg_black{background-color: black!important;}
+
+.bg_gray1{background-color: #929090!important;}
+
+.bg_gray2{background-color: #E9E9E9!important;}
+
+.bg_gray3{background-color: #E5E4E4!important;}
+
+.bg_red1{background: #BC1823!important;}
+
+.bg_red2{background: #CC5E65!important;}
+
+.color_green1{color: #33985d!important;}
+
+.color_white{color: white!important;}
+
+/*Border*/
+.border10{
+    border-radius: 10px;
+    border: none;
+}
+
+.border_ligne{
+    border: none;
+    border-bottom: solid 2px black;
+}
+
+/*Bouton*/
+.btn_vert30{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    background-color: #33985d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn_vert30:hover{
+    color: white;
+}
+
+.btn_vert10{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    background-color: #33985d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn_vert10:hover{
+    color: white;
+}
+
