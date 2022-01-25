@@ -1,0 +1,27 @@
+.connexion_tot{
+    width: 100%;
+    height: 500px;
+}
+
+.img_co{
+    width: 350px;
+    transform: translate(35%,25%);
+}
+
+.titre_co{
+    color: black;
+    text-transform: uppercase;
+}
+
+/* .icone_user_co{
+    padding-left: 50px;
+}
+
+.input_co{
+    padding-left: 30px;
+    padding-right: 50px;
+} */
+
+.inscription_co{
+    text-align: right !important;
+}

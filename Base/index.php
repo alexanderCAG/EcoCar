@@ -36,19 +36,6 @@
             </button>
         </div>
     </div>
-    <!-- <div class="row ">
-        <div class="col-4 bg_green3 carousel_bas">
-            Promo
-        </div>
-        <div class="col-4 bg_green2 carousel_bas">
-            Promo
-        </div>
-        <div class="col-4 bg_green1 carousel_bas">
-            Promo
-        </div>
-
-    </div> -->
-
     
 </section>
 

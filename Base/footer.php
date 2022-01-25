@@ -1,4 +1,4 @@
-<footer class="mt-4 pt-4 bg_black">
+<footer class="pt-4 bg_black">
     <div class="container mb-5">
         <div class="row">
             <div class="col-7">
@@ -30,13 +30,13 @@
                 <form class="pl-5">
                     <div class="row ll-5" >
                         <div class="col-6">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="pseudo" placeholder="Pseudonyme" class="form-control" id="exampleInputPseudo" aria-describedby="pseudoHelp">
                         </div>
                         <div class="col-6">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="note" placeholder="Note sur 5" class="form-control" id="exampleInputNote" aria-describedby="noteHelp">
                         </div>
                     </div>
-                    <textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <textarea class="form-control mt-3" placeholder="Commentaire..." id="exampleFormControlTextarea1" rows="5"></textarea>
                     <button class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
                 </form>
             </div>
@@ -50,7 +50,7 @@
     <div class="container-fluid bg_green1">
         <div class="row">
             <div class="col">
-                <p class="text-center text-white ">&copy; Site internet Marine Alexander</p>
+                <p class="text-center text-white my-auto">&copy; Site internet Marine Alexander</p>
             </div>
         </div>
     </div>
