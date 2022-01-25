@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+
 .body{
     overflow-x: hidden; 
 }
@@ -46,6 +49,7 @@
     background-color: #33985d;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 .btn_vert30:hover{
     color: white;
@@ -59,8 +63,14 @@
     background-color: #33985d;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 .btn_vert10:hover{
     color: white;
+}
+
+
+.petit_texte{
+    margin-top: -10px;
 }
 
