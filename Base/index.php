@@ -2,7 +2,6 @@
 <?php require('navbar.php'); ?>
 
 <section class="carousel_accueil">
-    <!-- <img src="../Image/img_bg_carousel.png" alt="img_bg_carousel" class="img_bg_carousel"> -->
 
     <div class="row row_carousel">
         <div class="col-4">
@@ -82,23 +81,23 @@
 </section>
 
 <section>
-    <div class="shape_marque">
-        <!-- <div class="top_div_marque1"></div> -->
-        <div class="top_div_marque2"></div>
-        <div class="bottom_div_marque"></div>
-        <div class="marque_titre color_white text-center">
-            <h1 class="text-uppercase text_marque_gen">Nos Marques</h1>
-            <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
+    <img class="image_fond_accueil" id="image_fond_accueil" src="../Image/image_fond_accueil.png" alt="image_fond_accueil">
+    <div class="marque_titre text-center">
+        <h1 class="text-uppercase text_marque_gen color_white">Nos Marques</h1>
+        <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
+    </div>
+    <div class="row">
+        <div class="col-4 bg-warning">
+a
+        </div>
+        <div class="col-4 bg-success">
+a
+        </div>
+        <div class="col-4 bg-warning">
+a
         </div>
     </div>
 </section>
-
-<div class="double-border">
-    <div class="marque_titre  text-center">
-        <h1 class="text-uppercase text_marque_gen">Nos Marques</h1>
-        <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
-    </div>
-</div>
 
 
 <!-- Footer -->

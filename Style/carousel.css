@@ -58,61 +58,24 @@
     width: 600px;
     height: 400px;
     margin-left: 50px;
+    object-fit: cover;
 }
 
 /* Marque */
+.image_fond_accueil{
+    width: 100%;
+    height: 500px;
+    content: "";
+    clip-path: polygon(0 60%, 0% 100%, 0 70%, 0 70%, 100% 40%, 100% 100%, 0 100%, 0 65%, 100% 35%, 100% 30%);
+}
+
 .marque_titre{
     position: relative;
-    top: -150px;
+    top: -120px;
 }
 
 .text_marque_gen{
     font-size: 60px;
-}
-
-.shape_marque {
-    width:100%;
-}
-
-/* .top_div_marque1 {
-    position: relative;
-    top: 200px;
-    height: 0;
-    border-width: 0 0 320px 3000px;
-    border-style: solid;
-    border-color: transparent #33985d #33985d transparent;
-} */
-
-.top_div_marque2 {
-    height: 0;
-    border-width: 0 0 320px 3000px;
-    /* border: double 5px orange; */
-    border-style: solid;
-    border-color: transparent #33985d #33985d transparent;
-}
-
-.bottom_div_marque {
-    height: 200px;
-    background-color: #33985d;
-}
-
-.double-border {
-    background-color:white;
-    border-top: 20px solid #33985d;
-    padding: 2em;
-    width: 100%;
-    height: 350px;
-    position: relative;
-}
-
-.double-border:before {
-    background: #33985d;
-    border: 4px solid #33985d;
-    content: "";
-    display: block;
-    height: 250px;
-    width: 100%;
-    position: absolute;
-    top: 20px;
-    left: 0px;
+    font-weight: bold;
+    letter-spacing: 7px;
 }

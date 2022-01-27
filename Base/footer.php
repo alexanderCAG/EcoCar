@@ -63,7 +63,7 @@
 <!-- JQUERY -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- JS -->
-<script src="../Style/"></script>
+<script src="../Style/general.js"></script>
 
 </body>
 
