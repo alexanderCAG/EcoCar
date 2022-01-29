@@ -108,3 +108,17 @@
     position: relative;
     top: -80px;
 }
+
+
+/* NEW CAROUEL  */
+
+.carousel{
+    margin-top: 50px;
+  }
+  .carousel-inner{
+    height: 100px;
+  }
+  .carousel-caption{
+    color: #fff;
+    top: 50%;
+  }

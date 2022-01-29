@@ -15,34 +15,61 @@
     <!-- carousel -->
     <div class="carousel_tot">
         
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
+    
+            <div id="carouselExampleControls" class="carousel slide bg-warning" data-ride="carousel">
+                <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="img_carousel position-relative" src="../Image/voiture_test.jpg" alt="" class="test">
+                <div class="carousel-caption">
+                    <h3>Boyd W.</h3>
+                    <p>TEXT</p>
+                </div>
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Second slide">
+                <div class="carousel-caption">
+                    <h3>Diane L</h3>
+                    <p>TEXT</p>
+                </div>
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Third slide">
+                <div class="carousel-caption">
+                    <h3>Randall L</h3>
+                    <p>TEXT</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h3>John D.</h3>
+                    <p>TEXT</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h3>Jody B.</h3>
+                    <p>TEXT</p>
+                </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div> -->
+            </div>
 
     </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
     <div class="row carousel_bas text-center">
         <a href="" class="col-4 bg_green3 text-decoration-none">

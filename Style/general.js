@@ -16,3 +16,6 @@ $(window).scroll(function(){
     }
 
 });
+
+// carousel 
+
