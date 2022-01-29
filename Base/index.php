@@ -81,23 +81,60 @@
 </section>
 
 <section>
-    <img class="image_fond_accueil" id="image_fond_accueil" src="../Image/image_fond_accueil.png" alt="image_fond_accueil">
+    <img class="image_fond_marque1" id="image_fond_marque1" src="../Image/image_fond_vert.png" alt="image_fond_vert">
     <div class="marque_titre text-center">
         <h1 class="text-uppercase text_marque_gen color_white">Nos Marques</h1>
         <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
     </div>
-    <div class="row">
-        <div class="col-4 bg-warning">
-a
+
+    <div class="bg_green1">
+        <div class="row row_marque">
+            <div class="col-3">
+                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+            </div>
+            <div class="col-3">
+                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+            </div>
+            <div class="col-3">
+                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+            </div>
+            <div class="col-3">
+                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+            </div>
         </div>
-        <div class="col-4 bg-success">
-a
-        </div>
-        <div class="col-4 bg-warning">
-a
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body bg_green1 p-0">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                    </div>
+                    <div class="col-3">
+                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                    </div>
+                    <div class="col-3">
+                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                    </div>
+                    <div class="col-3">
+                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <div class="row_marque2">
+        <p class="btn_affiche_marque">
+            <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img class="image_fond_marque2" src="../Image/image_fond_vert.png" alt="image_fond_vert">
+                <br>
+                <i class="icone_affiche_marque bi bi-arrow-down-circle-fill fa-2x color_white"></i>
+            </a>
+        </p>
+    </div>
 </section>
+
+
+
 
 
 <!-- Footer -->

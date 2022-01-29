@@ -62,7 +62,7 @@
 }
 
 /* Marque */
-.image_fond_accueil{
+.image_fond_marque1{
     width: 100%;
     height: 500px;
     content: "";
@@ -78,4 +78,33 @@
     font-size: 60px;
     font-weight: bold;
     letter-spacing: 7px;
+}
+
+.row_marque{
+    margin-top: -108px!important;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+}
+
+.img_marque{
+    height: 400px;
+    object-fit: cover;
+}
+
+.row_marque2{
+    text-align: center;
+    border: none;
+    border-top: solid 20px #33985d;
+}
+
+.image_fond_marque2{
+    width: 300px;
+    height: 100px;
+    content: "";
+    clip-path: polygon(100% 0, 100% 40%, 50% 100%, 50% 100%, 0 40%, 0% 0%);
+}
+
+.icone_affiche_marque{
+    position: relative;
+    top: -80px;
 }
