@@ -9,6 +9,13 @@
     height: 605px;
 }
 
+.img_carousel_pres{
+    float: right;
+    border: 15px solid #EFEFEF;
+    height: 500px!important;
+    object-fit: cover;
+}
+
 .carousel_tot{
     position: relative;
 }
@@ -118,6 +125,7 @@
     top: -164px;
     z-index: -1;
     padding-top: 140px;
+    height: 485px;
 }
 .triangle_commentaire{
     display : inline-block;
