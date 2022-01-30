@@ -38,3 +38,9 @@ function rotation_icone(){
     }
 }
 
+// Carousel Avis
+// $(document).ready(function(){
+//     $(".wish-icon i").click(function(){
+//         $(this).toggleClass("fa-heart fa-heart-o");
+//     });
+// });	

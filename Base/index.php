@@ -3,6 +3,7 @@
 
 <section class="carousel_accueil">
 
+    <!-- Fond Carousel -->
     <div class="row row_carousel">
         <div class="col-4">
 
@@ -12,64 +13,53 @@
         </div>
     </div>
 
-    <!-- carousel -->
-    <!-- <div class="carousel_tot">
-        
-    
-            <div id="carouselExampleControls" class="carousel slide bg-warning" data-ride="carousel">
-                <div class="carousel-inner">
-                <div class="carousel-item active">
-                <div class="carousel-caption">
-                    <h3>Boyd W.</h3>
-                    <p>TEXT</p>
+    <!-- Carousel -->
+    <div class="carousel_tot" style="margin-top:-600px">
+
+        <div class="container py-5" >
+            <div class="row align-items-center"  id="table_promo" >
+                <div class="col-md-8">
+                    <img src="https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0" style="float:right;border: 15px solid #EFEFEF;width:75%">
                 </div>
+                <div class="col-md-4">
+                    <div class="bg-light w-100 p-4" id="" style="border: 15px solid #EFEFEF;margin-left:-80px">
+                
+                        <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
+
+                        <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
+                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
+                        <ul class="list-unstyled fw-light">
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h3>Diane L</h3>
-                    <p>TEXT</p>
+            </div> 
+            <div class="row align-items-center d-none"  id="table_best_seller" >
+                <div class="col-md-8">
+                    <img src="https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0" style="float:right;border: 15px solid #EFEFEF;width:75%">
                 </div>
-                </div>
-                <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h3>Randall L</h3>
-                    <p>TEXT</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h3>John D.</h3>
-                    <p>TEXT</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h3>Jody B.</h3>
-                    <p>TEXT</p>
-                </div>
+                <div class="col-md-4">
+                    <div class="bg-light w-100 p-4"style="border: 15px solid #EFEFEF;margin-left:-80px">
+                
+                        <img src="../Image/ico_bs.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
+
+                        <h1 class="text-uppercase titre text-dark">Best seller 1</h1>
+                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
+                        <ul class="list-unstyled fw-light">
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </div>
+        </div>
 
     </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br> -->
 
     <!-- Sous titre carousel -->
     <div class="row carousel_bas text-center">
@@ -163,14 +153,260 @@
     </div>
 </section>
 
-<section>
-    <div class="bg_gray3 test">
+<!-- Avis -->
+<section class="avis_tot bg_gray3">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-md-12">
+            <h1 class="text-uppercase titre text-dark text-center">avis clients</h1>
+            <p class="text-center fw-light">Laissez nous votre avis depuis le formulaire ci-dessous</p>
 
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>   
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="row" >
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
+                                    <div class="thumb-content">
+                                        <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
+                                    </div>						
+                                </div>
+                                <div class="triangle_commentaire"></div>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </section>
-
-
-
 
 <!-- Footer -->
 <?php require('footer.php'); ?>
