@@ -13,7 +13,7 @@
     </div>
 
     <!-- carousel -->
-    <div class="carousel_tot">
+    <!-- <div class="carousel_tot">
         
     
             <div id="carouselExampleControls" class="carousel slide bg-warning" data-ride="carousel">
@@ -69,8 +69,9 @@
 <br>
 <br>
 <br>
-<br>
+<br> -->
 
+    <!-- Sous titre carousel -->
     <div class="row carousel_bas text-center">
         <a href="" class="col-4 bg_green3 text-decoration-none">
             <span class="carousel_bas1 text-uppercase">Promo</span>
@@ -91,6 +92,7 @@
 
 </section>
 
+<!-- Presentation -->
 <section class="presentation_tot ">
     <div class="container">
         <div class="row">
@@ -107,6 +109,7 @@
     </div>
 </section>
 
+<!-- Affiche Marque -->
 <section>
     <img class="image_fond_marque1" id="image_fond_marque1" src="../Image/image_fond_vert.png" alt="image_fond_vert">
     <div class="marque_titre text-center">
@@ -151,15 +154,20 @@
     
     <div class="row_marque2">
         <p class="btn_affiche_marque">
-            <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a id="rot_icone" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 <img class="image_fond_marque2" src="../Image/image_fond_vert.png" alt="image_fond_vert">
                 <br>
-                <i class="icone_affiche_marque bi bi-arrow-down-circle-fill fa-2x color_white"></i>
+                <i id="icone_marque" class="icone_affiche_marque bi bi-arrow-down-circle-fill fa-2x color_white"></i>
             </a>
         </p>
     </div>
 </section>
 
+<section>
+    <div class="bg_gray3 test">
+
+    </div>
+</section>
 
 
 

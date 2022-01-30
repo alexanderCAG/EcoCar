@@ -30,6 +30,25 @@
     font-family: 'Raleway', sans-serif;
 }
 
+
+
+/* NEW CAROUEL  */
+
+.carousel{
+    margin-top: 50px;
+}
+.carousel-inner{
+    height: 100px;
+}
+.carousel-caption{
+    color: #fff;
+    top: 50%;
+}
+
+
+
+
+
 /* Presentation */
 .presentation_tot{
     margin-bottom: 10px;
@@ -82,8 +101,6 @@
 
 .row_marque{
     margin-top: -108px!important;
-    /* margin-left: 50px;
-    margin-right: 50px; */
 }
 
 .img_marque{
@@ -107,18 +124,14 @@
 .icone_affiche_marque{
     position: relative;
     top: -80px;
+    transform: rotate(180deg);
 }
 
-
-/* NEW CAROUEL  */
-
-.carousel{
-    margin-top: 50px;
-  }
-  .carousel-inner{
-    height: 100px;
-  }
-  .carousel-caption{
-    color: #fff;
-    top: 50%;
-  }
+/* Avis */
+.test{
+    height: 200px;
+    content: "";
+    position: relative;
+    top: -164px;
+    z-index: -1;
+}

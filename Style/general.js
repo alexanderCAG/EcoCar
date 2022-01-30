@@ -1,6 +1,7 @@
 
 $(window).scroll(function(){
   
+    // Affiche Marque
     var trait_vert = document.getElementById("image_fond_marque1");
     if($(this).scrollTop() > 1330){
         var i = 0;
@@ -17,5 +18,23 @@ $(window).scroll(function(){
 
 });
 
-// carousel 
+// Affiche marque btn
+
+var marque_affiche = document.getElementById("rot_icone");
+var icone_marque = $(".icone_affiche_marque");
+var compteur_rot_icone = 0;
+marque_affiche.addEventListener("click", rotation_icone);
+
+function rotation_icone(){
+
+    if(compteur_rot_icone%2 == 0){
+        icone_marque.removeClass("bi-arrow-down-circle-fill");
+        icone_marque.addClass("bi-arrow-up-circle-fill");
+        compteur_rot_icone++;
+    }else{
+        icone_marque.removeClass("bi-arrow-up-circle-fill");
+        icone_marque.addClass("bi-arrow-down-circle-fill");
+        compteur_rot_icone++;
+    }
+}
 
