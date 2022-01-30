@@ -49,13 +49,16 @@ function rotation_icone(){
 
 
 
+$(document).ready(function(){
+    // boucle();
+    // document.getElementById('check_inscri').checked=true;
 
-
+});
 
 jQuery(document).ready(function(){
 
     $('.bestSeller_tot').hide();
-
+    // $("#check_inscri").prop("checked", true);
 });
 
 // Carousel Presentation
@@ -89,10 +92,6 @@ function ViewbestSeller(){
     $('.promo_tot').hide();
     $('.bestSeller_tot').show(); 
 }
-
-$(document).ready(function(){
-    // boucle();
-});
 
 function boucle(){
     let compteur_boucle = 0;
