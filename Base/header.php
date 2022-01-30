@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../Style/carousel.css">
     <link rel="stylesheet" href="../Style/footer.css">
     <link rel="stylesheet" href="../Style/connexion.css">
+    <link rel="stylesheet" href="../Style/inscription.css">
     <link rel="shortcut icon" href="../Image/">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
