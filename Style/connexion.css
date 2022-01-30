@@ -5,7 +5,11 @@
 
 .img_co{
     width: 350px;
-    transform: translate(35%,25%);
+    transform: translate(55%,25%);
+}
+
+.contenu_co{ 
+    margin-left: 150px;
 }
 
 .titre_co{
@@ -13,14 +17,20 @@
     text-transform: uppercase;
 }
 
-/* .icone_user_co{
-    padding-left: 50px;
+.icone_user_co{
+    position: relative;
+    left: 25px;
 }
 
 .input_co{
     padding-left: 30px;
-    padding-right: 50px;
-} */
+    width: 200px;
+}
+
+.erreur_co{
+    color: red;
+    display: none;
+}
 
 .inscription_co{
     text-align: right !important;
