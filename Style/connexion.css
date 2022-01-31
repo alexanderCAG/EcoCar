@@ -24,12 +24,16 @@
 
 .input_co{
     padding-left: 30px;
-    width: 200px;
+    width: 430px;
 }
 
 .erreur_co{
     color: red;
     display: none;
+}
+
+.checkbox_co{
+    margin-right: 20px;
 }
 
 .inscription_co{

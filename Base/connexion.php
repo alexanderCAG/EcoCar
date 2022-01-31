@@ -24,9 +24,11 @@
                     <input class="border_ligne input_co" type="password" placeholder="Mot de passe" name="password" required>
                     <br>
                     <small><span class="erreur_co"></span></small>
-                    <br><br>
-                    <input type="checkbox" id="scales" name="scales">
-                    <label for="scales">Se souvenir de moi</label>
+                    <br>
+                    <div class="checkbox_co">
+                        <input type="checkbox" id="scales" name="scales">
+                        <label for="scales">Se souvenir de moi</label>
+                    </div>
                     <br>
                     <button class="btn_vert10 mt-3 border-0">Connexion</button>
                     <a class="inscription_co" href="#" style="color:#000000;" target="_bank">S'incrire</a> 
