@@ -1,9 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 .body{
     overflow-x: hidden; 
+}
+
+/* Titre */
+.titre{
+    font-family: 'Oswald', sans-serif;
+}
+
+.titre2{
+    font-family: 'Raleway', sans-serif;
 }
 
 /*Couleur*/
@@ -49,6 +58,7 @@
     background-color: #33985d;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 .btn_vert30:hover{
     color: white;
@@ -62,8 +72,14 @@
     background-color: #33985d;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 .btn_vert10:hover{
     color: white;
+}
+
+
+.petit_texte{
+    margin-top: -10px;
 }
 
