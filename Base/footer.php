@@ -67,7 +67,8 @@
 <!-- Carousel Avis -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <!-- JS -->
-<script src="../Style/general.js"></script>
+<script src="../Style/affiche_marque.js"></script>
+<script src="../Style/carousel.js"></script>
 
 
 
