@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../Style/general.css">
     <link rel="stylesheet" href="../Style/header_admin.css">
+    <link rel="stylesheet" href="../Style/accueil_admin.css">
     <link rel="shortcut icon" href="../Image/">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,19 +35,31 @@
 
 <body class="body">
 
-<section class="header_tot bg-warning">
-    <img src="../Image/logo.png" alt="logo" class="img_logo_admin">
-    <div class="bg_gray2 div_notif_admin">
-        <i class="bi bi-bell-fill icone_notif"></i>
-        <span>5</span>
-        <div class="notif_admin"></div>
+<section class="header_tot">
+    <a href=""><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
+    <a href="">
+        <div class="bg_gray2 div_notif_admin">
+            <i class="bi bi-bell-fill icone_notif"></i>
+            <span>5</span>
+            <div class="notif_admin"></div>
+        </div>
+    </a>
+    <a href="">
+        <div class="bg_gray2 div_notif_admin">
+            <i class="bi bi-envelope-fill icone_notif"></i>
+            <span>5</span>
+            <div class="notif_admin"></div>
+        </div>
+    </a>
+    <small><input type="text" class="recherche_header_admin bg_gray2" placeholder="Recherche rapide"></small>
+    
+    <div class="identification_con_admin">
+        <a href="" class="text-decoration-none color_black redirection_con_admin">
+            <img class="img_user_admin" src="../Image/voiture_test.jpg" alt="user">
+            <span class="nom_admin">Nom Prenom</span>
+        </a>
     </div>
-    <div class="bg_gray2 div_notif_admin">
-        <i class="bi bi-envelope-fill icone_notif"></i>
-        <span>5</span>
-        <div class="notif_admin"></div>
-    </div>
-    <input type="text" class="recherche_header_admin bg_gray2" placeholder="Recherche rapide">
     
 </section>
+
   
