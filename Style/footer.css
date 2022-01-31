@@ -1,14 +1,22 @@
 
-.titre{
+.titre_footer{
     text-transform: uppercase;
     color: white;
     font-weight: bold;
 }
 
-.float_right{
-    float:right!important;
+.nav_footer{
+    text-decoration: none;
+}
+
+.nav_footer:hover{
+    text-decoration: underline;
 }
 
 .droite_footer{
-    border-right:solid 2px white!important
+    border-left:solid 2px white;
+}
+
+.float_right{
+    float:right!important;
 }

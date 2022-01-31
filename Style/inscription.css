@@ -1,0 +1,77 @@
+.inscription_tot{
+    height: 90vh;
+}
+
+.titre_inscription{
+    color: black;
+    text-transform: uppercase;
+    margin-top: -50px;
+}
+
+.contenu_inscription{ 
+    margin-left: 150px;
+}
+
+.contenue_inscri{
+    margin-left: 50px;
+}
+
+.icone_user_inscription{
+    position: relative;
+    left: 25px;
+}
+
+.input_inscription{
+    width: 40%;
+}
+
+.input_inscription2{
+    width: 91%;
+}
+
+.input_inscri_espace{
+    margin-left: 10%;
+}
+
+.erreur_inscription{
+    color: red;
+    display: none;
+}
+
+.span_inscri_espace{
+    margin-left: 45%;
+}
+
+.co_inscription{
+    float: right;
+    margin-right: 60px;
+    margin-top: 25px;
+}
+
+.img_inscription{
+    width: 500px;
+    height: 50vh;
+    margin-top: 40px;
+    margin-left: 230px;
+}
+
+.inscri_info{
+    width: 300px;
+    height: 33px;
+    line-height: 30px;
+    color: white;
+    border-radius: 18px;
+    background-color: #33985d;
+    font-weight: bold;
+    margin-left: 350px;
+    margin-bottom: 15px;
+}
+
+#inscri_info1{
+    margin-top: 30px;
+}
+
+.icone_info{
+    margin-right: 25px;
+    margin-left: 10px;
+}

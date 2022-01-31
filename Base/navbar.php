@@ -9,7 +9,7 @@
     <div class="nav_ul" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Accueil</a>
+          <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
@@ -19,19 +19,20 @@
             Categorie
           </a>
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item color_white" href="#">Action</a></li>
-            <li><a class="dropdown-item color_white" href="#">Another action</a></li>
-            <li><a class="dropdown-item color_white" href="#">Something else here</a></li>
+            <li><a class="dropdown-item color_white" href="#">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
+            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="#">Tout</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
         </li>
         <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Avis</a>
+          <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
         </li>
         <li class="nav-item" >
-            <a href=""><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
+            <a href="connexion.php"><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
         </li>
       </ul>
     </div>
