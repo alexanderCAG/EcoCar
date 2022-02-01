@@ -6,6 +6,10 @@
     overflow-x: hidden; 
 }
 
+.t_bold{
+    font-weight: bold;
+}
+
 /* Titre */
 .titre{
     font-family: 'Oswald', sans-serif;

@@ -10,7 +10,7 @@
                 echo strftime('%A %d %B');
             ?>
         </p>
-        <a href="" class="color_white text-decoration-none titre_sidebar bg_gray1"><h5 class="titre_sidebar2 text-uppercase">tableau de bord</h5></a>
+        <a href="" class="color_white text-decoration-none titre_sidebar bg_gray1"><p class="titre_sidebar2 text-uppercase">tableau de bord</p></a>
         <ul class="text-uppercase list-unstyled liste_titre_sidebar">
             <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Produits</li></a>
             <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Marques</li></a>
@@ -25,6 +25,7 @@
     <!-- Contenue -->
     <div class="contenue bg_gray3">
 
+        <!-- Partie Haut contenu -->
         <section>
             <div class="div_accueil_color bg_green1">
                 <div class="row">
@@ -32,7 +33,7 @@
                     <div class="col-4">
                         <a href="">
                             <div class="bg_gray2 div_ajout_admin2">
-                                <small><p>Ajouter une véhicule</p></small>
+                                <small><p>Ajouter un véhicule</p></small>
                             </div>
                         </a>
                         <a href="">
@@ -46,61 +47,112 @@
             </div>
         </section>
         
-        <div class="container">
-            <div class="row">
-                <div class="col-8 div_gauche_admin">
-                    <div class="contenu_gauche1_admin shadow bg_white">
-                        <img src="../Image/voiture_test.jpg" alt="last vehicule" class="img_last_save">
-                        <div class="gauche1_admin_texteUp text-uppercase titre">
-                            <h4>Dernier véhicule enregistré</h4>
-                            <h6>Mettre du texte ici</h6>
-                            <p class="prix_last_save"><span>500,50</span>€/Mois</p>
+        <!-- Partie Centrale contenu -->
+        <section>
+            <div class="container">
+                <div class="row">
+
+                    <!-- Gauche -->
+                    <div class="col-9 div_gauche_admin">
+                        
+                        <!-- Partie 1 -->
+                        <div class="contenu_gauche1_admin shadow bg_white mx-2">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="../Image/voiture_test.jpg" alt="last vehicule" class="img_last_save">
+                                </div>
+                                <div class="col-9">
+                                    <div class="gauche1_admin_texteUp text-uppercase titre">
+                                        <h4>Dernier devis enregistré</h4>
+                                        <h6>Nom Prenom</h6>
+                                        <p class="prix_last_save"><span>500,50</span>€/Mois</p>
+                                    </div>
+                                    <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
+                                    <div class="info_last_save text-uppercase">
+                                        <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
+                                        <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
-                        <div class="info_last_save text-uppercase">
-                            <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
-                            <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
+
+                        <!-- Partie 2 -->
+                        <div class="mt-4 contenu_gauche2_admin shadow bg_white container mx-2">
+                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules</h4>
+                            <div class="row align-items-center mt-5">
+                                <div class="col-9">
+                                    <p class="mx-4">Contrat de location signés</p>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row legende_admin">
+                                        <div class="col-6">
+                                            <span class="titre2 legende_graphe">Hybride</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="legende_graphe_color"></div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row legende_admin mt-3">
+                                        <div class="col-6">
+                                            <span class="titre2 legende_graphe">Electrique</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="legende_graphe_color2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="mt-5 contenu_gauche1_admin shadow">
-                        <br><br><br><br><br><br><br>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="row">
-                        <div class="col-12 contenu_droit1_admin shadow">
-                            <br><br><br><br><br><br><br>
+
+                    <!-- Droit -->
+                    <div class="col-3">
+
+                        <!-- Partie 1 -->
+                        <div class="contenu_droit1_admin shadow bg_white">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit1_admin titre">Messages/Avis</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit1_admin"></i></a>
+                                </div>
+                            </div>                            
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-        
-        
+        </section>
 
-        <!-- Presentation categorie -->
-        <!-- <div class="container">
-                <div class="row presentation_categorie">
-                    <div class="col-6">
-                        <p class="texte_presentation_categorie text-uppercase">Boulangerie</p>
-                        <p class="sous_texte_presentation_categorie">Amusez vous à écrire vos propres recette de Boulangerie</p>
-                        <input class="barre_recherche_categorie pt-2 pb-2" type="text" placeholder="Rechercher une recette"><i class="bi bi-search barre_recherche_categorie_icone"></i></input>
-                    </div>
-
-                    <div class="col-6">
-                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                            <defs>
-                                <clipPath id="shape">
-                                    <path id="blob" d="M436,329.5Q377,409,290.5,431Q204,453,122,402Q40,351,39,249.5Q38,148,120.5,96.5Q203,45,302.5,52Q402,59,448.5,154.5Q495,250,436,329.5Z" fill="#d1d8e0"></path>
-                                </clipPath>
-                            </defs>
-                            <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" xlink:href="image/boulangerie_fd.png" preserveAspectRatio="none"></image>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-        </div> -->
 
 </div>
 
