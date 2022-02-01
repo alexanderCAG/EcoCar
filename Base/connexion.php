@@ -31,7 +31,7 @@
                     </div>
                     <br>
                     <button class="btn_vert10 mt-3 border-0">Connexion</button>
-                    <a class="inscription_co" href="#" style="color:#000000;" target="_bank">S'incrire</a> 
+                    <a class="inscription_co" href="inscription.php" style="color:#000000;" target="_bank">S'incrire</a> 
                 </div>
             </form>
             
