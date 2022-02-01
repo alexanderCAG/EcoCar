@@ -6,7 +6,7 @@
 }
 
 
-
+/* Sidebar */
 .sidebar {
     min-width: 16%;
     max-width: 16%;
@@ -68,32 +68,7 @@
 }
 
 
-
-
-.sidebar_liste_menu{
-    display: inline-block;
-    list-style: none;
-    height: 60px;
-    line-height: 60px;
-    margin-right: 50px;
-    font-weight: bold;
-}
-
-.nom_menu_sidebar{
-    color: white!important;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.nom_menu_sidebar:hover{
-    color: #33985d!important;
-    font-weight: bold;
-    border-radius: 50px;
-}
-
-
-
-
+/* Sidebar animation */
 .collapsed {
     margin-left: -10%;
 }
@@ -124,16 +99,130 @@
 
 
 
-
+/* Contenue */
 .contenue {
     width: 100%;
 }
 
+
+/* Part 1 */
+
 .div_accueil_color{
     width: 100%;
     height: 150px;
-    content: "";
 }
+
+.div_ajout_admin2{
+    width: 150px;
+    height: 25px;
+    border-radius: 15px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: black;
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+.div_notif_admin2{
+    width: 70px;
+    height: 25px;
+    border-radius: 15px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: black;
+}
+
+.div_notif_admin2:hover,
+.div_notif_admin2:hover .icone_notif2,
+.div_ajout_admin2:hover{
+    color: #33985d;
+}
+
+.icone_notif2{
+    margin-left: 10px;
+    color: #929090;
+    margin-right: 7px;
+}
+
+
+/* Gauche */
+
+.div_gauche_admin{
+    margin-top: -70px!important;
+    width: 100%;
+}
+
+.contenu_gauche1_admin{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.img_last_save{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: solid 10px #33985d;
+    margin-left: 20px;
+    margin-top: 10px;
+    object-fit: cover;
+    float: left;
+}
+
+.gauche1_admin_texteUp{
+    width: 550px;
+    height: 65px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.prix_last_save{
+    float: right;
+    position: relative;
+    bottom: 65px;
+    font-size: 20px;
+}
+
+.texte_last_save{
+    text-align: justify;
+    width: 550px;
+    font-size: 15px;
+    margin-left: 240px;
+}
+
+.info_last_save{
+    width: 550px;
+    height: 60px;
+    float: left;
+    margin-left: 40px;
+    margin-top: -15px;
+}
+
+.info_last_save span{
+    margin-left: 20px;
+    vertical-align: 5px;
+}
+
+
+
+
+/* Droit */
+
+.contenu_droit1_admin{
+    width: 28%;
+    height: 500px;
+    margin-top: -70px!important;
+}
+
+
+
+
+
+
+
 
 /* PRESENTATION */
 
