@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../Style/general.css">
     <link rel="stylesheet" href="../Style/header_admin.css">
     <link rel="stylesheet" href="../Style/accueil_admin.css">
+    <link rel="stylesheet" href="../Style/footer_admin.css">
     <link rel="shortcut icon" href="../Image/">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

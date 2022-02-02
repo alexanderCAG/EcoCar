@@ -10,7 +10,7 @@
 .sidebar {
     min-width: 12%;
     max-width: 12%;
-    height: 200vh;
+    height: 193vh;
     transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out,
     margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
     background-color: #222222;
@@ -262,8 +262,78 @@
             margin-right: 5px;
         }
 
+        /* Partie 3 */
+
+        .contenu_gauche3_admin{
+            width: 100%;
+            height: 240px;
+            border-radius: 20px;
+        }
+
+        .info_liste_car{
+            border-radius: 50px;
+            padding: 5px;
+            float: right;
+            width: 40px;
+            text-align: center;
+        }
+
+        .liste_vehicule_admin{
+            height: 35px;
+            float: left;
+        }
+
+        .liste2_vehicule_admin{
+            width: 95%;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 10px;
+            padding-bottom: 40px;
+        }
+
+        .img_logo_listeVoiture{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+
 
 /* Droit */
+
+.droit_admin_div{
+    padding-bottom: 50px;
+}
+
+.titre_droit_admin{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.icone_droit_admin{
+    float: right;
+    position: relative;
+    right: 20px;
+    top: 10px;
+    color: #929090;
+}
+
+.icone_droit_admin:hover{
+    color: #33985d;
+}
+
+.liste_droit_admin{
+    margin-bottom: 20px;
+    color: #5a5959;
+    font-size: 15px;
+}
+
+.partie_droit_droit_admin{
+    float: right;
+}
 
         /* Partie 1 */
 
@@ -273,70 +343,21 @@
             margin-top: -70px!important;
             border-radius: 20px;
         }
+        
 
-        .titre_droit1_admin{
-            text-align: center;
-            padding-top: 20px;
-            margin-bottom: 30px;
-            font-weight: bold;
+        /* Partie 2 */
+
+        .contenu_droit2_admin{
+            width: 100%;
+            height: 660px;
+            border-radius: 20px;
         }
 
-        .icone_droit1_admin{
-            float: right;
-            position: relative;
-            right: 20px;
-            top: 10px;
-            color: #929090;
+        /* Partie 3 */
+
+        .contenu_droit3_admin{
+            width: 100%;
+            height: 240px;
+            border-radius: 20px;
         }
 
-        .icone_droit1_admin:hover{
-            color: #33985d;
-        }
-
-        .liste_droit1_admin{
-            margin-bottom: 20px;
-            color: #5a5959;
-            font-size: 15px;
-        }
-
-        .date_droit1_admin{
-            float: right;
-        }
-
-
-
-
-
-
-
-
-/* PRESENTATION */
-
-.presentation_categorie{
-    text-align: center;
-    padding-top: 40px;
-}
-
-.texte_presentation_categorie{
-    font-size: 70px;
-    color: #bc1823;
-    font-weight: bold;
-    margin-top: 160px;
-}
-
-.sous_texte_presentation_categorie{
-    margin-top: -20px;
-}
-
-.barre_recherche_categorie{
-    margin-top: 50px;
-    border-radius: 50px;
-    text-align: center;
-    width: 90%;
-    border: none;
-}
-
-.barre_recherche_categorie_icone{
-    position: relative;
-    right: 540px;
-}

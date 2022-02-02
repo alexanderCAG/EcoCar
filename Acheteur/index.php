@@ -179,55 +179,202 @@
                         </div>
 
                         <!-- Partie 3 -->
+                        <div class="mt-4 contenu_gauche3_admin shadow bg_white container mx-2">
+                            <div class="row mb-1">
+                                <div class="col-6">
+                                    <h4 class="text-uppercase pt-4 t_bold titre">Liste des véhicules</h4>
+                                </div>
+                                <div class="col-6">
+                                    <span class="bg_black info_liste_car color_white mt-4">45</span>
+                                </div>
+                            </div>
 
-                    </div>
+                            <div class="row text-uppercase" style="margin-left: 15px">
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
 
-                    <!-- Droit -->
-                    <div class="col-3 bg_green3">
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
 
-                        <!-- Partie 1 -->
-                        <div class="contenu_droit1_admin shadow bg_white">
-                            <div class="row">
-                                <div class="col-11">
-                                    <h4 class="text-uppercase titre_droit1_admin titre">Messages/Avis</h4>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
                                 </div>
-                                <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit1_admin"></i></a>
-                                </div>
-                            </div>                            
-                            <div class="row liste_droit1_admin mx-2">
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="date_droit1_admin"><?php echo date("m.d.y"); ?></span>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+                    <!-- Droit -->
+                    <div class="col-3 bg_green3 droit_admin_div">
+
+                        <!-- Partie 1 -->
+                        <div class="contenu_droit1_admin shadow bg_white">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Messages/Avis</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div>  
+
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partie 2 -->
+                        <div class="contenu_droit2_admin shadow bg_white mt-4">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Derniers devis</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div> 
+
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partie 3 -->
+                        <div class="contenu_droit3_admin shadow bg_white mt-4">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Liste Clients</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div> 
+
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Foot admin -->
+        <?php require('foot.php'); ?>
+        
+    </div>
 
 </div>
 
