@@ -37,23 +37,25 @@
 
 <body class="body">
 
-<section class="header_tot">
+<section class="header_tot bg_gray2">
     <a href=""><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
+    <!-- Pour devis -->
     <a href="">
-        <div class="bg_gray2 div_notif_admin">
+        <div class="bg_white div_notif_admin">
             <i class="bi bi-bell-fill icone_notif"></i>
             <span>5</span>
             <div class="notif_admin"></div>
         </div>
     </a>
+    <!-- Pour avis -->
     <a href="">
-        <div class="bg_gray2 div_notif_admin">
+        <div class="bg_white div_notif_admin">
             <i class="bi bi-envelope-fill icone_notif"></i>
             <span>5</span>
             <div class="notif_admin"></div>
         </div>
     </a>
-    <small><input type="text" class="recherche_header_admin bg_gray2" placeholder="Recherche rapide"></small>
+    <small><input type="text" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
     
     <div class="identification_con_admin">
         <a href="" class="text-decoration-none color_black redirection_con_admin">

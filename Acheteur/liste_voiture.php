@@ -21,12 +21,12 @@
                     </div>
                     <div class="col-4">
                         <a href="">
-                            <div class="bg_gray2 div_ajout_admin2">
+                            <div class="bg_gray2 div_ajout_admin2 shadow">
                                 <small><p>Ajouter un véhicule</p></small>
                             </div>
                         </a>
                         <a href="">
-                            <div class="bg_gray2 div_notif_admin2">
+                            <div class="bg_gray2 div_notif_admin2 shadow">
                                 <i class="fas fa-user-friends icone_notif2"></i>
                                 <span>50</span>
                             </div>
@@ -34,30 +34,608 @@
                     </div>
                 </div>
 
-                <div class="div_info_glob_liste bg_white">
-                    <div class="row text-uppercase text-center px-5">
-                        <div class="col-1">Catégorie</div>
-                        <div class="col-2">Marque</div>
-                        <div class="col-1">Référence</div>
-                        <div class="col-2">Modèle</div>
-                        <div class="col-1">Location</div>
-                        <div class="col-2">Promotion</div>
-                        <div class="col-1">Statut</div>
-                        <div class="col-2">
-                            <i class="bi bi-three-dots fa-2x float-end"></i>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
-
-        <div class="mt-5"></div>
         
         <!-- Partie Centrale contenu -->
-        <section>
+        <section class="mx-5" style="margin-top:-65px">
+            <table class="table table-striped bg_white shadow" style="border-radius: 20px 20px 0 0; vertical-align:30px">
+                <thead>
+                    <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Catégorie</th>
+                    <th scope="col">Marque</th>
+                    <th scope="col">Référence</th>
+                    <th scope="col">Modèle</th>
+                    <th scope="col">Couleur</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Pormotion</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col"><i class="icone_listeBtnVoiture_th bi bi-three-dots fa-2x float-end"></i></th>
+                    </tr>
+                </thead>
+                <!-- Pas plus de 15 lignes -->
+                <tbody>
 
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <!-- <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div> -->
+                            <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div>
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span>Hybide</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span class="text-uppercase">ag15</span></td>
+                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>15</span></td>
+                        <td><span class="text-uppercase">15</span>%</td>
+                        <td>
+                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <!-- <div class="statut_info_listeVoiture bg-warning color_white"><span>En location</span></div> -->
+                        </td>
+                        <td>
+
+                            <div class="statut_info_listeVoiture">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="" class="text-decoration-none">
+                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+ 
+                </tbody>
+            </table>
         </section>
+
+        <!-- Pagination -->
+        <section style="margin-top:70px; margin-bottom:58px;">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
         
 
 <!-- Footer -->

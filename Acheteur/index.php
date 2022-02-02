@@ -19,12 +19,12 @@
                     </div>
                     <div class="col-4">
                         <a href="">
-                            <div class="bg_gray2 div_ajout_admin2">
+                            <div class="bg_gray2 div_ajout_admin2 shadow">
                                 <small><p>Ajouter un véhicule</p></small>
                             </div>
                         </a>
                         <a href="">
-                            <div class="bg_gray2 div_notif_admin2">
+                            <div class="bg_gray2 div_notif_admin2 shadow">
                                 <i class="fas fa-user-friends icone_notif2"></i>
                                 <span>50</span>
                             </div>

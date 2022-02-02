@@ -6,8 +6,13 @@
     overflow-x: hidden; 
 }
 
+/* General */
 .t_bold{
     font-weight: bold;
+}
+
+.t_center{
+    text-align: center;
 }
 
 /* Titre */
@@ -16,7 +21,6 @@
 }
 
 .titre2{
-    
     font-family: 'Raleway', sans-serif;
 }
 
