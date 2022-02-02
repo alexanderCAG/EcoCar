@@ -159,6 +159,28 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="row" style="margin-top:-85px">
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold float-end">Marque 1</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold float-end" style="margin-right:10px">Marque 2</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-left:20px">Marque 3</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-left:10px">Marque 4</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold">Marque 5</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-right:20px">Marque 6</span>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
   

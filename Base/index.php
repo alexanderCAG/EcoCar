@@ -147,7 +147,7 @@
             <a id="rot_icone" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 <img class="image_fond_marque2" src="../Image/image_fond_vert.png" alt="image_fond_vert">
                 <br>
-                <i id="icone_marque" class="icone_affiche_marque bi bi-arrow-left-circle-fill fa-2x color_white"></i>
+                <i id="icone_marque" class="icone_affiche_marque bi bi-arrow-down-circle-fill fa-2x color_white"></i>
             </a>
         </p>
     </div>
