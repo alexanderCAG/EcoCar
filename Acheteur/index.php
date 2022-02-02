@@ -29,7 +29,11 @@
         <section>
             <div class="div_accueil_color bg_green1">
                 <div class="row">
-                    <div class="col-8"></div>
+                    <div class="col-8">
+                        <a href="#" class="sidebar-toggle" id="sidebar_retract">
+                            <i class="bi bi-arrow-left-circle-fill fa-2x color_white icone_retract_sidebar"></i>
+                        </a>
+                    </div>
                     <div class="col-4">
                         <a href="">
                             <div class="bg_gray2 div_ajout_admin2">
@@ -373,7 +377,7 @@
 
         <!-- Foot admin -->
         <?php require('foot.php'); ?>
-        
+
     </div>
 
 </div>
