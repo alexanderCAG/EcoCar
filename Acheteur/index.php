@@ -3,24 +3,7 @@
 <div class="total_categorie">
 
     <!-- Sidebar -->
-    <nav class="sidebar shadow" id="sidebar">
-        <p class="date_admin_accueil text-uppercase">
-            <?php
-                setlocale(LC_ALL, 'fr_FR', 'fra_FRA');
-                echo strftime('%A %d %B');
-            ?>
-        </p>
-        <a href="" class="color_white text-decoration-none titre_sidebar bg_gray1"><p class="titre_sidebar2 text-uppercase">tableau de bord</p></a>
-        <ul class="text-uppercase list-unstyled liste_titre_sidebar">
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Produits</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Marques</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Devis</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Clients</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Paramètre</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Deconnexion</li></a>
-        </ul>
-    </nav>
+    <?php require('sidebar.php'); ?>
 
     <!-- Contenue -->
     <div class="contenue bg_gray3">
@@ -374,13 +357,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Foot admin -->
-        <?php require('foot.php'); ?>
-
-    </div>
-
-</div>
+        
 
 <!-- Footer -->
 <?php require('footer.php'); ?>
