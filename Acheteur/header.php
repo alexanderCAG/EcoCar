@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../Style/sidebar.css">
     <link rel="stylesheet" href="../Style/accueil_admin.css">
     <link rel="stylesheet" href="../Style/footer_admin.css">
-    <link rel="stylesheet" href="../Style/voiture_admin.css">
     <link rel="stylesheet" href="../Style/total_admin.css">
     <link rel="shortcut icon" href="../Image/">
     <!-- Responsive -->

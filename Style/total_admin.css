@@ -1,5 +1,54 @@
 
-/* Image Marque */
+
+/* Liste Voiture */
+
+.icone_listeBtnVoiture_th{
+    position: relative;
+    right: 35px;
+    top: 10px;
+}
+
+.img_listeVoiture{
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    padding-left: 10px;
+    margin-right: -20px;
+}
+
+.statut_info_listeVoiture{
+    width: 90px;
+    height: 25px;
+    border-radius: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.ico_plus_liste{
+    padding: 5px 5px 5px 5px;
+    border-radius: 3px;
+}
+
+.disabled .page-link{
+    color: gray!important;
+}
+
+.page-link{
+    background-color: #b8b8b8!important;
+    color: white!important;
+}
+
+.page-link:hover{
+    background-color: #33985d!important;
+}
+
+/* Ajout */
+
+
+
+
+/* Les Marques */
 
 .table_marque td{
     border: solid 5px white;
@@ -98,4 +147,13 @@
 .ico_listeClient{
     padding: 5px 5px 5px 5px;
     border-radius: 3px;
+}
+
+/* Avis */
+
+.col_avis{
+    width: 300px!important;
+    height: 250px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
