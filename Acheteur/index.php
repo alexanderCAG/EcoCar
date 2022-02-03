@@ -307,7 +307,68 @@
                                 </div>
                             </div> 
 
+                            <!-- Pas plus de 14 devis -->
                             <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
                                 <div class="col-8">
                                     <p>Référence</p>
                                 </div>
