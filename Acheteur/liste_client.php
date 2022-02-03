@@ -67,10 +67,10 @@
                         <td>
 
                             <div class="statut_info_listeClient">
-                                <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                <div class="float-end" style="margin-right:-15px;">
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -88,9 +88,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -108,9 +108,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -128,9 +128,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -148,9 +148,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -168,9 +168,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -188,9 +188,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -208,9 +208,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -228,9 +228,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -248,9 +248,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -268,9 +268,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -288,9 +288,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -308,9 +308,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -328,9 +328,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -348,9 +348,9 @@
 
                             <div class="statut_info_listeClient">
                                 <div class="float-end" style="margin-right:-15px">
-                                    <a href="" class="text-decoration-none">
-                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
-                                    </a>
+                                    <button class="border-0">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
+                                    </button>
                                 </div>
                             </div>
 

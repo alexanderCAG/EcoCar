@@ -86,9 +86,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -123,9 +123,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -160,9 +160,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -197,9 +197,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -234,9 +234,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -271,9 +271,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -308,9 +308,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -345,9 +345,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -382,9 +382,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -419,9 +419,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -456,9 +456,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -493,9 +493,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -530,9 +530,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -567,9 +567,9 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -604,16 +604,16 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <button class="border-0">
                                             <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
                         </td>
                     </tr>
- 
+
                 </tbody>
             </table>
         </section>
