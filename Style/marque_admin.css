@@ -1,4 +1,5 @@
 
+/* Image Marque */
 
 .table_marque td{
     border: solid 5px white;
@@ -13,4 +14,58 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+/* Devis Marque */
+
+.contenu_devis_tot{
+    width: 100%;
+}
+
+.row_devis{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.img_devis{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: solid 10px #33985d;
+    margin-top: 10px;
+    object-fit: cover;
+    float: left;
+}
+
+.devis_texteUp{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-top: 15px;
+}
+
+.prix_devis{
+    float: right;
+    position: relative;
+    bottom: 35px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.texte_devis{
+    text-align: justify;
+    width: 95%;
+    font-size: 15px;
+}
+
+.info_devis{
+    width: 550px;
+    height: 60px;
+    float: left;
+}
+
+.info_devis span{
+    margin-left: 20px;
+    vertical-align: 5px;
 }

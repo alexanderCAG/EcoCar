@@ -42,16 +42,16 @@
             <table class="table table-striped bg_white shadow" style="border-radius: 20px 20px 0 0; vertical-align:30px">
                 <thead>
                     <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Catégorie</th>
-                    <th scope="col">Marque</th>
-                    <th scope="col">Référence</th>
-                    <th scope="col">Modèle</th>
-                    <th scope="col">Couleur</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Pormotion</th>
-                    <th scope="col">Statut</th>
-                    <th scope="col"><i class="icone_listeBtnVoiture_th bi bi-three-dots fa-2x float-end"></i></th>
+                    <th scope="col" style="width:90px;"></th>
+                    <th scope="col" style="width:120px;">Catégorie</th>
+                    <th scope="col" style="width:170px;">Marque</th>
+                    <th scope="col" style="width:130px;">Référence</th>
+                    <th scope="col" style="width:130px;">Modèle</th>
+                    <th scope="col" style="width:100px;">Couleur</th>
+                    <th scope="col" style="width:100px;">Location</th>
+                    <th scope="col" style="width:100px;">Pormotion</th>
+                    <th scope="col" style="width:150px;">Statut</th>
+                    <th scope="col" style="width:150px;"><i class="icone_listeBtnVoiture_th bi bi-three-dots fa-2x float-end"></i></th>
                     </tr>
                 </thead>
                 <!-- Pas plus de 15 lignes -->
@@ -618,7 +618,7 @@
         </section>
 
         <!-- Pagination -->
-        <section style="margin-top:70px; margin-bottom:58px;">
+        <section style="margin-top:70px; margin-bottom:55px;">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">

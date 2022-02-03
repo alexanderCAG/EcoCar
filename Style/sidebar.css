@@ -1,0 +1,94 @@
+
+
+/* Sidebar */
+.sidebar {
+    min-width: 12%;
+    max-width: 12%;
+    height: 193vh;
+    transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out,
+    margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+    background-color: #222222;
+    color: white;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.date_admin_accueil{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+
+.titre_sidebar{
+    width: 100%;
+    height: 50px;
+    margin-top: 39px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+}
+
+.titre_sidebar2{
+    width: 100%;
+    font-size: 18px;
+}
+
+.titre_sidebar:hover{
+    background-color: #79bb94!important;
+}
+
+.liste_titre_sidebar{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.liste_sidebar{
+    width: 100%;
+    height: 40px;
+    border-bottom: solid 2px #929090;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.liste_sidebar:hover{
+    color: #79bb94;
+    border-bottom: solid 2px #79bb94;
+}
+
+
+/* Sidebar animation */
+.collapsed {
+    margin-left: -12%;
+}
+
+    /* SCROLL */
+    .sidebar::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        /* background: #163c8c; */
+        background-color: rgba(0, 0, 0, 0.5);;
+    }
+
+
+/* ICONE RETRACT SIDEBAR */
+
+.icone_retract_sidebar{
+    margin-left: 20px;
+    line-height: 85px;
+}

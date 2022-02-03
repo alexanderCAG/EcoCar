@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../Style/general.css">
     <link rel="stylesheet" href="../Style/header_admin.css">
+    <link rel="stylesheet" href="../Style/sidebar.css">
     <link rel="stylesheet" href="../Style/accueil_admin.css">
     <link rel="stylesheet" href="../Style/footer_admin.css">
     <link rel="stylesheet" href="../Style/voiture_admin.css">
@@ -39,7 +40,7 @@
 <body class="body">
 
 <section class="header_tot bg_gray2">
-    <a href=""><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
+    <a href="index.php"><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
     <!-- Pour devis -->
     <a href="">
         <div class="bg_white div_notif_admin">
