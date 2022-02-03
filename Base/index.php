@@ -173,7 +173,7 @@
                         <div class="carousel-inner">
                             <div class="item carousel-item active">
                                 <div class="row" >
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-3 s">
                                         <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
                                             <div class="thumb-content">
                                                 <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>

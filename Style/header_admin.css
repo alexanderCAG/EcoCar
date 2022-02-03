@@ -1,0 +1,87 @@
+
+.header_tot{
+    width: 100%;
+    height: 60px;
+}
+
+.img_logo_admin{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 15px;
+    margin-left: 15px;
+    padding-left: 10px;
+    float: left;
+}
+
+.div_notif_admin{
+    width: 70px;
+    height: 25px;
+    border-radius: 15px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    color: black;
+}
+
+.div_notif_admin:hover,
+.div_notif_admin:hover .icone_notif{
+    color: #33985d;
+}
+
+.div_notif_admin:hover{
+    height: 30px;
+    border: solid 2px black;
+}
+
+.icone_notif{
+    margin-left: 10px;
+    color: #929090;
+    margin-right: 7px;
+}
+
+.notif_admin{
+    width: 15px;
+    height: 15px;
+    content: "";
+    border-radius: 30px;
+    background-color: red;
+    float: right;
+    position: relative;
+    bottom: 3px;
+    left: 5px;
+}
+
+.recherche_header_admin{
+    width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 25px;
+    border: none;
+}
+
+.identification_con_admin{
+    width: 180px;
+    height: 50px;
+    margin-top: 5px;
+    float: right;
+    margin-right: 30px;
+    border-left: solid 2px black;
+    padding-left: 15px;
+    color: black;
+}
+
+.img_user_admin{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.redirection_con_admin:hover .nom_admin{
+    text-decoration: underline;
+}

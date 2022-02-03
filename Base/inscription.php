@@ -57,7 +57,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-7 bg_green3">
+        <div class="col-7 bg_green3 shadow">
             <img src="../Image/img_inscription.png" alt="image" class="img_inscription">
             <div class="inscri_info" id="inscri_info1">
                 <i class="bi bi-check-circle icone_info"></i> bla bla bla bla bla bla bla bla
