@@ -42,46 +42,315 @@
             <table class="table table-striped bg_white shadow" style="border-radius: 20px 20px 0 0; vertical-align:30px">
                 <thead>
                     <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prenom</th>
-                        <th scope="col">Permis</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Téléphone</th>
-                        <th scope="col">Nombre de location</th>
-                        <th scope="col"><i class="icone_listeBtnVoiture_th bi bi-three-dots fa-2x float-end"></i></th>
+                        <th scope="col" style="width:90px;"></th>
+                        <th scope="col" style="width:170px;">Nom</th>
+                        <th scope="col" style="width:170px;">Prenom</th>
+                        <th scope="col" style="width:120px;">Permis</th>
+                        <th scope="col" style="width:300px;">Email</th>
+                        <th scope="col" style="width:120px;">Téléphone</th>
+                        <th scope="col" style="width:120px;">Nb location</th>
+                        <th scope="col" style="width:150px;"><i class="icone_listeBtnClient_th bi bi-three-dots fa-2x float-end"></i></th>
                     </tr>
                 </thead>
                 <!-- Pas plus de 15 lignes -->
+                <!-- Ne pas oublier de blinder ou max les carac par colonne -->
                 <tbody>
 
                     <tr>
-                        <td><img class="img_listeVoiture" src="../Image/voiture_test.jpg" alt="user"></td>
-                        <td><span>Hybide</span></td>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
                         <td><span class="text-uppercase">Range Rover</span></td>
                         <td><span class="text-uppercase">A6d23325</span></td>
-                        <td><span>alexander@gmail.com</span></td>
-                        <td><span class="text-uppercase">Bleu</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
                         <td><span>15</span></td>
                         <td>
 
-                            <div class="statut_info_listeVoiture">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <a href="" class="text-decoration-none">
-                                            <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="" class="text-decoration-none">
-                                            <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="" class="text-decoration-none">
-                                            <i class="bi bi-trash-fill bg-danger color_white ico_plus_liste"></i>
-                                        </a>
-                                    </div>
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">Range Rover</span></td>
+                        <td><span class="text-uppercase">A6d23325</span></td>
+                        <td><span>alexanderalex@gmail.com</span></td>
+                        <td><span class="text-uppercase">0612234556</span></td>
+                        <td><span>15</span></td>
+                        <td>
+
+                            <div class="statut_info_listeClient">
+                                <div class="float-end" style="margin-right:-15px">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="bi bi-trash-fill bg-danger color_white ico_listeClient"></i>
+                                    </a>
                                 </div>
                             </div>
 

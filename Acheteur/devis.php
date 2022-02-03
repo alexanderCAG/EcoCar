@@ -206,7 +206,7 @@
         </section>
 
         <!-- Pagination -->
-        <section style="margin-top:100px; margin-bottom:120px;">
+        <section style="margin-top:100px; margin-bottom:118px;">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">

@@ -55,6 +55,7 @@
                     </tr>
                 </thead>
                 <!-- Pas plus de 15 lignes -->
+                <!-- Ne pas oublier de blinder ou max les carac par colonne -->
                 <tbody>
 
                     <tr>
