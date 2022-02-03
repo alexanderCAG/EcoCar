@@ -1,0 +1,16 @@
+
+
+.table_marque td{
+    border: solid 5px white;
+    width: 200px;
+    height: 210px;
+}
+
+.img_marque_liste{
+    background-image: url("../Image/voiture_test.jpg");
+    background-repeat: none;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
