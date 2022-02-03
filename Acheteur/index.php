@@ -23,7 +23,7 @@
                                 <small><p>Ajouter un véhicule</p></small>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="liste_client.php">
                             <div class="bg_gray2 div_notif_admin2 shadow">
                                 <i class="fas fa-user-friends icone_notif2"></i>
                                 <span>50</span>

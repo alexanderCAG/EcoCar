@@ -13,7 +13,7 @@
         <a href="liste_client.php" class="color_white text-decoration-none"><li class="liste_sidebar">Clients</li></a>
         <a href="avis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Avis</li></a>
         <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Statistique</li></a>
-        <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
+        <a href="compte_admin.php" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
         <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Deconnexion</li></a>
     </ul>
 </nav>
