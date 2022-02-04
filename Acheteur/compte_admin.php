@@ -19,7 +19,19 @@
         <!-- Partie Centrale contenu -->
         <div class="container">
             <form action="">
-                
+                Nom de site --> pas de modif <br>
+                Telephone <br>
+                Email <br>
+                Mdp <br>
+                Verif mdp <br>
+
+                image <br>
+
+                Btn : <br>
+                - modifier <br>
+                - annuler modi <br>
+                - supprimer / reset <br>
+                - valider <br>
             </form>
         </div>       
         
