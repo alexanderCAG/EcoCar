@@ -9,7 +9,7 @@
             <img src="../Image/img_connexion.png" alt="image" class="img_co">
         </div>
         <div class="col-6 my-auto">
-            <form>
+            <form action="">
                 
                 <h1 class="titre_co titre text-center">Se connecter</h1>
                 <small><p class="text-center"><i>Connecte-toi vite pour louer la voiture de tes rêves</i></p></small>

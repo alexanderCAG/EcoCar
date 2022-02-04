@@ -6,8 +6,8 @@
 <section>
     <div class="inscription_tot row">
         <div class="col-5 my-auto">
-            <div class="container"> 
-                <form>
+            <div class="container">
+                <form action="">
                     
                     <h1 class="titre_inscription titre text-center">S'inscrire</h1>
                     <small><p class="text-center"><i>Inscrit-toi vite pour louer la voiture de tes rêves</i></p></small>
