@@ -243,7 +243,7 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Messages/Avis</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="avis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div>  
 
@@ -282,7 +282,7 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Derniers devis</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="devis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div> 
 
@@ -382,7 +382,7 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Liste Clients</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="liste_client.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div> 
 

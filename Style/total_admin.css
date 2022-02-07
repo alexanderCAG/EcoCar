@@ -173,3 +173,37 @@
     height: 90vh;
     content: "";
 }
+
+.infoPerso_input{
+    background-color: transparent;
+    width: 45%;
+    margin-left: 120px;
+    margin-top: 15px;
+}
+
+.infoPerso_span{
+    margin-left: 120px;
+    color: red;
+}
+
+.infoPerso_image{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 2px #33985d;
+    border-radius: 150px;
+    float: left;
+}
+
+.img_div_change{
+    margin-top: 10px;
+}
+
+.btn_choix_img_admin{
+    position: relative;
+    overflow: hidden;
+    color: black!important;
+    font-size: 15px!important;
+    font-weight: bold!important;
+    float: left;
+}
