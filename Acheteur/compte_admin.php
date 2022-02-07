@@ -15,38 +15,38 @@
         ?>
         
         <!-- Partie Centrale contenu -->
-        <div class="container">
+        <div class="container" style="margin-bottom: 415px">
             <div class="compte_tot" style="margin-top: 70px;">
                 <form action="">
                     <div class="row">
                         <div class="col-6">
-                            <input class="border_ligne infoPerso_input" type="text" placeholder="Nom du site">
+                            <input id="infoPerso_1" class="border_ligne infoPerso_input" type="text" placeholder="Nom du site">
                             <br>
                             <small><span class="infoPerso_span" id="ErreurCon_1"></span></small>
                             <br>
 
-                            <input class="border_ligne infoPerso_input" type="text" placeholder="Téléphone">
+                            <input id="infoPerso_2" class="border_ligne infoPerso_input" type="text" placeholder="Téléphone">
                             <br>
                             <small><span class="infoPerso_span" id="ErreurCon_2"></span></small>
                             <br>
 
-                            <input class="border_ligne infoPerso_input" type="email" placeholder="Email">
+                            <input id="infoPerso_3" class="border_ligne infoPerso_input" type="email" placeholder="Email">
                             <br>
                             <small><span class="infoPerso_span" id="ErreurCon_3"></span></small>
                             <br>
 
-                            <input class="border_ligne infoPerso_input" type="text" placeholder="Mot de passe">
+                            <input id="infoPerso_4" class="border_ligne infoPerso_input" type="text" placeholder="Mot de passe">
                             <br>
                             <small><span class="infoPerso_span" id="ErreurCon_4"></span></small>
                             <br>
 
-                            <input class="border_ligne infoPerso_input" type="text" placeholder="Vérification mot de passe">
+                            <input id="infoPerso_5" class="border_ligne infoPerso_input" type="text" placeholder="Vérification mot de passe">
                             <br>
                             <small><span class="infoPerso_span" id="ErreurCon_5"></span></small>
                             <br>
 
                         </div>
-                        <div class="col-6">
+                        <div class="col-6" style="width:40%">
                             <img id="infoPerso_image" class="infoPerso_image" src="../Image/voiture_test.jpg" alt="user_img">
                             <hr style="margin-top: 270px">
                             <div class="img_div_change">
@@ -60,24 +60,18 @@
                                 <span id="imageErreur_infoPersovendeur"></span>
                                 <br>
                             </div>
+                        </div>
                     </div>
+                    <div class="row text-center mt-4">
+                        <div class="col">
+                            <button id="btn_modif_infoPerso" class="btn_vert10">Modifier</button>
+                            <button id="btn_Annulmodif_infoPerso" class="btn_vert10">Annuler Modif</button>
+                            <button id="btn_reset_infoPerso" class="btn_vert10">Reset</button>
+                            <button type="submit" id="submit_valider_infoPerso" class="btn_vert10">Valider</button>
+                        </div>
                     </div>
                 </form>
             </div>
-
-            Nom de site --> pas de modif <br>
-            Telephone <br>
-            Email <br>
-            Mdp <br>
-            Verif mdp <br>
-
-            image <br>
-
-            Btn : <br>
-            - modifier <br>
-            - annuler modi <br>
-            - supprimer / reset <br>
-            - valider <br>
         </div>       
         
         

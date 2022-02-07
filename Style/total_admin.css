@@ -177,12 +177,12 @@
 .infoPerso_input{
     background-color: transparent;
     width: 45%;
-    margin-left: 120px;
+    margin-left: 150px;
     margin-top: 15px;
 }
 
 .infoPerso_span{
-    margin-left: 120px;
+    margin-left: 150px;
     color: red;
 }
 
