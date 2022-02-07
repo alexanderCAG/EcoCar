@@ -6,8 +6,8 @@
 <section>
     <div class="inscription_tot row">
         <div class="col-5 my-auto">
-            <div class="container"> 
-                <form>
+            <div class="container">
+                <form action="">
                     
                     <h1 class="titre_inscription titre text-center">S'inscrire</h1>
                     <small><p class="text-center"><i>Inscrit-toi vite pour louer la voiture de tes rêves</i></p></small>
@@ -57,7 +57,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-7 bg_green3">
+        <div class="col-7 bg_green3 shadow">
             <img src="../Image/img_inscription.png" alt="image" class="img_inscription">
             <div class="inscri_info" id="inscri_info1">
                 <i class="bi bi-check-circle icone_info"></i> bla bla bla bla bla bla bla bla

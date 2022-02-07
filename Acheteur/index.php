@@ -1,415 +1,425 @@
 <?php require('header.php'); ?>
-<?php require('navbar.php'); ?>
 
-<section class="carousel_accueil">
+<div class="total_categorie">
 
-    <!-- Fond Carousel -->
-    <div class="row row_carousel">
-        <div class="col-4">
+    <!-- Sidebar -->
+    <?php require('sidebar.php'); ?>
 
-        </div>
-        <div class="col-8 bg_green3">
+    <!-- Contenue -->
+    <div class="contenue bg_gray3">
 
-        </div>
-    </div>
-
-    <!-- Carousel -->
-    <div class="carousel_tot" style="margin-top:-600px">
-
-        <div class="container py-5" >
-            <div class="row align-items-center promo_tot"  id="promo_tot">
-                <div class="col-md-8">
-                    <img src="https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0 img_carousel_pres">
-                </div>
-                <div class="col-md-4">
-                    <div class="bg-light w-100 p-4" id="" style="border: 15px solid #EFEFEF;margin-left:-80px">
-                
-                        <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
-
-                        <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
-                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
-                        <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> 
-            <div class="row align-items-center bestSeller_tot" id="bestSeller_tot">
-                <div class="col-md-8">
-                    <img src="https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0 img_carousel_pres">
-                </div>
-                <div class="col-md-4">
-                    <div class="bg-light w-100 p-4"style="border: 15px solid #EFEFEF;margin-left:-80px">
-                
-                        <img src="../Image/ico_bs.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
-
-                        <h1 class="text-uppercase titre text-dark">Best seller 1</h1>
-                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
-                        <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Sous titre carousel -->
-    <div class="row carousel_bas text-center">
-        <a href="" id="btn_promo1" onclick="ViewPromo()" class="col-4 bg_green3 text-decoration-none">
-            <span class="carousel_bas1 text-uppercase">Promo</span>
-            <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" id="btn_bestSeller" onclick="ViewbestSeller()" class="col-4 bg_green2 text-decoration-none">
-            <span class="carousel_bas1 text-uppercase">Best Seller</span>
-            <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" class="col-4 bg_green1 text-decoration-none">
-            <span class="carousel_bas1 text-uppercase">Promo</span>
-            <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-    </div>
-
-</section>
-
-<!-- Presentation -->
-<section class="presentation_tot ">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h1 class="titre_presentation text-uppercase">Presentation</h1>
-                <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
-                <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
-                <a href="" class="btn_vert30 btn_presention">Lire plus</a>
-            </div>
-            <div class="col-6">
-                <img src="../Image/voiture_test.jpg" alt="img_bg_carousel" class="img_presentation">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Affiche Marque -->
-<section>
-    <img class="image_fond_marque1" id="image_fond_marque1" src="../Image/image_fond_vert.png" alt="image_fond_vert">
-    <div class="marque_titre text-center">
-        <h1 class="text-uppercase text_marque_gen color_white">Nos Marques</h1>
-        <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
-    </div>
-
-    <div class="bg_green1">
-        <div class="row row_marque">
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-        </div>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body bg_green1 p-0">
+        <!-- Partie Haut contenu -->
+        <?php 
+            require('haut_admin.php'); 
+        ?>
+        
+        <!-- Partie Centrale contenu -->
+        <section>
+            <div class="container">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row_marque2">
-        <p class="btn_affiche_marque">
-            <a id="rot_icone" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <img class="image_fond_marque2" src="../Image/image_fond_vert.png" alt="image_fond_vert">
-                <br>
-                <i id="icone_marque" class="icone_affiche_marque bi bi-arrow-down-circle-fill fa-2x color_white"></i>
-            </a>
-        </p>
-    </div>
-</section>
 
-<!-- Avis -->
-<section class="avis_tot bg_gray3">
-    <div class="bg_gray3">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-md-12">
-                <h1 class="text-uppercase titre text-dark text-center">avis clients</h1>
-                <p class="text-center fw-light">Laissez nous votre avis depuis le formulaire ci-dessous</p>
-
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>   
-                        <!-- Wrapper for carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item carousel-item active">
-                                <div class="row" >
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
+                    <!-- Gauche -->
+                    <div class="col-9 div_gauche_admin">
                         
+                        <!-- Partie 1 -->
+                        <div class="contenu_gauche1_admin shadow bg_white mx-2">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="../Image/voiture_test.jpg" alt="last vehicule" class="img_last_save">
                                 </div>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
+                                <div class="col-9">
+                                    <div class="gauche1_admin_texteUp text-uppercase titre">
+                                        <h4>Dernier devis enregistré</h4>
+                                        <h6>Nom Prenom</h6>
+                                        <p class="prix_last_save"><span>500,50</span>€/Mois</p>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
+                                    <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
+                                    <div class="info_last_save text-uppercase">
+                                        <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
+                                        <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                        
-                                </div>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                        
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Partie 2 -->
+                        <div class="mt-4 contenu_gauche2_admin shadow bg_white container mx-2">
+                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules</h4>
+                            
+                            <div class="row align-items-center mt-5">
+                                <div class="col-9">
+                                    <p class="mx-4">Contrat de location signés</p>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row legende_admin">
+                                        <div class="col-6">
+                                            <span class="titre2 legende_graphe">Hybride</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="legende_graphe_color"></div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row legende_admin mt-3">
+                                        <div class="col-6">
+                                            <span class="titre2 legende_graphe">Electrique</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="legende_graphe_color2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row pt-3 pb-3" style="margin-top: 40px">
+                                <div class="col-md-12">
+                                    <div class="border-0 rounded-0 text-uppercase" style="height: 500px!important">
+                                        <!-- <br>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#5499C7">Pillow</span>
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#F39C12">Decoraton</span>
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#52BE80">Sheet</span>
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#A569BD">T-shirt</span>
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#B03A2E">Sweat-shirt</span>
+                                                <span class="m-2 pl-4 p-2  text-light" style="background-color:#935116">Shoes</span>
+                                            </div>
+                                        </div> -->
+                                
+                                        <div class="container contain_bar h-100 pt-5" style="margin-left:2%;"> 
+                                            <!-- ##### Stat pillow #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
+                                                <div class="bar1_progress progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 50%; background-color:#c0dfcd">
+                                                    <span class="">50%</span>
+                                                </div>
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 80%; background-color:#79bb94">
+                                                    <span class="">80%</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- ##### Stat decoration #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 70%; background-color: #F39C12;">
+                                                    <span class="">70%</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- ##### Stat sheet #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 20%; background-color: #52BE80;">
+                                                    <span class="">20%</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- ##### Stat Tshirt #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 65%; background-color: #A569BD;">
+                                                    <span class="">65%</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- ##### Stat Sweat-shirt #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 85%; background-color: #B03A2E;">
+                                                    <span class="">85%</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- ##### Stat Shoes #######-->
+
+                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 45%; background-color: #935116;">
+                                                    <span class="">45%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:-85px">
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold float-end">Marque 1</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold float-end" style="margin-right:10px">Marque 2</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-left:20px">Marque 3</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-left:10px">Marque 4</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold">Marque 5</span>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="titre2 text-uppercase t_bold" style="margin-right:20px">Marque 6</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+  
+                            </div>
+                        </div>
+
+                        <!-- Partie 3 -->
+                        <div class="mt-4 contenu_gauche3_admin shadow bg_white container mx-2">
+                            <div class="row mb-1">
+                                <div class="col-6">
+                                    <h4 class="text-uppercase pt-4 t_bold titre">Liste des véhicules</h4>
+                                </div>
+                                <div class="col-6">
+                                    <span class="bg_black info_liste_car color_white mt-4">45</span>
+                                </div>
+                            </div>
+
+                            <div class="row text-uppercase" style="margin-left: 15px">
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 liste_vehicule_admin mt-3">
+                                    <div class="row liste2_vehicule_admin bg_gray2">
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
+                                        <div class="col-3">marque</div>
+                                        <div class="col-3">Modele</div>
+                                        <div class="col-4">Reference</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- Droit -->
+                    <div class="col-3 bg_green3 droit_admin_div">
+
+                        <!-- Partie 1 -->
+                        <div class="contenu_droit1_admin shadow bg_white">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Messages/Avis</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="avis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div>  
+
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Demande d'information</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partie 2 -->
+                        <div class="contenu_droit2_admin shadow bg_white mt-4">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Derniers devis</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="devis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div> 
+
+                            <!-- Pas plus de 14 devis -->
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partie 3 -->
+                        <div class="contenu_droit3_admin shadow bg_white mt-4">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h4 class="text-uppercase titre_droit_admin titre">Liste Clients</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a href="liste_client.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                </div>
+                            </div> 
+
+                            <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Nom Prénom</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-    
-</section>
+        </section>
+        
 
 <!-- Footer -->
 <?php require('footer.php'); ?>

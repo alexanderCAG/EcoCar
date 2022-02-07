@@ -6,6 +6,15 @@
     overflow-x: hidden; 
 }
 
+/* General */
+.t_bold{
+    font-weight: bold;
+}
+
+.t_center{
+    text-align: center;
+}
+
 /* Titre */
 .titre{
     font-family: 'Oswald', sans-serif;
@@ -24,6 +33,8 @@
 
 .bg_black{background-color: black!important;}
 
+.bg_white{background-color: white!important;}
+
 .bg_gray1{background-color: #929090!important;}
 
 .bg_gray2{background-color: #E9E9E9!important;}
@@ -37,6 +48,8 @@
 .color_green1{color: #33985d!important;}
 
 .color_white{color: white!important;}
+
+.color_black{color: black!important;}
 
 /*Border*/
 .border10{
