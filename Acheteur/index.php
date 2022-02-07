@@ -9,30 +9,9 @@
     <div class="contenue bg_gray3">
 
         <!-- Partie Haut contenu -->
-        <section>
-            <div class="div_accueil_color bg_green1">
-                <div class="row">
-                    <div class="col-8">
-                        <a href="#" class="sidebar-toggle" id="sidebar_retract">
-                            <i class="bi bi-arrow-left-circle-fill fa-2x color_white icone_retract_sidebar"></i>
-                        </a>
-                    </div>
-                    <div class="col-4">
-                        <a href="">
-                            <div class="bg_gray2 div_ajout_admin2 shadow">
-                                <small><p>Ajouter un véhicule</p></small>
-                            </div>
-                        </a>
-                        <a href="liste_client.php">
-                            <div class="bg_gray2 div_notif_admin2 shadow">
-                                <i class="fas fa-user-friends icone_notif2"></i>
-                                <span>50</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php 
+            require('haut_admin.php'); 
+        ?>
         
         <!-- Partie Centrale contenu -->
         <section>
@@ -264,7 +243,7 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Messages/Avis</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="avis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div>  
 
@@ -303,11 +282,72 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Derniers devis</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="devis.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div> 
 
+                            <!-- Pas plus de 14 devis -->
                             <div class="row liste_droit1_admin mx-2">
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
+                                <div class="col-8">
+                                    <p>Référence</p>
+                                </div>
+                                <div class="col-4">
+                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                </div>
                                 <div class="col-8">
                                     <p>Référence</p>
                                 </div>
@@ -342,7 +382,7 @@
                                     <h4 class="text-uppercase titre_droit_admin titre">Liste Clients</h4>
                                 </div>
                                 <div class="col-1">
-                                    <a href="" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
+                                    <a href="liste_client.php" class="color_black"><i class="bi bi-three-dots fa-2x icone_droit_admin"></i></a>
                                 </div>
                             </div> 
 
