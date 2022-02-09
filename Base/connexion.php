@@ -26,11 +26,11 @@
                     <small><span class="erreur_co"></span></small>
                     <br>
                     <div class="checkbox_co">
-                        <input type="checkbox" id="scales" name="scales">
+                        <input type="checkbox" id="scales" name="scales" style="margin-left: 20px">
                         <label for="scales">Se souvenir de moi</label>
                     </div>
                     <br>
-                    <button class="btn_vert10 mt-3 border-0">Connexion</button>
+                    <button class="btn_vert10 mt-3 border-0" style="margin-left: 20px">Connexion</button>
                     <a class="inscription_co" href="inscription.php" style="color:#000000;" target="_bank">S'incrire</a> 
                 </div>
             </form>
