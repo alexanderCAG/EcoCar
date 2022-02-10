@@ -44,14 +44,14 @@ function ViewbestSeller(){
     $('.bestSeller_tot').show(); 
 }
 
-function boucle(){
-    let compteur_boucle = 0;
-    do{
-        setTimeout(function(){
-            setTimeout(function(){$('#bestSeller_tot').hide();$('#promo_tot').show();}, 2000);
-            setTimeout(function(){$('#promo_tot').hide();$('#bestSeller_tot').show();}, 2000);
-            compteur_boucle++;
-        }, 2000);
+// function boucle(){
+//     let compteur_boucle = 0;
+//     do{
+//         setTimeout(function(){
+//             setTimeout(function(){$('#bestSeller_tot').hide();$('#promo_tot').show();}, 2000);
+//             setTimeout(function(){$('#promo_tot').hide();$('#bestSeller_tot').show();}, 2000);
+//             compteur_boucle++;
+//         }, 2000);
         
-    }while(compteur_boucle==10);
-}
+//     }while(compteur_boucle==10);
+// }
