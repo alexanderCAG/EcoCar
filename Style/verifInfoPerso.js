@@ -149,5 +149,3 @@ function verifInfo(event){
     }
 
 }
-
-// 

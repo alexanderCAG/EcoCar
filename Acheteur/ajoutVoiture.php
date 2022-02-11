@@ -71,11 +71,11 @@
                                 <span class="file_inscription_img">
                                     <span onclick="choix_image_vendeur()" id="btn_Browse2" class="btn btn-default btn_choix_img_admin">
                                         Browse 
-                                        <input type="file" name="ajoutVoiture_img" id="file_interrieur_imgAdmin" accept="image/png, image/jpg, image/jpeg">
+                                        <input type="file" name="ajoutVoiture_img" id="file_interrieur_imgAdminAjout" accept="image/png, image/jpg, image/jpeg">
                                     </span>
                                 </span>
                                 <input type="text" class="form-control" readonly value="">
-                                <span id="imageErreur_ajoutVoiturevendeur"></span>
+                                <small><span class="infoPerso_span" id="imageErreur_ajoutVoiture"></span></small>
                                 <br>
                             </div>
                         </div>

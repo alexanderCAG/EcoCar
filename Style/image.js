@@ -29,19 +29,29 @@ function choix_image_vendeur(){
         if (mon_img.files && mon_img.files[0]) {
             let read = new FileReader();
             
+            // infoPerso_Admin
             read.onload = function (e) {
                 $("#infoPerso_image").attr('src', e.target.result);
             }
-            // read.onload = function (e) {
-            //     $("#ajoutVoiture_image").attr('src', e.target.result);
-            // }
+            
+            // Ajout Voiture
+            read.onload = function (e) {
+                $("#ajoutVoiture_image").attr('src', e.target.result);
+            }
             
             read.readAsDataURL(mon_img.files[0]);
         }
     }
     
+    // infoPerso_Admin
     $("#file_interrieur_imgAdmin").change(function(){
         readURL(this);
     });
+
+    // Ajout Voiture
+    $("#file_interrieur_imgAdminAjout").change(function(){
+        readURL(this);
+    });
+
 
 }
