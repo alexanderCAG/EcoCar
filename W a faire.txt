@@ -1,8 +1,6 @@
 Admin:
 
-/// - Ajouter vehicule
 - Statistique
-///- Info Perso
 - refaire Avis
 
 Base :
@@ -10,6 +8,7 @@ Base :
 - Présentation
 - Catégorie
 - Détail présentation catégorie
+- Panier (avec comparaison ?)
 
 
 - Faire BDD
