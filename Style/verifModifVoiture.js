@@ -11,26 +11,26 @@ var regex_tot = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüý
 
 
 // Ajouter Véhicule
-document.getElementById('submit_valider_ajoutVoiture').addEventListener('click', verifAjoutVoiture)
+document.getElementById('submit_valider_modifVoiture').addEventListener('click', verifAjoutVoiture)
 function verifAjoutVoiture(event){
 
     var verifAjoutVoiture_Admin=true;
 
     // input
-    let ajoutVoiture1 = document.getElementById('ajoutVoiture1');
-    let ajoutVoiture2 = document.getElementById('ajoutVoiture2');
-    let ajoutVoiture3 = document.getElementById('ajoutVoiture3');
-    let ajoutVoiture4 = document.getElementById('ajoutVoiture4');
-    let color_ajoutVoiture = document.getElementById('color_ajoutVoiture');
-    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminAjout');
+    let ajoutVoiture1 = document.getElementById('modifVoiture1');
+    let ajoutVoiture2 = document.getElementById('modifVoiture2');
+    let ajoutVoiture3 = document.getElementById('modifVoiture3');
+    let ajoutVoiture4 = document.getElementById('modifVoiture4');
+    let color_ajoutVoiture = document.getElementById('color_modifVoiture');
+    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif');
 
     // span
-    let ErreurAjout_1 = document.getElementById('ErreurAjout_1');
-    let ErreurAjout_2 = document.getElementById('ErreurAjout_2');
-    let ErreurAjout_3 = document.getElementById('ErreurAjout_3');
-    let ErreurAjout_4 = document.getElementById('ErreurAjout_4');
-    let ErreurAjout_5 = document.getElementById('ErreurAjout_5');
-    let imageErreur_ajoutVoiture = document.getElementById('imageErreur_ajoutVoiture');
+    let ErreurAjout_1 = document.getElementById('Erreurmodif_1');
+    let ErreurAjout_2 = document.getElementById('Erreurmodif_2');
+    let ErreurAjout_3 = document.getElementById('Erreurmodif_3');
+    let ErreurAjout_4 = document.getElementById('Erreurmodif_4');
+    let ErreurAjout_5 = document.getElementById('Erreurmodif_5');
+    let imageErreur_ajoutVoiture = document.getElementById('imageErreur_modifVoiture');
 
     // reset span
     ErreurAjout_1.innerHTML="";

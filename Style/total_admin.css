@@ -301,3 +301,11 @@
     margin-right: 25px;
     margin-top: 15px;
 }
+
+/* Modifier voiture */
+.modifVoiture_input{
+    background-color: transparent;
+    width: 45%;
+    margin-right: 25px;
+    margin-top: 15px;
+}

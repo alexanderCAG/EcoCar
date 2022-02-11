@@ -65,7 +65,7 @@
 
                         </div>
                         <div class="col-6" style="width:30%">
-                            <img id="ajoutVoiture_image" class="ajoutVoiture_image" src="../Image/voiture_test.jpg" alt="user_img">
+                            <img id="infoPerso_image" class="ajoutVoiture_image" src="../Image/voiture_test.jpg" alt="user_img">
                             <hr style="margin-top: 270px">
                             <div class="img_div_change">
                                 <span class="file_inscription_img">

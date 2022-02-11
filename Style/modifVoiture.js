@@ -1,65 +1,52 @@
 
 jQuery(document).ready(function(){
 
-    $("#btn_Browse2").hide();
-    $("#submit_valider_ajoutVoiture").hide();
+    $("#btn_Browse3").hide();
+    $("#submit_valider_modifVoiture").hide();
 
-    document.getElementById('ajoutVoiture1').disabled=true;
-    document.getElementById('ajoutVoiture2').disabled=true;
-    document.getElementById('ajoutVoiture3').disabled=true;
-    document.getElementById('ajoutVoiture4').disabled=true;
-    document.getElementById('ajoutVoiture5').disabled=true;
+    document.getElementById('modifVoiture1').disabled=true;
+    document.getElementById('modifVoiture2').disabled=true;
+    document.getElementById('modifVoiture3').disabled=true;
+    document.getElementById('modifVoiture4').disabled=true;
+    document.getElementById('modifVoiture5').disabled=true;
 
 });
 
 
-// COLOR PICKER
-
-$("input.color").each(function() {
-    var that = this;
-    $(this).parent().prepend($("<i class='fa fa-paint-brush color-icon'></i>").click(function() {
-        that.type = (that.type == "color") ? "text" : "color";
-}));
-}).change(function() {
-    $(this).attr("data-value", this.value);
-    this.type = "text";
-});
-
-
-// Ajout Voiture
+// modif Voiture
 
 function modif_Voiture(){
-    $("#submit_valider_ajoutVoiture").show();
-    $("#btn_Browse2").show();
+    $("#submit_valider_modifVoiture").show();
+    $("#btn_Browse3").show();
 
-    document.getElementById('ajoutVoiture1').disabled=false;
-    document.getElementById('ajoutVoiture2').disabled=false;
-    document.getElementById('ajoutVoiture3').disabled=false;
-    document.getElementById('ajoutVoiture4').disabled=false;
-    document.getElementById('ajoutVoiture5').disabled=false;
+    document.getElementById('modifVoiture1').disabled=false;
+    document.getElementById('modifVoiture2').disabled=false;
+    document.getElementById('modifVoiture3').disabled=false;
+    document.getElementById('modifVoiture4').disabled=false;
+    document.getElementById('modifVoiture5').disabled=false;
 
 
 }
 
 function annulModif_Voiture(){
-    $("#submit_valider_ajoutVoiture").hide();
-    $("#btn_Browse2").hide();
+    $("#submit_valider_modifVoiture").hide();
+    $("#btn_Browse3").hide();
     
-    document.getElementById('ajoutVoiture1').disabled=true;
-    document.getElementById('ajoutVoiture2').disabled=true;
-    document.getElementById('ajoutVoiture3').disabled=true;
-    document.getElementById('ajoutVoiture4').disabled=true;
-    document.getElementById('ajoutVoiture5').disabled=true;
+    document.getElementById('modifVoiture1').disabled=true;
+    document.getElementById('modifVoiture2').disabled=true;
+    document.getElementById('modifVoiture3').disabled=true;
+    document.getElementById('modifVoiture4').disabled=true;
+    document.getElementById('modifVoiture5').disabled=true;
 
 }
 
 function reset_Voiture(){
-    $(".ajoutVoiture_input").val("");
+    $(".modifVoiture_input").val("");
 
-    document.getElementById('ErreurAjout1').innerHTML="";
-    document.getElementById('ErreurAjout2').innerHTML="";
-    document.getElementById('ErreurAjout3').innerHTML="";
-    document.getElementById('ErreurAjout4').innerHTML="";
-    document.getElementById('ErreurAjout5').innerHTML="";
+    document.getElementById('Erreurmodif1').innerHTML="";
+    document.getElementById('Erreurmodif2').innerHTML="";
+    document.getElementById('Erreurmodif3').innerHTML="";
+    document.getElementById('Erreurmodif4').innerHTML="";
+    document.getElementById('Erreurmodif5').innerHTML="";
 
 }

@@ -34,10 +34,15 @@ function choix_image_vendeur(){
                 $("#infoPerso_image").attr('src', e.target.result);
             }
             
-            // Ajout Voiture
-            read.onload = function (e) {
-                $("#ajoutVoiture_image").attr('src', e.target.result);
-            }
+            // // Ajout Voiture
+            // read.onload = function (e) {
+            //     $("#ajoutVoiture_image").attr('src', e.target.result);
+            // }
+
+            // // Modif Voiture
+            // read.onload = function (e) {
+            //     $("#modifVoiture_img").attr('src', e.target.result);
+            // }
             
             read.readAsDataURL(mon_img.files[0]);
         }
@@ -50,6 +55,11 @@ function choix_image_vendeur(){
 
     // Ajout Voiture
     $("#file_interrieur_imgAdminAjout").change(function(){
+        readURL(this);
+    });
+
+    // Modif Voiture
+    $("#file_interrieur_imgAdminmodif").change(function(){
         readURL(this);
     });
 
