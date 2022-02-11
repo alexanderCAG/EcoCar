@@ -293,3 +293,11 @@
     font-weight: bold!important;
     float: left;
 }
+
+/* Afficher voiture */
+.afficherVoiture_input{
+    background-color: transparent;
+    width: 45%;
+    margin-right: 25px;
+    margin-top: 15px;
+}

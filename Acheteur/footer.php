@@ -34,6 +34,7 @@
 <script src="../Style/ajoutVoiture.js"></script>
 <script src="../Style/verifInfoPerso.js"></script>
 <script src="../Style/verifAjoutVoiture.js"></script>
+<script src="../Style/afficherVoiture.js"></script>
 
 
 

@@ -10,7 +10,6 @@ jQuery(document).ready(function(){
     document.getElementById('ajoutVoiture4').disabled=true;
     document.getElementById('ajoutVoiture5').disabled=true;
 
-
 });
 
 

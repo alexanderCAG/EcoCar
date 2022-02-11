@@ -6,10 +6,10 @@ jQuery(document).ready(function(){
     document.getElementById('infoPerso_3').disabled=true;
     document.getElementById('infoPerso_4').disabled=true;
     document.getElementById('infoPerso_5').disabled=true;
-    
 
     $("#btn_Browse").hide();
     $("#submit_valider_infoPerso").hide();
+
 });
 
 

@@ -53,7 +53,7 @@
                             <div class="statut_info_listeVoiture">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <a href="afficherVoiture.php" class="text-decoration-none">
                                             <i class="bi bi-file-earmark-fill bg-success color_white ico_plus_liste"></i>
                                         </a>
                                     </div>
