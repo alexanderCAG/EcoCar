@@ -64,10 +64,10 @@
                     </div>
                     <div class="row text-center mt-4">
                         <div class="col">
-                            <button type="button" onclick="modif_infoPerso()" id="btn_modif_infoPerso" class="btn_vert10">Modifier</button>
-                            <button type="button" onclick="annulModif_infoPerso()" id="btn_Annulmodif_infoPerso" class="btn_vert10">Annuler Modif</button>
-                            <button type="button" onclick="reset_infoPerso()" id="btn_reset_infoPerso" class="btn_vert10">Reset</button>
-                            <button type="submit" id="submit_valider_infoPerso" class="btn_vert10">Valider</button>
+                            <button type="button" onclick="modif_infoPerso()" id="btn_modif_infoPerso" class="btn_vert10 border-0">Modifier</button>
+                            <button type="button" onclick="annulModif_infoPerso()" id="btn_Annulmodif_infoPerso" class="btn_vert10 border-0">Annuler Modif</button>
+                            <button type="button" onclick="reset_infoPerso()" id="btn_reset_infoPerso" class="btn_vert10 border-0">Reset</button>
+                            <button type="submit" id="submit_valider_infoPerso" class="btn_vert10 border-0">Valider</button>
                         </div>
                     </div>
                 </form>

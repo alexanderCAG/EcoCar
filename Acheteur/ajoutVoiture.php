@@ -82,7 +82,7 @@
                     </div>
                     <div class="row text-center mt-4">
                         <div class="col">
-                            <button type="submit" id="submit_valider_ajoutVoiture" class="btn_vert10">Valider</button>
+                            <button type="submit" id="submit_valider_ajoutVoiture" class="btn_vert10 border-0">Valider</button>
                         </div>
                     </div>
                 </form>
