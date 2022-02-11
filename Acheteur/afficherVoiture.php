@@ -20,20 +20,6 @@
                 <div class="row">
                     <div class="col-6" style="margin-left:140px; margin-top:30px;width:50%">
 
-                        <!-- <select name="marque" id="ajoutVoiture1" class="ajoutVoiture_input text-center">
-                            <option value="choixMarque">-- Choisir une Marque --</option>
-                            <option value="Marque1">Marque1</option>
-                            <option value="Marque2">Marque2</option>
-                            <option value="Marque3">Marque3</option>
-                            <option value="Marque4">Marque4</option>
-                            <option value="Marque5">Marque5</option>
-                            <option value="Marque6">Marque6</option>
-                        </select>
-                        <select name="Categorie" id="ajoutVoiture2" class="ajoutVoiture_input text-center">
-                            <option value="choixCategorie">-- Choisir une Categorie --</option>
-                            <option value="Hybride">Hybride</option>
-                            <option value="Electrique">Électrique</option>
-                        </select> -->
                         <input class="border_ligne afficherVoiture_input" id="affiche1_voiture1" type="text" name="" placeholder="Marque">
                         <input class="border_ligne afficherVoiture_input" id="affiche1_voiture2" type="text" name="" id="" placeholder="Catégorie">
                         <br><br>
