@@ -28,7 +28,7 @@ $("input.color").each(function() {
 
 // Ajout Voiture
 
-function modif_ajoutVoiture(){
+function modif_Voiture(){
     $("#submit_valider_ajoutVoiture").show();
     $("#btn_Browse2").show();
 
@@ -41,7 +41,7 @@ function modif_ajoutVoiture(){
 
 }
 
-function annulModif_ajoutVoiture(){
+function annulModif_Voiture(){
     $("#submit_valider_ajoutVoiture").hide();
     $("#btn_Browse2").hide();
     
@@ -51,10 +51,9 @@ function annulModif_ajoutVoiture(){
     document.getElementById('ajoutVoiture4').disabled=true;
     document.getElementById('ajoutVoiture5').disabled=true;
 
-
 }
 
-function reset_ajoutVoiture(){
+function reset_Voiture(){
     $(".ajoutVoiture_input").val("");
 
     document.getElementById('ErreurAjout1').innerHTML="";

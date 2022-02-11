@@ -58,7 +58,7 @@
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="" class="text-decoration-none">
+                                        <a href="modifVoiture.php" class="text-decoration-none">
                                             <i class="bi bi-pencil-square bg-success color_white ico_plus_liste"></i>
                                         </a>
                                     </div>

@@ -31,10 +31,12 @@
 <script src="../Style/sidebar.js"></script>
 <script src="../Style/image.js"></script>
 <script src="../Style/infoAdmin.js"></script>
-<script src="../Style/ajoutVoiture.js"></script>
+<script src="../Style/ajoutColor.js"></script>
 <script src="../Style/verifInfoPerso.js"></script>
 <script src="../Style/verifAjoutVoiture.js"></script>
 <script src="../Style/afficherVoiture.js"></script>
+<script src="../Style/modifVoiture.js"></script>
+<script src="../Style/verifModifVoiture.js"></script>
 
 
 
