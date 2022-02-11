@@ -57,7 +57,7 @@
                                     </span>
                                 </span>
                                 <input type="text" class="form-control" readonly value="">
-                                <span id="imageErreur_infoPersovendeur"></span>
+                                <small><span class="infoPerso_span" id="imageErreur_infoPerso"></span></small>
                                 <br>
                             </div>
                         </div>

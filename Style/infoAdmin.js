@@ -43,5 +43,6 @@ function reset_infoPerso(){
     document.getElementById('ErreurCon_3').innerHTML="";
     document.getElementById('ErreurCon_4').innerHTML="";
     document.getElementById('ErreurCon_5').innerHTML="";
+    document.getElementById('imageErreur_infoPerso').innerHTML="";
 
 }

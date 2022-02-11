@@ -32,6 +32,7 @@
 <script src="../Style/image.js"></script>
 <script src="../Style/infoAdmin.js"></script>
 <script src="../Style/ajoutVoiture.js"></script>
+<script src="../Style/verifAdmin.js"></script>
 
 
 
