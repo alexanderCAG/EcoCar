@@ -5,10 +5,11 @@ Admin:
 
 Base :
 
-- Présentation
-- Catégorie
-- Détail présentation catégorie
-- Panier (avec comparaison ?)
+- Présentation ( Marine )
+- Catégorie ( Alex )
+- Détail présentation catégorie ( Marine )
+[ - Panier (avec comparaison ?) ]
+- Mdp oublié ( Alex )
 
 
 - Faire BDD

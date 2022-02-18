@@ -9,39 +9,27 @@ $(document).ready(function(){
 jQuery(document).ready(function(){
 
     $('.bestSeller_tot').hide();
-    // $("#check_inscri").prop("checked", true);
+    $('.promo_tot2').hide();
 });
 
 // Carousel Presentation
 
-// var presentation_promotion = document.getElementById("promo_tot");
-// var presentation_bestSeller = document.getElementById("bestSeller_tot");
-
-// var btn_presentation_promotion = document.getElementById("btn_promo1");
-// var btn_presentation_bestSeller = document.getElementById("btn_bestSeller");
-
-// btn_presentation_promotion.addEventListener("click", ViewPromo);
-// btn_presentation_bestSeller.addEventListener("click", ViewbestSeller);
-
-function ViewPromo(){
-    // alert('prom');
-    // presentation_promotion.removeClass("d-none");
-    // presentation_bestSeller.addClass("d-none");
-    // $('.promo_tot').removeClass('d-none');
-    // $('.bestSeller_tot').addClass('d-none');
+function ViewPromo1(){
     $('.bestSeller_tot').hide();
-    $('.promo_tot').show();
+    $('.promo_tot2').hide();
+    $('.promo_tot1').show();
 }
 
-function ViewbestSeller(){
-    // alert('BestSeller');
-    // presentation_bestSeller.removeClass("d-none");
-    // presentation_promotion.addClass("d-none");
-    // $('.bestSeller_tot').removeClass('d-none');
-    // $('.promo_tot').addClass('d-none');
-    
-    $('.promo_tot').hide();
+function ViewbestSeller(){   
+    $('.promo_tot1').hide();
+    $('.promo_tot2').hide();
     $('.bestSeller_tot').show(); 
+}
+
+function ViewPromo2(){
+    $('.bestSeller_tot').hide();
+    $('.promo_tot1').hide();
+    $('.promo_tot2').show();
 }
 
 // function boucle(){
