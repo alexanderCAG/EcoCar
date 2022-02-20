@@ -41,6 +41,10 @@
     margin-left: 110px;
 }
 
+.btn_modal_mdpOublie:hover{
+    text-decoration: underline;
+}
+
 .inscription_co{
     text-align: right !important;
     margin-left: 220px;

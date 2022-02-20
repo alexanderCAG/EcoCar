@@ -9,7 +9,7 @@ Base :
 - Catégorie ( Alex )
 - Détail présentation catégorie ( Marine )
 [ - Panier (avec comparaison ?) ]
-- Mdp oublié ( Alex )
+/// - Mdp oublié ( Alex )
 
 
 - Faire BDD

@@ -29,7 +29,7 @@
                         <input type="checkbox" id="scales" name="scales" style="margin-left: 20px">
                         <label for="scales">Se souvenir de moi</label>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn_vert10 btn_modal_mdpOublie" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn_vert10 btn_modal_mdpOublie border-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Mot de passe oublié
                         </button>
                     </div>
