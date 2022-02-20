@@ -19,15 +19,15 @@
             Categorie
           </a>
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item color_white" href="#">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
             <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
             <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
             <li><a class="dropdown-item color_white" href="#">Tout</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
         </li>
