@@ -128,32 +128,74 @@
 
         <!-- Contenue -->
         <section style="margin-top: 50px">
+            <!-- 3 lignes max -->
             <div class="row px-5" style="margin-left: 15px">
-                <div class="col-6">
+                <div class="col-6 mb-4">
                     <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" id="img_cate_voiture1">
+                        <div class="img_cate_voiture" >
                             <p class="titre_voiture">Modèle voiture</p>
                         </div>
-                        <div class="contenu_cate_detailHover" id="contenu_cate_detailHover1">
+                        <div class="contenu_cate_detailHover">
                             <a href="index.php" class="text-decoration-none">
                                 <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
                             </a>
                         </div>
-                        <!-- <div class="contenu_cate_detail">
-                            <p class="prix_devis" style="margin-left: 20px;margin-top:7px;"><span>500,50</span>€/Mois</p>
-                            <div class="info_devis text-uppercase" style="margin-left: 20px; margin-top:-20px">
-                                <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
-                                <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 mb-4">
                     <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" id="img_cate_voiture2">
+                        <div class="img_cate_voiture">
                             <p class="titre_voiture">Modèle voiture</p>
                         </div>
-                        <div class="contenu_cate_detailHover" id="contenu_cate_detailHover2">
+                        <div class="contenu_cate_detailHover">
+                            <a href="index.php" class="text-decoration-none">
+                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="div_contenu_detail shadow">
+                        <div class="img_cate_voiture" >
+                            <p class="titre_voiture">Modèle voiture</p>
+                        </div>
+                        <div class="contenu_cate_detailHover">
+                            <a href="index.php" class="text-decoration-none">
+                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="div_contenu_detail shadow">
+                        <div class="img_cate_voiture">
+                            <p class="titre_voiture">Modèle voiture</p>
+                        </div>
+                        <div class="contenu_cate_detailHover">
+                            <a href="index.php" class="text-decoration-none">
+                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="div_contenu_detail shadow">
+                        <div class="img_cate_voiture" >
+                            <p class="titre_voiture">Modèle voiture</p>
+                        </div>
+                        <div class="contenu_cate_detailHover">
+                            <a href="index.php" class="text-decoration-none">
+                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="div_contenu_detail shadow">
+                        <div class="img_cate_voiture">
+                            <p class="titre_voiture">Modèle voiture</p>
+                        </div>
+                        <div class="contenu_cate_detailHover">
                             <a href="index.php" class="text-decoration-none">
                                 <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
                             </a>
@@ -258,7 +300,6 @@
 <script src="../Style/affiche_marque.js"></script>
 <script src="../Style/carousel.js"></script>
 <script src="../Style/categorie.js"></script>
-<script src="../Style/visual_cate_voiture.js"></script>
 
 
 
