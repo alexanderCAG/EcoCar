@@ -79,7 +79,7 @@
                 <div class="col-6">
                     <div class="text_chiffre_partie_droite">
                         <p class="text_chiffre">18</p>
-                        <p class="text_chiffre">PÉRSENT DANS 18 VILLES</p>
+                        <p class="text_chiffre">PRÉSENT DANS 18 VILLES</p>
                     </div>
                 </div>
             </div>
