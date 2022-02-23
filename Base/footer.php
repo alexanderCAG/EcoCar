@@ -28,7 +28,7 @@
             <div class="col-1 droite_footer"></div>
 
             <div class="col-4 border-0 pl-5" id="avis_redirection">
-                <h2 class="titre_footer text-center">Commentaire</h2>
+                <h2 class="titre_footer text-center">Donnez votre avis !</h2>
                 <small><p class="text-center text-light"><i>Laissez-nous un commentaire</i> </p></small>
                 <form class="pl-5">
                     <div class="row ll-5" >

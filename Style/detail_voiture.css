@@ -1,0 +1,75 @@
+/*Partie gauche*/
+.img_detail_voiture{
+    margin-top: -60px;
+    margin-left: -20px;
+    object-fit: cover;
+    width: 800px;
+    height: 400px;
+}
+
+.info_nom{
+    text-align: center;
+    font-size: 370%;
+    margin-top: 80px;
+}
+
+.btn_detail{
+    width: 200px;
+    margin-left: 300px;
+    
+}
+
+/*separation*/
+.droite_detail{
+    border-left:solid 2px black;
+    margin-top: 40px;
+}
+
+/*Partie droite*/
+.info_voiture{
+    margin-right: 0px;
+}
+
+.couleur_or{
+    color: gold;
+}
+
+.info_detail{
+    font-size: 130%;
+    margin-top: 7px;
+    margin-left: -300px;
+}
+
+#icon_detail{
+    margin-left: -50px;
+    margin-bottom: 20px;
+    color: #33985d;
+}
+
+#icon_garantie{
+    margin-left: -50px;
+    color: black;
+}
+
+.info_titre {
+    margin-left: -90px;
+    font-size: 160%;
+    margin-top: 30px;
+}
+
+.detail_garantie{
+    width: 700px;
+}
+
+.info_garantie{
+    margin-left: -100px;
+}
+
+.info_garantie_titre{
+    margin-top: 12px;
+}
+
+.info_garantie_sous_titre{
+    margin-top: -12px;
+}
+
