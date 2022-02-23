@@ -4,7 +4,7 @@
 <?php require('navbar.php'); ?>
 
 <section>
-    <div class="row">
+    <div class="row" style="height:91vh">
         <div class="col-6">
             <div class="info_nom"><p><b>PEUGEOT E-208</b></p></div>
             <img src="../Image/peugeot_e-208_bleu.png" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Autonomie : 362 km</p>
+                            <p>Autonomie : <span>362 km</span></p>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Puissance : 136 ch</p>
+                            <p>Puissance : <span>136</span> ch</p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Consommation : 15,4 kWh/100km</p>
+                            <p>Consommation : <span>15,4</span> kWh/100km</p>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>5 places</p>
+                            <p><span>5</span> places</p>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         <p class="info_garantie_titre"><b>Remboursement du véhicule si vous n'êtes pas entièrement satisfait</b></p>
                         <p class="info_garantie_sous_titre">Dans un délai de 5 jours ouvrables et 1000 km parcourus.</p>                        </div>
                     </div>
-                    <br>
+                    
                 </div>
             </div>
         </div>

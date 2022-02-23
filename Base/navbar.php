@@ -12,7 +12,7 @@
           <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
+          <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
         </li>
         <li class="nav-item dropdown">
           <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
