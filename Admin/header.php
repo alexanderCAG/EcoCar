@@ -13,14 +13,11 @@
     </title>
     <!-- CSS -->
     <link rel="stylesheet" href="../Style/general.css">
-    <link rel="stylesheet" href="../Style/navbar.css">
-    <link rel="stylesheet" href="../Style/accueil.css">
-    <link rel="stylesheet" href="../Style/footer.css">
-    <link rel="stylesheet" href="../Style/connexion.css">
-    <link rel="stylesheet" href="../Style/inscription.css">
-    <link rel="stylesheet" href="../Style/categorie.css">
-    <link rel="stylesheet" href="../Style/presentation.css">
-    <link rel="stylesheet" href="../Style/detail_voiture.css">
+    <link rel="stylesheet" href="../Style/header_admin.css">
+    <link rel="stylesheet" href="../Style/sidebar.css">
+    <link rel="stylesheet" href="../Style/accueil_admin.css">
+    <link rel="stylesheet" href="../Style/footer_admin.css">
+    <link rel="stylesheet" href="../Style/total_admin.css">
     <link rel="shortcut icon" href="../Image/logo2.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,11 +34,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-
-
-        
-    <link rel="stylesheet" href="https://static.aliasdmc.fr/css/mini_codepen.css">
-
 </head>
 
 <body class="body">
@@ -50,5 +42,34 @@
     include("../Bdd/cnx.php");
     session_start();
 ?>
+
+<section class="header_tot bg_gray2">
+    <a href="index.php"><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
+    <!-- Pour devis -->
+    <a href="devis.php">
+        <div class="bg_white div_notif_admin">
+            <i class="bi bi-bell-fill icone_notif"></i>
+            <span>5</span>
+            <div class="notif_admin"></div>
+        </div>
+    </a>
+    <!-- Pour avis -->
+    <a href="avis.php">
+        <div class="bg_white div_notif_admin">
+            <i class="bi bi-envelope-fill icone_notif"></i>
+            <span>5</span>
+            <div class="notif_admin"></div>
+        </div>
+    </a>
+    <small><input type="text" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
+    
+    <div class="identification_con_admin">
+        <a href="compte_admin.php" class="text-decoration-none color_black redirection_con_admin">
+            <img class="img_user_admin" src="../Image/voiture_test.jpg" alt="user">
+            <span class="nom_admin">Nom Prenom</span>
+        </a>
+    </div>
+    
+</section>
 
   

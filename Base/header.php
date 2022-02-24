@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="../Style/footer.css">
     <link rel="stylesheet" href="../Style/connexion.css">
     <link rel="stylesheet" href="../Style/inscription.css">
-    <link rel="shortcut icon" href="../Image/">
+    <link rel="stylesheet" href="../Style/categorie.css">
+    <link rel="stylesheet" href="../Style/presentation.css">
+    <link rel="stylesheet" href="../Style/detail_voiture.css">
+    <link rel="shortcut icon" href="../Image/logo2.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Boostrap icon -->
@@ -33,6 +36,11 @@
     <!-- Icon Fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+
+        
+    <link rel="stylesheet" href="https://static.aliasdmc.fr/css/mini_codepen.css">
 
 </head>
 

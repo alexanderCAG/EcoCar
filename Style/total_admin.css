@@ -207,3 +207,107 @@
     font-weight: bold!important;
     float: left;
 }
+
+/* Ajout Voiture */
+
+.ajoutVoiture_tot{
+    width: 100%;
+    height: 90vh;
+    content: "";
+}
+
+.ajoutVoiture_input{
+    background-color: transparent;
+    width: 45%;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.ajoutVoiture_span{
+    color: red;
+}
+
+.Erreur_span2{
+    margin-left: 260px;
+}
+
+        /* Color */
+        
+        .label_color{
+            font-family: sans-serif;
+            width: 300px;
+            display: block;
+            position: relative;
+        }
+
+        .color_ajoutVoiture {
+            padding: 5px 15px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .color_ajoutVoiture{
+            padding: 0;
+            border: 0;
+            height: 40px;
+            padding-left: 10px;
+        }
+
+        .color_ajoutVoiture:after {
+            content: attr(data-value);
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            color: #fffff5;
+            display: block;
+            width: 100%;
+        }
+
+        .color-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #666;
+        }
+
+
+.ajoutVoiture_image{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 2px #33985d;
+    border-radius: 150px;
+    float: left;
+}
+
+/* .img_div_change{
+    margin-top: 10px;
+} */
+
+/* .btn_choix_img_admin{
+    position: relative;
+    overflow: hidden;
+    color: black!important;
+    font-size: 15px!important;
+    font-weight: bold!important;
+    float: left;
+} */
+
+
+
+/* Afficher voiture */
+/* .afficherVoiture_input{
+    background-color: transparent;
+    width: 45%;
+    margin-right: 25px;
+    margin-top: 15px;
+} */
+
+/* Modifier voiture */
+.modifVoiture_input{
+    background-color: transparent;
+    width: 45%;
+    margin-right: 25px;
+    margin-top: 15px;
+}

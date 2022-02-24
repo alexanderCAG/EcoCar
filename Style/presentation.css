@@ -1,0 +1,237 @@
+/* image d'accueil */
+.img_prez{
+    background-image: url("../Image/voiture_presentation2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    content: "";
+    
+}
+
+.text_prez_tot{
+    font-size: 60px;
+    width: 550px;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+
+.text_prez_detail{
+    position: relative;
+    top: 30px;
+    left: 100px;
+    font-size: 20px;
+   
+}
+
+.info_prez{
+    position: relative;
+    top: -320px;
+    right: 90px;
+    float: right;
+    letter-spacing: 3px;
+}
+
+.prez_btn_avis{
+    position: relative;
+    top: 60px;
+    left: 100px;
+    border: solid 2px white;
+    background-color: transparent;
+    font-size: 25px;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+}
+
+.prez_btn_avis:hover{
+    color: #33985d;
+    border: solid 2px #33985d;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* 1ère partie de text */
+.titre_partie1{
+    color: black;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 360%;
+}
+
+.soustitre_partie1{
+    margin-left: 100px; 
+    font-size: 100%;
+}
+
+.paragraphe_partie1{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 130%;
+    text-align: justify;
+}
+
+.droite{
+    border-left:solid 5px #33985d;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 20px;
+    color: #33985d;
+    text-align: justify;
+    font-size: 130%;
+}
+
+.btn_prez{
+    width: 200px;
+    margin-left: -70px;
+    margin-top: 45px;
+}
+
+/* Partie chiffres-clés */
+.chiffres_cles{
+    background-color: #c0dfcd;
+    width: 100%;
+    height: 600px;
+}
+
+.titre_chiffre{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 400%;
+    padding-top: 30px;
+}
+
+.sous_titre_chiffre{
+    text-align: center;
+    font-size: 130%;
+}
+
+.row_chiffre{
+    padding-top: 30px;
+}
+
+.text_chiffre{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 150%;
+}
+
+.text_chiffre_partie_gauche{
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
+.text_chiffre_partie_droite{
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
+.img1_chiffre{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.img2_chiffre{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.img3_chiffre{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.img4_chiffre{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+/* 2eme partie de text */
+/* Sous-partie 1 */
+.titre1_partie2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 300%;
+    padding-top: 50px;
+    color: #33985d;
+}
+
+.text1_partie2{
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 135%;
+}
+
+.img1_partie2{
+    box-shadow: 25px -25px #c0dfcd;
+    width: 550px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 70px;
+    object-fit: cover;
+}
+
+/* Sous-partie 2 */
+.titre2_partie2{
+    text-transform: uppercase;
+    margin-left: 90px;
+    font-size: 300%;
+    padding-top: 50px;
+    color: #33985d;
+}
+
+.text2_partie2{
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 150px;
+    font-size: 135%;
+}
+
+.img2_partie2{
+    box-shadow: -25px -25px 0 0 #c0dfcd;
+    width: 550px;
+    height: 350px;
+    margin-left: 125px;
+    margin-top: 70px;
+    object-fit: cover;
+}
+
+/* Sous-partie 3 */
+.titre3_partie2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 300%;
+    padding-top: 50px;
+    color: #33985d;
+}
+
+.text3_partie2{
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 135%;
+}
+
+.img3_partie2{
+    box-shadow: 25px -25px #c0dfcd;
+    width: 550px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 70px;
+    object-fit: cover;
+}

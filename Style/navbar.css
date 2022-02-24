@@ -29,3 +29,7 @@
 #icone_con{
     margin-left: 50px;
 }
+
+#icone_con:hover{
+    color: #33985d;
+}

@@ -41,6 +41,8 @@
 
 .bg_gray3{background-color: #E5E4E4!important;}
 
+.bg_gray4{background-color: #333333!important;}
+
 .bg_red1{background: #BC1823!important;}
 
 .bg_red2{background: #CC5E65!important;}
@@ -50,6 +52,8 @@
 .color_white{color: white!important;}
 
 .color_black{color: black!important;}
+
+.color_gray4{color: #333333!important;}
 
 /*Border*/
 .border10{

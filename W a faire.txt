@@ -1,16 +1,20 @@
 Admin:
 
-- Ajouter vehicule
 - Statistique
-///- Info Perso
 - refaire Avis
 
 Base :
 
-- Présentation
-- Catégorie
-- Détail présentation catégorie
+- Présentation ( Marine )
+- Catégorie ( Alex )
+- Détail présentation catégorie ( Marine )
+[ - Panier (avec comparaison ?) ]
+/// - Mdp oublié ( Alex )
 
 
 - Faire BDD
 - Relation de page avec connexion
+
+
+Marque / Catégorie / Modèle / Référence / Couleur / Image
+Autonomie / Puissance / Consommation / places

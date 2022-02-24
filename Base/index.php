@@ -17,7 +17,7 @@
     <div class="carousel_tot" style="margin-top:-600px">
 
         <div class="container py-5" >
-            <div class="row align-items-center promo_tot"  id="promo_tot">
+            <div class="row align-items-center promo_tot1"  id="promo_tot">
                 <div class="col-md-8">
                     <img src="https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0 img_carousel_pres">
                 </div>
@@ -57,27 +57,47 @@
                     </div>
                 </div>
             </div>
+            <div class="row align-items-center promo_tot2"  id="promo_tot">
+                <div class="col-md-8">
+                    <img src="../Image/voiture_test.jpg" class="img-fluid p-0 img_carousel_pres">
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-light w-100 p-4" id="" style="border: 15px solid #EFEFEF;margin-left:-80px">
+                
+                        <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
+
+                        <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
+                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
+                        <ul class="list-unstyled fw-light">
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
         </div>
 
     </div>
 
     <!-- Sous titre carousel -->
     <div class="row carousel_bas text-center">
-        <a href="" id="btn_promo1" onclick="ViewPromo()" class="col-4 bg_green3 text-decoration-none">
+        <button href="" id="btn_promo1" onclick="ViewPromo1()" class="col-4 bg_green3 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" id="btn_bestSeller" onclick="ViewbestSeller()" class="col-4 bg_green2 text-decoration-none">
+        </button>
+        <button href="" id="btn_bestSeller" onclick="ViewbestSeller()" class="col-4 bg_green2 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Best Seller</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" class="col-4 bg_green1 text-decoration-none">
+        </button>
+        <button onclick="ViewPromo2()" class="col-4 bg_green1 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
+        </button>
     </div>
 
 </section>
@@ -90,7 +110,7 @@
                 <h1 class="titre_presentation text-uppercase">Presentation</h1>
                 <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
                 <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
-                <a href="" class="btn_vert30 btn_presention">Lire plus</a>
+                <a href="presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
             <div class="col-6">
                 <img src="../Image/voiture_test.jpg" alt="img_bg_carousel" class="img_presentation">
