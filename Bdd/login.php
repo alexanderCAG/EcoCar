@@ -8,7 +8,7 @@
         $usermail=$_POST['username'];
         $password=$_POST['password'];
 
-        $acheteurCon = mysqli_query($con, "insert * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=0 ");
+        $acheteurCon = mysqli_query($con, "select * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=0 ");
 		$adminCon = mysqli_query($con, "select * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=1 ");
 
         // INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
