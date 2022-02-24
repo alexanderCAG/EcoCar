@@ -31,21 +31,13 @@
         $usernom=$_POST['nom'];
         $userprenom=$_POST['prenom'];
         $userphone=$_POST['telephone'];
-        $userdate=$_POST['date_permis'];
         $useremail=$_POST['email'];
         $usermdp=$_POST['mdp'];
-        // $useradmin='0';
 
-        $userInscription = mysqli_query($con,"INSERT INTO inscription (nom, prenom, email, phone, datePermis, mdp, administrateur) 
-                            VALUES ('$usernom', '$userprenom', '$userphone', '$userdate', '$useremail', '$usermdp', '0')");
+        $userInscription = mysqli_query($con,"INSERT INTO inscription (nom, prenom, email, phone, mdp, administrateur) 
+                            VALUES ('$usernom', '$userprenom', '$useremail', '$userphone', '$usermdp', '0')");
 
-        // redirection vers la page connexion
-        // if($con->query($userInscription)===true){
-            echo "<script language='javascript' type='text/javascript'> location.href='../Base/connexion.php'</script>";
-        // }
-        // else{
-        //     echo "<script language='javascript' type='text/javascript'> location.href='../Base/inscription.php'</script>";
-        // }
+        echo "<script language='javascript' type='text/javascript'> location.href='../Base/connexion.php'</script>";
     }
 
 
