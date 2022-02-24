@@ -8,8 +8,8 @@
         $usermail=$_POST['username'];
         $password=$_POST['password'];
 
-        $acheteurCon = mysqli_query($con, "insert * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=0 ");
-		$adminCon = mysqli_query($con, "select * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=1 ");
+        $acheteurCon = mysqli_query($con, "select * from inscription where mdp='$password' and email='$usermail' and administrateur=0 ");
+		$adminCon = mysqli_query($con, "select * from inscription where mdp='$password' and email='$usermail' and administrateur=1 ");
 
         // verifie the different connection
         if (mysqli_num_rows($acheteurCon) != 0){
