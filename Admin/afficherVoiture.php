@@ -15,7 +15,7 @@
         ?>
         
         <!-- Partie Centrale contenu -->
-        <div class="card p-2 mt-3 shadow" style="width:96%;margin-left:2%;border-radius:10px;margin-bottom:493px">
+        <div class="card p-2 mt-3 shadow" style="width:96%;margin-left:2%;border-radius:10px;margin-bottom:492px">
             <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="h-100 bg_green1 pt-3" style="height:60px!important;">
