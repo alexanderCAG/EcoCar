@@ -5,16 +5,9 @@ Admin:
 
 Base :
 
-- Présentation ( Marine )
-- Catégorie ( Alex )
-- Détail présentation catégorie ( Marine )
 [ - Panier (avec comparaison ?) ]
-/// - Mdp oublié ( Alex )
 
 
-- Faire BDD
-- Relation de page avec connexion
+PARTIE PHP :
 
-
-Marque / Catégorie / Modèle / Référence / Couleur / Image
-Autonomie / Puissance / Consommation / places
+- Deconnexion
