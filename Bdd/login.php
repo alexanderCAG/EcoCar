@@ -12,7 +12,7 @@
 		$adminCon = mysqli_query($con, "select * from inscription where mdp='$password' and (email='$usermail' or nom='$usermail') and administrateur=1 ");
 
         // INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
-		// 		VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')  "
+		// 		VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')"
 
         // verifie the different connection
         if (mysqli_num_rows($acheteurCon) != 0){
