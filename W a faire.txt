@@ -14,3 +14,7 @@ Base :
 
 - Faire BDD
 - Relation de page avec connexion
+
+
+Marque / Catégorie / Modèle / Référence / Couleur / Image
+Autonomie / Puissance / Consommation / places

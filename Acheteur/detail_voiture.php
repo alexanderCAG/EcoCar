@@ -9,7 +9,7 @@
             <div class="info_nom"><p><b>PEUGEOT E-208</b></p></div>
             <img src="../Image/peugeot_e-208_bleu.png" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
             <br><br><br>
-            <a href="connexion.php" class="btn_vert30 btn_detail">Louer celle-ci</a>
+            <a href="" class="btn_vert30 btn_detail">Louer celle-ci</a>
         </div>
 
         <div class="col-1 droite_detail"></div>

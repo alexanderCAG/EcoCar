@@ -2,43 +2,46 @@
 <?php require('header.php'); ?>
 
 <!-- Navbar -->
-<nav class="bg_black navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <img src="../Image/logo.png" alt="logo" class="img_logo">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="nav_ul" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
-            </li>
-            <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorie
-            </a>
-            <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
-                <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
-                <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
-                <li><a class="dropdown-item color_white" href="#">Tout</a></li>
-            </ul>
-            </li>
-            <!-- <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
-            </li> -->
-            <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
-            </li>
-            <li class="nav-item" >
-                <a href="connexion.php"><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
-            </li>
-        </ul>
-        </div>
+<nav class="bg_black navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container-fluid">
+    <img src="../Image/logo.png" alt="logo" class="img_logo">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav_ul" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item" style="margin-top: 10px;">
+          <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
+        </li>
+        <li class="nav-item" style="margin-top: 10px;">
+          <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
+        </li>
+        <li class="nav-item dropdown" style="margin-top: 10px;">
+          <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
+            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="#">Tout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" style="margin-top: 10px;">
+          <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
+        </li>
+        <li class="nav-item dropdown" style="margin-right: 25px;">
+          <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="color_white bi bi-person-fill h2" id="icone_con"></i>
+          </a>
+          <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item color_white" href="#">Mon compte</a></li>
+            <li><a class="dropdown-item color_white" href="../Bdd/logout.php">Deconnexion</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <div class="haut_categorie bg_green3">
@@ -267,7 +270,7 @@
                                 </div>
                             </div>
                             <textarea class="form-control mt-3" placeholder="Commentaire..." id="exampleFormControlTextarea1" rows="5"></textarea>
-                            <a href="connexion.php" class="btn_vert10 float_right mt-3 border-0"> Envoyer</a>
+                            <button class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
                         </form>
                     </div>
 

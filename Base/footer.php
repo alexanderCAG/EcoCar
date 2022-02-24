@@ -8,7 +8,7 @@
                     <div class="col-5">
                         <ul class="text-light text-uppercase list-unstyled">
                             <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
-                            <li class="my-2"><small><a class="color_white nav_footer" href="">Présentation</a></small></li>
+                            <li class="my-2"><small><a class="color_white nav_footer" href="presentation.php">Présentation</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="">Promotion</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture hybride</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture électrique</a></small></li>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <textarea class="form-control mt-3" placeholder="Commentaire..." id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <button class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
+                    <a href="connexion.php" class="btn_vert10 float_right mt-3 border-0"> Envoyer</a>
                 </form>
             </div>
 
