@@ -15,7 +15,7 @@
         ?>
         
         <!-- Partie Centrale contenu -->
-        <div class="container" style="margin-bottom: 415px">
+        <!-- <div class="container" style="margin-bottom: 415px">
             <div class="ajoutVoiture_tot" style="margin-top: 70px;">
                 <form action="">
                     <div class="row">
@@ -87,7 +87,96 @@
                     </div>
                 </form>
             </div>
-        </div>       
+        </div> -->
+        
+        <div class="card p-2 mt-3 shadow" style="width:96%;margin-left:2%;border-radius:10px;margin-bottom:600px">
+            <h5 class="titre t_bold" >&nbsp; Quelle catégorie de véhicule voulez-vous ajouter ? <br></h5>
+            <div class="w-75 mt-3"> &nbsp; &nbsp; 
+                <div class="btn bg_green1 py-3 text-light text-uppercase">Hybride</div>
+                <div class="btn btn-outline-success py-3 texte_green1 text-uppercase">Électrique</div>
+            </div>
+
+            <div class="row container mt-3 my-5">
+                <div class="col-md-8"> 
+                <form class="shadow m-2 p-4">
+                    <div class="form-row">
+                        <div class="row ">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Catégorie" value="catégorie1">
+                            </div>
+                            <div class="col">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choisir une marque</option>
+                                    <option>Marque 1</option>
+                                    <option>Marque 1</option>
+                                    <option>Marque 1</option>
+                                    <option>Marque 1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row  mt-4">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Modèle">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Référence">
+                            </div>
+                        </div>
+                        <div class="row  mt-4">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Autonomie">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Puissance">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Consommation">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Nombre de place">
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="row form-row mt-4">
+                        <div class="form-group col-md-4 col-4" style="margin-top: 52px">
+                            <select id="inputState" class="form-control">
+                                <option selected>Couleur</option>
+                                <option>Rouge</option>
+                                <option>Bleu</option>
+                                <option>Orange</option>
+                                <option>Blanc</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-8 col-8">
+                            <div class="img_div_change">
+                                <span class="file_inscription_img">
+                                    <span onclick="choix_image_vendeur()" id="btn_Browse2" class="btn btn-default btn_choix_img_admin">
+                                        Browse 
+                                        <input type="file" name="ajoutVoiture_img" id="file_interrieur_imgAdminAjout" accept="image/png, image/jpg, image/jpeg">
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control" readonly value="">
+                                <small><span class="infoPerso_span" id="imageErreur_ajoutVoiture"></span></small>
+                                <br>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                </form>
+                </div>
+                
+                <div class="col-md-4">
+                    <img id="infoPerso_image" src="../Image/voiture_test.jpg" class="img-responsive rounded mt-2" style="width:400px; height:266px; object-fit: cover;">
+                    <a class="btn w-50 bg_green1 text-uppercase mt-5 text-light float-end" style="float:right!important"> Enregister</a>
+                </div>
+            </div> 
+            
+
+        </div>
         
         
 

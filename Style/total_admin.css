@@ -281,18 +281,20 @@
     float: left;
 }
 
-.img_div_change{
+/* .img_div_change{
     margin-top: 10px;
-}
+} */
 
-.btn_choix_img_admin{
+/* .btn_choix_img_admin{
     position: relative;
     overflow: hidden;
     color: black!important;
     font-size: 15px!important;
     font-weight: bold!important;
     float: left;
-}
+} */
+
+
 
 /* Afficher voiture */
 /* .afficherVoiture_input{
