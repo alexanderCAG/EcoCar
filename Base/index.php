@@ -110,7 +110,7 @@
                 <h1 class="titre_presentation text-uppercase">Presentation</h1>
                 <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
                 <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
-                <a href="../Base/presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
+                <a href="presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
             <div class="col-6">
                 <img src="../Image/voiture_test.jpg" alt="img_bg_carousel" class="img_presentation">

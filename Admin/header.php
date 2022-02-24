@@ -38,6 +38,11 @@
 
 <body class="body">
 
+<?php
+    include("../Bdd/cnx.php");
+    session_start();
+?>
+
 <section class="header_tot bg_gray2">
     <a href="index.php"><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
     <!-- Pour devis -->
