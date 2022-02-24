@@ -1,14 +1,14 @@
 
 jQuery(document).ready(function(){
 
-    $("#btn_Browse3").hide();
-    $("#submit_valider_modifVoiture").hide();
+    // $("#btn_Browse3").hide();
+    // $("#submit_valider_modifVoiture").hide();
 
-    document.getElementById('modifVoiture1').disabled=true;
-    document.getElementById('modifVoiture2').disabled=true;
-    document.getElementById('modifVoiture3').disabled=true;
-    document.getElementById('modifVoiture4').disabled=true;
-    document.getElementById('modifVoiture5').disabled=true;
+    // document.getElementById('modifVoiture1').disabled=true;
+    // document.getElementById('modifVoiture2').disabled=true;
+    // document.getElementById('modifVoiture3').disabled=true;
+    // document.getElementById('modifVoiture4').disabled=true;
+    // document.getElementById('modifVoiture5').disabled=true;
 
 });
 
