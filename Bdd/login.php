@@ -11,9 +11,6 @@
         $acheteurCon = mysqli_query($con, "select * from inscription where mdp='$password' and email='$usermail' and administrateur=0 ");
 		$adminCon = mysqli_query($con, "select * from inscription where mdp='$password' and email='$usermail' and administrateur=1 ");
 
-        // INSERT INTO buyer (lastname,firstname,phone,email,passworde,adress1,adress2,city,zip_code,country) 
-		// 		VALUES ('$nom_acheteur','$prenom_acheteur','$telephone_acheteur','$mail_acheteur','$mdp_acheteur','$adresse1_acheteur','$adresse2_acheteur','$ville_acheteur','$codepostal_acheteur','$pays_acheteur')"
-
         // verifie the different connection
         if (mysqli_num_rows($acheteurCon) != 0){
             $_SESSION['emailUser']=$usermail;
@@ -26,5 +23,23 @@
             echo "<script language='javascript' type='text/javascript'> location.href='../Base/connexion.php' </script>";
         }
     }
+
+    if (isset($_POST['inscription'])){
+
+        include("cnx.php");
+        session_start();
+        $usernom=$_POST['nom'];
+        $userprenom=$_POST['prenom'];
+        $userphone=$_POST['telephone'];
+        $useremail=$_POST['email'];
+        $usermdp=$_POST['mdp'];
+
+        $userInscription = mysqli_query($con,"INSERT INTO inscription (nom, prenom, email, phone, mdp, administrateur) 
+                            VALUES ('$usernom', '$userprenom', '$useremail', '$userphone', '$usermdp', '0')");
+
+        echo "<script language='javascript' type='text/javascript'> location.href='../Base/connexion.php'</script>";
+    }
+
+
 
 ?>
