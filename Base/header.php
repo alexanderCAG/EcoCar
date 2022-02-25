@@ -46,4 +46,9 @@
 
 <body class="body">
 
+<?php
+    include("../Bdd/cnx.php");
+    session_start();
+?>
+
   
