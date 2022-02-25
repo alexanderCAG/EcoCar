@@ -21,6 +21,10 @@ function verifAjoutVoiture(event){
     let ajoutVoiture2 = document.getElementById('modifVoiture2');
     let ajoutVoiture3 = document.getElementById('modifVoiture3');
     let ajoutVoiture4 = document.getElementById('modifVoiture4');
+    let ajoutVoiture5 = document.getElementById('modifVoiture5');
+    let ajoutVoiture6 = document.getElementById('modifVoiture6');
+    let ajoutVoiture7 = document.getElementById('modifVoiture7');
+    let ajoutVoiture8 = document.getElementById('modifVoiture8');
     let color_ajoutVoiture = document.getElementById('color_modifVoiture');
     let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif');
 
@@ -30,6 +34,10 @@ function verifAjoutVoiture(event){
     let ErreurAjout_3 = document.getElementById('Erreurmodif_3');
     let ErreurAjout_4 = document.getElementById('Erreurmodif_4');
     let ErreurAjout_5 = document.getElementById('Erreurmodif_5');
+    let ErreurAjout_6 = document.getElementById('Erreurmodif_6');
+    let ErreurAjout_7 = document.getElementById('Erreurmodif_7');
+    let ErreurAjout_8 = document.getElementById('Erreurmodif_8');
+    let ErreurAjout_9 = document.getElementById('Erreurmodif_9');
     let imageErreur_ajoutVoiture = document.getElementById('imageErreur_modifVoiture');
 
     // reset span
@@ -38,6 +46,10 @@ function verifAjoutVoiture(event){
     ErreurAjout_3.innerHTML="";
     ErreurAjout_4.innerHTML="";
     ErreurAjout_5.innerHTML="";
+    ErreurAjout_6.innerHTML="";
+    ErreurAjout_7.innerHTML="";
+    ErreurAjout_8.innerHTML="";
+    ErreurAjout_9.innerHTML="";
     imageErreur_ajoutVoiture.innerHTML="";
 
 
@@ -99,6 +111,62 @@ function verifAjoutVoiture(event){
         verifAjoutVoiture_Admin=false;
     }else{
         imageErreur_ajoutVoiture.innerHTML = "";
+    }
+
+    // Autonomie
+    if(ajoutVoiture5.value.trim()==""){
+        ErreurAjout_6.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture5.value)==false){
+        ErreurAjout_6.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture5.value.length >= 10){
+        ErreurAjout_6.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_6.innerHTML = "";
+    }
+
+    // Puissance
+    if(ajoutVoiture6.value.trim()==""){
+        ErreurAjout_7.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture6.value)==false){
+        ErreurAjout_7.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture6.value.length >= 10){
+        ErreurAjout_7.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_7.innerHTML = "";
+    }
+
+    // Consommation
+    if(ajoutVoiture7.value.trim()==""){
+        ErreurAjout_8.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture7.value)==false){
+        ErreurAjout_8.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture7.value.length >= 10){
+        ErreurAjout_8.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_8.innerHTML = "";
+    }
+
+    // Nb place
+    if(ajoutVoiture8.value.trim()==""){
+        ErreurAjout_9.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture8.value)==false){
+        ErreurAjout_9.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture8.value.length >= 10){
+        ErreurAjout_9.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_9.innerHTML = "";
     }
 
 
