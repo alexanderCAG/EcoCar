@@ -1,16 +1,17 @@
-<?php require('header.php'); ?>
-<?php require('navbar.php'); ?>
+<?php 
+    require('header.php');
+    require('navbar.php');
+
+    $demandeImgMarque = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4");
+    $demandeImgMarque2 = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4,4");
+?>
 
 <section class="carousel_accueil">
 
     <!-- Fond Carousel -->
     <div class="row row_carousel">
-        <div class="col-4">
-
-        </div>
-        <div class="col-8 bg_green3">
-
-        </div>
+        <div class="col-4"></div>
+        <div class="col-8 bg_green3"></div>
     </div>
 
     <!-- Carousel -->
@@ -29,10 +30,10 @@
                         <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
                         <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
                         <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
                         </ul>
                     </div>
                 </div>
@@ -49,10 +50,10 @@
                         <h1 class="text-uppercase titre text-dark">Best seller 1</h1>
                         <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
                         <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
                         </ul>
                     </div>
                 </div>
@@ -69,10 +70,10 @@
                         <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
                         <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
                         <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
+                            <li><i class="bi bi-dot"></i><i>4 voitures, 3 moteurs</i></li>
                         </ul>
                     </div>
                 </div>
@@ -129,34 +130,34 @@
 
     <div class="bg_green1">
         <div class="row row_marque">
+            <?php
+                for($i=0; $i<4; $i++){
+                    if($row = mysqli_fetch_assoc($demandeImgMarque)){
+                        $logoMarque=$row['logo'];  
+            ?>
             <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                <img src="<?php echo $logoMarque ?>" alt="img_marque" class="img_marque">
             </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
+            <?php
+                    }
+                }
+            ?>
         </div>
         <div class="collapse" id="collapseExample">
             <div class="card card-body bg_green1 p-0">
                 <div class="row">
+                    <?php
+                        for($i=0; $i<4; $i++){
+                            if($row2 = mysqli_fetch_assoc($demandeImgMarque2)){
+                                $logoMarque2=$row2['logo'];  
+                    ?>
                     <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                        <img src="<?php echo $logoMarque2 ?>" alt="img_marque" class="img_marque">
                     </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
