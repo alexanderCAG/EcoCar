@@ -1,13 +1,29 @@
-<!-- Header -->
-<?php require('header.php'); ?>
-<!-- Navbar -->
-<?php require('navbar.php'); ?>
+<?php 
+    require('header.php');
+    require('navbar.php');
+
+    $idVoiture=$_GET['idVoiture'];
+
+    $infoVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$idVoiture'");
+    $infoModel = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$idVoiture'");
+
+ ?>
 
 <section>
     <div class="row" style="height:91vh">
+    <?php
+        if($infoVoitureTot = mysqli_fetch_assoc($infoVoiture)){
+            $categorie= $infoVoitureTot['categorie'];
+            $image= $infoVoitureTot['image'];
+            if($infoModelTot = mysqli_fetch_assoc($infoModel)){
+                $autonomie= $infoModelTot['autonomie'];   
+                $puissance= $infoModelTot['puissance'];   
+                $consommation= $infoModelTot['consommation'];   
+                $place= $infoModelTot['place'];
+    ?>
         <div class="col-6">
             <div class="info_nom"><p><b>PEUGEOT E-208</b></p></div>
-            <img src="../Image/peugeot_e-208_bleu.png" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
+            <img src="<?php echo $image ?>" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
             <br><br><br>
             <a href="connexion.php" class="btn_vert30 btn_detail">Louer celle-ci</a>
         </div>
@@ -25,7 +41,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Hybride</p>
+                            <p><?php echo $categorie ?></p>
                         </div>
                     </div>
                 </div>
@@ -36,7 +52,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Autonomie : <span>362 km</span></p>
+                            <p>Autonomie : <span><?php echo $autonomie ?> km</span></p>
                         </div>
                     </div>
                 </div>
@@ -47,7 +63,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Puissance : <span>136</span> ch</p>
+                            <p>Puissance : <span><?php echo $puissance ?></span> ch</p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +74,7 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p>Consommation : <span>15,4</span> kWh/100km</p>
+                            <p>Consommation : <span><?php echo $consommation ?></span> kWh/100km</p>
                         </div>
                     </div>
                 </div>
@@ -69,10 +85,14 @@
                     </div>
                     <div class="col-6">
                         <div class="info_detail">
-                            <p><span>5</span> places</p>
+                            <p><span><?php echo $place ?></span> places</p>
                         </div>
                     </div>
                 </div>
+            <?php
+                    }
+                }
+            ?>
             </div>
 
             <!--Partie Garantie-->
