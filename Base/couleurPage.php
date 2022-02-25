@@ -11,6 +11,12 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
+    // affichage Nom categorie
+    $colItem=$_GET['colItem'];
+
+    // affiche general voiture
+    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 and `couleur` = '$colItem'");
+
 ?>
 <!-- Navbar -->
 <nav class="bg_black navbar navbar-expand-lg navbar-light">
@@ -32,10 +38,10 @@
                 Categorie
             </a>
             <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
-                <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
+                <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
+                <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
                 <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
-                <li><a class="dropdown-item color_white" href="#">Tout</a></li>
+                <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
             </ul>
             </li>
             <!-- <li class="nav-item">
@@ -81,7 +87,7 @@
                     $totalCategorie= $totalCat['total_categorie'];
             ?> 
             <span class="float-end" style="margin-right: 30px;"><?php echo $totalCategorie?></span>
-           
+            
             <div class="categorie1_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
                     <li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
@@ -90,7 +96,7 @@
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                        <li class="liste_categorie1"> <?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                        <li class="liste_categorie1"> <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         }
                     }
@@ -118,7 +124,7 @@
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
                     ?>
-                    <li class="liste_categorie2"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         }
                     }
@@ -146,7 +152,7 @@
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){
                                 $couleur= $rowCol['liste_couleur']; 
                     ?>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: <?php echo $couleur?>;"></div>
+                    <a href="couleurPage.php?colItem=<?= $couleur ?>" type="button" class="col-4 liste_categorie3 shadow" style="background-color: #<?php echo $couleur?>;"></a>
                     <?php 
                         }
                     }
@@ -180,78 +186,29 @@
         <section style="margin-top: 50px">
             <!-- 3 lignes max -->
             <div class="row px-5" style="margin-left: 15px">
+            <?php
+                for($i=0;$i<6;$i++){
+                    if($afficheTot = mysqli_fetch_assoc($afficheTotal)){
+                        $modeleTot= $afficheTot['modele'];              
+                        $imageTot= $afficheTot['image'];          
+                        $idTot= $afficheTot['id'];          
+            ?>
                 <div class="col-6 mb-4">
                     <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
+                        <div class="img_cate_voiture" style='background-image: url("<?php echo $imageTot ?>");'>
+                            <p class="titre_voiture"><?php echo $modeleTot ?></p>
                         </div>
                         <div class="contenu_cate_detailHover">
-                            <a href="detail_voiture.php" class="text-decoration-none">
+                            <a href="detail_voiture.php?idVoiture=<?php echo $idTot ?>" class="text-decoration-none">
                                 <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <?php
+                    }
+                }
+            ?>
             </div>
         </section>
 

@@ -11,8 +11,15 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
+    // affichage Nom categorie
+    $mqItem=$_GET['mqItem'];
+    var_dump($_GET['mqItem']);
+    $afficheTotal2 = mysqli_query($con, "SELECT * FROM `marque` WHERE `marque` = '$mqItem'");
+    if($totalafficheTotal2 = mysqli_fetch_assoc($afficheTotal2)){
+        $idMarque= $totalafficheTotal2['id'];
+
     // affiche general voiture
-    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 and `id_marque` = '$idMarque'");
 
 ?>
 <!-- Navbar -->
@@ -289,6 +296,11 @@
     </div>
 
 </div>
+
+<!-- fermeture ligne 17 -->
+<?php
+    }
+?>
 
 <!-- Boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
