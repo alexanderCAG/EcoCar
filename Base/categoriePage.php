@@ -40,12 +40,12 @@
             <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
                 <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
-                <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
+                <li><a class="dropdown-item color_white" href="promotion.php">Promotion</a></li>
                 <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
             </ul>
             </li>
             <!-- <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
+            <a class="color_white nav-link" aria-current="page" href="promotion.php">Promotion</a>
             </li> -->
             <li class="nav-item">
             <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
@@ -96,7 +96,10 @@
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                        <li class="liste_categorie1"> <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                   
+                        <li class="<?php if($categorie == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie1";}?>">
+                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="<?php if($categorie == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i>
+                        </li>
                     <?php 
                         }
                     }
@@ -118,13 +121,14 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
                     ?>
-                    <li class="liste_categorie2"><a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="<?php if($marque == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie2";}?>">
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="<?php if($marque == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         }
                     }
@@ -243,7 +247,7 @@
                                 <ul class="text-light text-uppercase list-unstyled">
                                     <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Présentation</a></small></li>
-                                    <li class="my-2"><small><a class="color_white nav_footer" href="">Promotion</a></small></li>
+                                    <li class="my-2"><small><a class="color_white nav_footer" href="promotion.php">Promotion</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture hybride</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture électrique</a></small></li>
                                 </ul> 

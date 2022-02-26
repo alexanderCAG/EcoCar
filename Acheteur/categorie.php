@@ -23,7 +23,7 @@
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
             <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
-            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="promotion.php">Promotion</a></li>
             <li><a class="dropdown-item color_white" href="#">Tout</a></li>
           </ul>
         </li>
@@ -85,7 +85,7 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <li class="liste_categorie2">Marque2<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <li class="liste_categorie2">Marque3<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <li class="liste_categorie2">Marque4<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
@@ -239,7 +239,7 @@
                                 <ul class="text-light text-uppercase list-unstyled">
                                     <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Présentation</a></small></li>
-                                    <li class="my-2"><small><a class="color_white nav_footer" href="">Promotion</a></small></li>
+                                    <li class="my-2"><small><a class="color_white nav_footer" href="promotion.php">Promotion</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture hybride</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture électrique</a></small></li>
                                 </ul> 

@@ -99,7 +99,7 @@
 .liste_categorie1:hover,
 .liste_categorie2:hover{
     background-color: #33985d;
-    color: white;
+    color: white!important;
     border-radius: 30px;
     width: 150px;
     padding-left: 20px;
@@ -107,6 +107,18 @@
     padding-bottom: 1px;
 }
 
+.active_sidebar{
+    background-color: #33985d;
+    color: white;
+    border-radius: 30px;
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    cursor: pointer;
+    height: 27px;
+
+}
 .liste_categorie3{
     border-radius: 30px;
     content: "";
