@@ -114,7 +114,7 @@
             </div>
 
 
-            <!-- <a type="button" href="../Bdd/locationVoiture.php?idVoiture=<?php echo $idVoiture ?>&amp;idInscrit=<?php echo $idInscription ?>" class="btn_vert30 btn_detail">Louer celle-ci</a> -->
+            <!-- <a type="button" href="../Bdd/locationVoiture.php?idVoiture=&amp;idInscrit=" class="btn_vert30 btn_detail">Louer celle-ci</a> -->
         </div>
 
         <div class="col-1 droite_detail"></div>
