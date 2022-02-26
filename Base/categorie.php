@@ -90,7 +90,7 @@
             
             <div class="categorie1_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie1"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         for($i=0; $i< $totalCategorie; $i++) {
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
@@ -118,7 +118,7 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
@@ -146,7 +146,7 @@
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <div class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover"></div>
+                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
                     <?php 
                         for($i=0; $i< $totalCouleur; $i++) {
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){
