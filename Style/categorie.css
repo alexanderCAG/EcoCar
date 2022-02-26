@@ -210,3 +210,8 @@
     background-color: #33985d!important;
 }
 
+.active .page-link{
+    background-color: #33985d!important;
+    border: solid 1px white!important;
+}
+
