@@ -10,7 +10,7 @@
     $infoVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$idVoiture'");
     $infoModel = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$idVoiture'");
 
- ?>
+?>
 
 <section>
     <div class="row" style="height:91vh">

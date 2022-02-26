@@ -31,7 +31,8 @@
 }
 
 .btn_carousel_bas1:hover{
-    background-color: #222222!important;
+    text-decoration: underline;
+    color: white;
 }
 
 .carousel_bas2{

@@ -170,17 +170,17 @@
 
     <!-- Sous titre carousel -->
     <div class="row carousel_bas text-center">
-        <button id="btn_promo1" onclick="ViewPromo1()" class="btn_carousel_bas1 col-4 bg_green3 text-decoration-none border-0">
+        <button id="btn_promo1" onclick="ViewPromo1()" class="btn_carousel_bas1 col-4 bg_green3 border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
         </button>
-        <button id="btn_bestSeller" onclick="ViewbestSeller()" class="btn_carousel_bas1 col-4 bg_green2 text-decoration-none border-0">
+        <button id="btn_bestSeller" onclick="ViewbestSeller()" class="btn_carousel_bas1 col-4 bg_green2 border-0">
             <span class="carousel_bas1 text-uppercase">Best Seller</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
         </button>
-        <button id="btn_promo2" onclick="ViewPromo2()" class="btn_carousel_bas1 col-4 bg_green1 text-decoration-none border-0">
+        <button id="btn_promo2" onclick="ViewPromo2()" class="btn_carousel_bas1 col-4 bg_green1 border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
