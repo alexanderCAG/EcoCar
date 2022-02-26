@@ -165,7 +165,7 @@
 
             <!-- Partie 4 -->
             <br><br>
-            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black" href="promoPage.php">Promotion</a></h5>
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black " href="promoPage.php">Promotion</a></h5>
             <?php 
                 if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
                     $totalPromotion= $totalPromo['total_promo'];

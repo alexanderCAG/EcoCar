@@ -58,29 +58,29 @@ if(isset($_POST['btnLocation'])){
             if($promotion!=0){
                 // Jour
                 if($jour>0 && $jour<=7){
-                    $calculPrix = ($jour * $prixJour) - ($jour * $prixJour * ($promotion/100));
-    
+                    $calculPrix = ($prixJour - ( $prixJour * ($promotion/100)))*$jour;
+
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
                 // Semaine
                 else if($jour>7 && $jour<=28){
                     $jour = $jour / 7;
-                    $calculPrix = ($jour * $prixSemaine) - ($jour * $prixJour * ($promotion/100));
-    
+                    $calculPrix = ($prixSemaine - ( $prixSemaine * ($promotion/100)))*$jour;
+
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
                 // Mois
                 else if($jour>28){
                     $jour = $jour / 28;
-                    $calculPrix = ($jour * $prixMois) - ($jour * $prixJour * ($promotion/100));
-    
+                    $calculPrix = ($prixMois - ( $prixMois * ($promotion/100)))*$jour;
+
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
             }else{
                 // Jour
@@ -89,7 +89,7 @@ if(isset($_POST['btnLocation'])){
     
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
                 // Semaine
                 else if($jour>7 && $jour<=28){
@@ -98,7 +98,7 @@ if(isset($_POST['btnLocation'])){
     
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
                 // Mois
                 else if($jour>28){
@@ -107,7 +107,7 @@ if(isset($_POST['btnLocation'])){
     
                     $inscritAdmin = mysqli_query($con,"INSERT INTO admin (id_voiture_loue, id_inscription_loue, prix_voiture) VALUES ('$idVoiture', '$idInscrit', '$calculPrix')");
                     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0', compteur_location='$compteur_location' WHERE id='$idVoiture'");
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
                 }
             }
 
