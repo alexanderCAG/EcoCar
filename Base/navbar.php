@@ -21,7 +21,7 @@
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
             <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
-            <li><a class="dropdown-item color_white" href="promotion.php">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="promoPage.php">Promotion</a></li>
             <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
           </ul>
         </li>

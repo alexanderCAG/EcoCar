@@ -11,6 +11,9 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
+        // recup promo
+        $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
+
     // affiche general voiture
     $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
 
@@ -28,7 +31,7 @@
             <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
+            <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
             </li>
             <li class="nav-item dropdown">
             <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +40,7 @@
             <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
                 <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
-                <li><a class="dropdown-item color_white" href="promotion.php">Promotion</a></li>
+                <li><a class="dropdown-item color_white" href="promoPage.php">Promotion</a></li>
                 <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
             </ul>
             </li>
@@ -156,6 +159,17 @@
                     ?>
                 </div>
             </div>
+            <?php 
+                }
+            ?>
+
+            <!-- Partie 4 -->
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:50px;"><a class="text-decoration-none color_black" href="promoPage.php">Promotion</a></h5>
+            <?php 
+                if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
+                    $totalPromotion= $totalPromo['total_promo'];
+            ?>
+            <span class="float-end" style="margin-right: 30px; margin-top:50px;"><?php echo $totalPromotion?></span>
             <?php 
                 }
             ?>
