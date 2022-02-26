@@ -3,6 +3,9 @@
     require('navbar.php');
 
     $idVoiture=$_GET['idVoiture'];
+    $id_session=$_SESSION['emailUser'];
+
+    $infoInscrit = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$id_session'");
 
     $infoVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$idVoiture'");
     $infoModel = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$idVoiture'");
@@ -20,12 +23,14 @@
                 $puissance= $infoModelTot['puissance'];   
                 $consommation= $infoModelTot['consommation'];   
                 $place= $infoModelTot['place'];
+                if($infoInscritTot = mysqli_fetch_assoc($infoInscrit)){
+                    $idInscription= $infoInscritTot['id'];
     ?>
         <div class="col-6">
             <div class="info_nom"><p><b>PEUGEOT E-208</b></p></div>
             <img src="<?php echo $image ?>" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
             <br><br><br>
-            <a href="connexion.php" class="btn_vert30 btn_detail">Louer celle-ci</a>
+            <a type="button" href="../Bdd/locationVoiture.php?idVoiture=<?php echo $idVoiture ?>&amp;idInscrit=<?php echo $idInscription ?>" class="btn_vert30 btn_detail">Louer celle-ci</a>
         </div>
 
         <div class="col-1 droite_detail"></div>
@@ -90,6 +95,7 @@
                     </div>
                 </div>
             <?php
+                        }
                     }
                 }
             ?>
