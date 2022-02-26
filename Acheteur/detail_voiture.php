@@ -18,6 +18,8 @@
         if($infoVoitureTot = mysqli_fetch_assoc($infoVoiture)){
             $categorie= $infoVoitureTot['categorie'];
             $image= $infoVoitureTot['image'];
+            $modele= $infoVoitureTot['modele'];
+            $id_marque= $infoVoitureTot['id_marque'];
             if($infoModelTot = mysqli_fetch_assoc($infoModel)){
                 $autonomie= $infoModelTot['autonomie'];   
                 $puissance= $infoModelTot['puissance'];   
@@ -25,9 +27,13 @@
                 $place= $infoModelTot['place'];
                 if($infoInscritTot = mysqli_fetch_assoc($infoInscrit)){
                     $idInscription= $infoInscritTot['id'];
+
+                    $infoMarque = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
+                    if($infoMarqueTot = mysqli_fetch_assoc($infoMarque)){
+                        $marque= $infoMarqueTot['marque'];
     ?>
         <div class="col-6">
-            <div class="info_nom"><p><b>PEUGEOT E-208</b></p></div>
+            <div class="info_nom"><p><b><?php echo $marque ?> &nbsp; <?php echo $modele ?></b></p></div>
             <img src="<?php echo $image ?>" alt="img_peugeot_e-208_bleu" class="img_detail_voiture">
             <br><br><br>
             <a type="button" href="../Bdd/locationVoiture.php?idVoiture=<?php echo $idVoiture ?>&amp;idInscrit=<?php echo $idInscription ?>" class="btn_vert30 btn_detail">Louer celle-ci</a>
@@ -95,6 +101,7 @@
                     </div>
                 </div>
             <?php
+                            }
                         }
                     }
                 }
