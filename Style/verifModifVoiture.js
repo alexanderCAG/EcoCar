@@ -25,6 +25,9 @@ function verifAjoutVoiture(event){
     let ajoutVoiture6 = document.getElementById('modifVoiture6');
     let ajoutVoiture7 = document.getElementById('modifVoiture7');
     let ajoutVoiture8 = document.getElementById('modifVoiture8');
+    let ajoutVoiture9 = document.getElementById('modifVoiture9');
+    let ajoutVoiture10 = document.getElementById('modifVoiture10');
+    let ajoutVoiture11 = document.getElementById('modifVoiture11');
     let color_ajoutVoiture = document.getElementById('color_modifVoiture');
     let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif');
 
@@ -38,6 +41,9 @@ function verifAjoutVoiture(event){
     let ErreurAjout_7 = document.getElementById('Erreurmodif_7');
     let ErreurAjout_8 = document.getElementById('Erreurmodif_8');
     let ErreurAjout_9 = document.getElementById('Erreurmodif_9');
+    let ErreurAjout_10 = document.getElementById('Erreurmodif_10');
+    let ErreurAjout_11 = document.getElementById('Erreurmodif_11');
+    let ErreurAjout_12 = document.getElementById('Erreurmodif_12');
     let imageErreur_ajoutVoiture = document.getElementById('imageErreur_modifVoiture');
 
     // reset span
@@ -50,6 +56,9 @@ function verifAjoutVoiture(event){
     ErreurAjout_7.innerHTML="";
     ErreurAjout_8.innerHTML="";
     ErreurAjout_9.innerHTML="";
+    ErreurAjout_10.innerHTML="";
+    ErreurAjout_11.innerHTML="";
+    ErreurAjout_12.innerHTML="";
     imageErreur_ajoutVoiture.innerHTML="";
 
 
@@ -167,6 +176,48 @@ function verifAjoutVoiture(event){
         verifAjoutVoiture_Admin=false;
     }else{
         ErreurAjout_9.innerHTML = "";
+    }
+
+    // Prix jour
+    if(ajoutVoiture9.value.trim()==""){
+        ErreurAjout_10.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture9.value)==false){
+        ErreurAjout_10.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture9.value.length >= 10){
+        ErreurAjout_10.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_10.innerHTML = "";
+    }
+
+    // Prix semaine
+    if(ajoutVoiture10.value.trim()==""){
+        ErreurAjout_11.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture10.value)==false){
+        ErreurAjout_11.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture10.value.length >= 10){
+        ErreurAjout_11.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_11.innerHTML = "";
+    }
+
+    // Prix mois
+    if(ajoutVoiture11.value.trim()==""){
+        ErreurAjout_12.innerHTML = "Remplir le champs";
+        verifAjoutVoiture_Admin=false;
+    }else if(regex_chiffre.test(ajoutVoiture11.value)==false){
+        ErreurAjout_12.innerHTML = "Seulement les chiffres";
+        verifAjoutVoiture_Admin=false;
+    }else if(ajoutVoiture11.value.length >= 10){
+        ErreurAjout_12.innerHTML = "Trop long";
+        verifAjoutVoiture_Admin=false;
+    }else{
+        ErreurAjout_12.innerHTML = "";
     }
 
 

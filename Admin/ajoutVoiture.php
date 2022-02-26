@@ -75,6 +75,22 @@
 
                                 
                             </div>
+
+                            <div class="row mt-4">
+                                <div class="col" style="height:38px;">
+                                    <input class="form-control" type="text" name="" id="ajoutVoiture9" placeholder="Prix (jour)">
+                                    <small><span class="ajoutVoiture_span" id="ErreurAjout_10"></span></small>
+                                </div>
+                                <div class="col" style="height:38px;">
+                                    <input class="form-control" type="text" name="" id="ajoutVoiture10" placeholder="Prix (semaine)">
+                                    <small><span class="ajoutVoiture_span" id="ErreurAjout_11"></span></small>
+                                </div>
+                                <div class="col" style="height:38px;">
+                                    <input class="form-control" type="text" name="" id="ajoutVoiture11" placeholder="Prix (mois)">
+                                    <small><span class="ajoutVoiture_span" id="ErreurAjout_12"></span></small>
+                                </div>
+                            </div>
+
                             <div class="row form-row mt-4">
                                 <div class="form-group col-md-4 col-4" style="margin-top: 52px; height:38px;">
                                     <ul class="list-group list-group-flush">
@@ -106,6 +122,7 @@
                                 </div>
                                 
                             </div>
+
                         </div>
                     </div>
                     
