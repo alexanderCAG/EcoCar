@@ -1,5 +1,6 @@
 
 <?php
+
 if(isset($_GET['idVoiture']) && isset($_GET['idInscrit'])){
     include("cnx.php");
     session_start();
@@ -13,7 +14,7 @@ if(isset($_GET['idVoiture']) && isset($_GET['idInscrit'])){
     $updateVoiture = mysqli_query($con, "UPDATE voiture SET dispo='0' WHERE id='$idVoiture'");
 
 
-echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
+    echo "<script language='javascript' type='text/javascript'> location.href='../Acheteur' </script>";
 }
 
 
