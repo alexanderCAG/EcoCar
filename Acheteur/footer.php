@@ -30,17 +30,27 @@
             <div class="col-4 border-0 pl-5" id="avis_redirection">
                 <h2 class="titre_footer text-center">Donnez votre avis !</h2>
                 <small><p class="text-center text-light"><i>Laissez-nous un commentaire</i> </p></small>
-                <form class="pl-5">
+                <form class="pl-5" action="../Bdd/login.php" method="POST">
                     <div class="row ll-5" >
                         <div class="col-6">
-                            <input type="pseudo" placeholder="Pseudonyme" class="form-control" id="exampleInputPseudo" aria-describedby="pseudoHelp">
+                        <?php
+                            $nomuser=$_SESSION['emailUser'];
+
+                            $rechercheId = mysqli_query($con, "SELECT prenom FROM inscription WHERE email='$nomuser'");
+                            if ($rowDemandeId = mysqli_fetch_assoc($rechercheId)){
+                                $prenom = $rowDemandeId['prenom'];
+                        ?>
+                            <input type="pseudo" value="<?php echo $prenom ?>" class="form-control" id="exampleInputPseudo" aria-describedby="pseudoHelp" disabled>
                         </div>
+                        <?php
+                            }
+                        ?>
                         <div class="col-6">
-                            <input type="note" placeholder="Note sur 5" class="form-control" id="exampleInputNote" aria-describedby="noteHelp">
+                            <input type="note" placeholder="Note sur 5" name="avisnote" class="form-control" id="exampleInputNote" aria-describedby="noteHelp">
                         </div>
                     </div>
-                    <textarea class="form-control mt-3" placeholder="Commentaire..." id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <button class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
+                    <textarea class="form-control mt-3" placeholder="Commentaire..." name="aviscommentaire" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <button type="submit" name="avis" class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
                 </form>
             </div>
 
