@@ -99,12 +99,25 @@
 .liste_categorie1:hover,
 .liste_categorie2:hover{
     background-color: #33985d;
+    color: white!important;
+    border-radius: 30px;
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.active_sidebar{
+    background-color: #33985d;
     color: white;
     border-radius: 30px;
     width: 150px;
     padding-left: 20px;
     padding-top: 1px;
     padding-bottom: 1px;
+    cursor: pointer;
+    height: 27px;
+
 }
 
 .liste_categorie3{
@@ -127,7 +140,6 @@
 }
 
 .img_cate_voiture{
-    background-image: url("../Image/voiture_test.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -145,6 +157,7 @@
     width: 220px;
     height: 40px;
     padding-left: 20px;
+    text-align: center;
 }
 
 .contenu_cate_detailHover{

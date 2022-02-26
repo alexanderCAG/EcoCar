@@ -11,11 +11,11 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
-        // recup promo
-        $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
+    // recup promo
+    $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
-    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
 ?>
 <!-- Navbar -->
@@ -118,7 +118,7 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
@@ -146,7 +146,7 @@
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
+                    <a href="categorie.php" class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover"></a>
                     <?php 
                         for($i=0; $i< $totalCouleur; $i++) {
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){

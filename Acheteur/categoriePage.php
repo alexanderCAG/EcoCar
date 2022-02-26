@@ -14,8 +14,11 @@
         // recup promo
         $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
+    // affichage Nom categorie
+    $catItem=$_GET['catItem'];
+
     // affiche general voiture
-    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 and `categorie` = '$catItem'");
 
 ?>
 <!-- Navbar -->
@@ -96,7 +99,10 @@
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                        <li class="liste_categorie1"> <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                   
+                        <li class="<?php if($categorie == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie1";}?>">
+                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="<?php if($categorie == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i>
+                        </li>
                     <?php 
                         }
                     }
@@ -118,13 +124,14 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
                     ?>
-                    <li class="liste_categorie2"><a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <li class="<?php if($marque == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie2";}?>">
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="<?php if($marque == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
                     <?php 
                         }
                     }
@@ -146,7 +153,7 @@
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
+                    <a href="categorie.php" class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover"></a>
                     <?php 
                         for($i=0; $i< $totalCouleur; $i++) {
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){

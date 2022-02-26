@@ -19,10 +19,10 @@
             Categorie
           </a>
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
-            <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
-            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
-            <li><a class="dropdown-item color_white" href="#">Tout</a></li>
+            <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
+            <li><a class="dropdown-item color_white" href="promoPage.php">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
           </ul>
         </li>
         <li class="nav-item" style="margin-top: 10px;">

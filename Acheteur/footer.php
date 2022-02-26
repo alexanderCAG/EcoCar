@@ -9,7 +9,7 @@
                         <ul class="text-light text-uppercase list-unstyled">
                             <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="presentation.php">Présentation</a></small></li>
-                            <li class="my-2"><small><a class="color_white nav_footer" href="">Promotion</a></small></li>
+                            <li class="my-2"><small><a class="color_white nav_footer" href="promotion.php">Promotion</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture hybride</a></small></li>
                             <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture électrique</a></small></li>
                         </ul> 
