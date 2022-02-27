@@ -100,16 +100,14 @@
             
             <div class="categorie1_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie1"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
                     <?php 
                         for($i=0; $i< $totalCategorie; $i++) {
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                   
-                        <li class="<?php if($categorie == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie1";}?>">
-                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="<?php if($categorie == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i>
-                        </li>
+
+                    <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="<?php if($categorie == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><li class="<?php if($categorie == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie1";}?>"><?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }
@@ -131,14 +129,13 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark"href="categorie.php"><li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
                     ?>
-                    <li class="<?php if($marque == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie2";}?>">
-                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="<?php if($marque == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="<?php if($marque == $catItem){echo "color: white";}else{ echo "color: #616161";} ?>"><li class="<?php if($marque == $catItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie2";}?>"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }

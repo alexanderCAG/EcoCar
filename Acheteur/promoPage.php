@@ -96,13 +96,13 @@
             
             <div class="categorie1_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie1"><a class="text-decoration-none text-dark" href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
                     <?php 
                         for($i=0; $i< $totalCategorie; $i++) {
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                        <li class="liste_categorie1"> <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><?php echo $categorie?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><li class="liste_categorie1"> <?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }
@@ -124,13 +124,13 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2"><a class="text-decoration-none text-dark"href="categorie.php">Tout</a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
                     ?>
-                    <li class="liste_categorie2"><a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><?php echo $marque?></a><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><li class="liste_categorie2"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }
@@ -152,7 +152,7 @@
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <a href="categorie.php" class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover"></a>
+                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
                     <?php 
                         for($i=0; $i< $totalCouleur; $i++) {
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){
@@ -171,7 +171,7 @@
 
             <!-- Partie 4 -->
             <br><br>
-            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black" href="promoPage.php">Promotion</a></h5>
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black " href="promoPage.php">Promotion</a></h5>
             <?php 
                 if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
                     $totalPromotion= $totalPromo['total_promo'];
