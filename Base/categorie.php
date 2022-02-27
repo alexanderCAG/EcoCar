@@ -15,7 +15,7 @@
         $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
-    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
 
 ?>
 <!-- Navbar -->
@@ -165,7 +165,7 @@
 
             <!-- Partie 4 -->
             <br><br>
-            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black" href="promoPage.php">Promotion</a></h5>
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black " href="promoPage.php">Promotion</a></h5>
             <?php 
                 if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
                     $totalPromotion= $totalPromo['total_promo'];
@@ -176,20 +176,7 @@
             ?>
 
         </div>
-        
 
-
-        <!-- <p class="titre_sidebar2 text-uppercase">tableau de bord</p>
-        <ul class="text-uppercase list-unstyled liste_titre_sidebar">
-            <a href="liste_voiture.php" class="color_white text-decoration-none"><li class="liste_sidebar">Liste des véhicules</li></a>
-            <a href="liste_marque.php" class="color_white text-decoration-none"><li class="liste_sidebar">Nos Marques</li></a>
-            <a href="devis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Devis</li></a>
-            <a href="liste_client.php" class="color_white text-decoration-none"><li class="liste_sidebar">Clients</li></a>
-            <a href="avis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Avis</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Statistique</li></a>
-            <a href="compte_admin.php" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
-            <a href="../Base" class="color_white text-decoration-none"><li class="liste_sidebar">Deconnexion</li></a>
-        </ul> -->
     </nav>
 
     <div class="contenue_user bg_gray3">
@@ -199,11 +186,29 @@
             <!-- 3 lignes max -->
             <div class="row px-5" style="margin-left: 15px">
             <?php
-                for($i=0;$i<6;$i++){
-                    if($afficheTot = mysqli_fetch_assoc($afficheTotal)){
-                        $modeleTot= $afficheTot['modele'];              
-                        $imageTot= $afficheTot['image'];          
-                        $idTot= $afficheTot['id'];          
+                if (isset($_GET['page_no']) && $_GET['page_no']!="") {
+                $page_no = $_GET['page_no'];
+                } else {
+                    $page_no = 1;
+                    }
+
+                $total_records_per_page = 6;
+                $offset = ($page_no-1) * $total_records_per_page;
+                $previous_page = $page_no - 1;
+                $next_page = $page_no + 1;
+                $adjacents = "2"; 
+
+                $result_count = mysqli_query($con,"SELECT COUNT(*) As total_records FROM `voiture`");
+                $total_records = mysqli_fetch_array($result_count);
+                $total_records = $total_records['total_records'];
+                $total_no_of_pages = ceil($total_records / $total_records_per_page);
+                $second_last = $total_no_of_pages - 1; // total page minus 1
+
+                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 LIMIT $offset, $total_records_per_page ");
+                while($afficheTot = mysqli_fetch_array($result)){
+                    $modeleTot= $afficheTot['modele'];              
+                    $imageTot= $afficheTot['image'];          
+                    $idTot= $afficheTot['id'];
             ?>
                 <div class="col-6 mb-4">
                     <div class="div_contenu_detail shadow">
@@ -218,7 +223,6 @@
                     </div>
                 </div>
             <?php
-                    }
                 }
             ?>
             </div>
@@ -226,19 +230,24 @@
 
         <!-- Pagination -->
         <section style="margin-top:100px; margin-bottom:118px;">
-            <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    <?php
+                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1'>&#139;&#139; First Page</a></li>"; } 
+                    ?>
+                    
+                    <li class="page-item" <?php if($page_no <= 1){ echo "class='disabled page-item'"; } ?>>
+                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
                     </li>
 
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <?php require('pagination.php');?>
 
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
+                    <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
+                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
                     </li>
+                    <?php if($page_no < $total_no_of_pages){
+                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
+                    } ?>
                 </ul>
             </nav>
         </section>
