@@ -11,8 +11,8 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
-        // recup promo
-        $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
+    // recup promo
+    $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
     // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
@@ -27,13 +27,13 @@
         </button>
         <div class="nav_ul" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 10px;">
             <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 10px;">
             <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style="margin-top: 10px;">
             <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorie
             </a>
@@ -47,11 +47,17 @@
             <!-- <li class="nav-item">
             <a class="color_white nav-link" aria-current="page" href="promotion.php">Promotion</a>
             </li> -->
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 10px;">
             <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
             </li>
-            <li class="nav-item" >
-                <a href="connexion.php"><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+                <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="color_white bi bi-person-fill h2" id="icone_con"></i>
+                </a>
+                <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item color_white" href="#">Mon compte</a></li>
+                    <li><a class="dropdown-item color_white" href="../Bdd/logout.php">Deconnexion</a></li>
+                </ul>
             </li>
         </ul>
         </div>

@@ -11,8 +11,8 @@
     $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
     $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
 
-        // recup promo
-        $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
+    // recup promo
+    $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
     // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");

@@ -11,7 +11,6 @@ if(isset($_POST['btnLocation'])){
     $idVoiture=$_POST['idVoiture'];
     $idInscrit=$_POST['idInscription'];
 
-    // $jour = $dateFin->diff($dateDebut)->format('%d');
     $jour = strtotime($dateFin) - strtotime($dateDebut);
 
     var_dump(strtotime($dateFin));
