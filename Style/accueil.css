@@ -30,6 +30,11 @@
     font-weight: bold;
 }
 
+.btn_carousel_bas1:hover{
+    text-decoration: underline;
+    color: white;
+}
+
 .carousel_bas2{
     color: black;
     font-size: 15px;
@@ -95,8 +100,7 @@
 }
 
 .img_marque{
-    height: 400px;
-    object-fit: cover;
+    height: 200px!important;
 }
 
 .row_marque2{

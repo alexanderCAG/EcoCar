@@ -15,7 +15,7 @@
     $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
-    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
 ?>
 <!-- Navbar -->
@@ -210,7 +210,7 @@
                 $total_no_of_pages = ceil($total_records / $total_records_per_page);
                 $second_last = $total_no_of_pages - 1; // total page minus 1
 
-                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 LIMIT $offset, $total_records_per_page ");
+                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0 LIMIT $offset, $total_records_per_page ");
                 while($afficheTot = mysqli_fetch_array($result)){
                     $modeleTot= $afficheTot['modele'];              
                     $imageTot= $afficheTot['image'];          
@@ -247,7 +247,7 @@
                     </li>
 
                     <?php require('pagination.php');?>
-
+                    
                     <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
                         <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
                     </li>

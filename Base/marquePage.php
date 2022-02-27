@@ -14,8 +14,16 @@
     // recup promo
     $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
+    // affichage Nom categorie
+    $mqItem=$_GET['mqItem'];
+    $_SESSION['mqItem']=$mqItem;
+
+    $afficheTotal2 = mysqli_query($con, "SELECT * FROM `marque` WHERE `marque` = '$mqItem'");
+    if($totalafficheTotal2 = mysqli_fetch_assoc($afficheTotal2)){
+        $idMarque= $totalafficheTotal2['id'];
+
     // affiche general voiture
-    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1 and `id_marque` = '$idMarque'");
 
 ?>
 <!-- Navbar -->
@@ -102,7 +110,7 @@
                             if($rowCat = mysqli_fetch_assoc($listeCategorie)){
                                 $categorie= $rowCat['liste_categorie']; 
                     ?>
-                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><li class="liste_categorie1"> <?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
+                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><li class="liste_categorie1"><?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }
@@ -124,13 +132,14 @@
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
+                    <a class="text-decoration-none text-dark"href="categorie.php"><li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
                     <?php 
                         for($i=0; $i< $totalMarque; $i++) {
                             if($rowMq = mysqli_fetch_assoc($listeMarque)){
                                 $marque= $rowMq['liste_marque']; 
+                                // $_SESSION['mqItem']=$marque;
                     ?>
-                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><li class="liste_categorie2"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="<?php if($marque == $mqItem){echo "color: white";}else{ echo "color: #616161";} ?>"><li class="<?php if($marque == $mqItem){echo "active_sidebar text-light color_white";} else{echo "liste_categorie2";}?>"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
                     <?php 
                         }
                     }
@@ -152,7 +161,7 @@
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
+                    <a href="categorie.php" class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover"></a>
                     <?php 
                         for($i=0; $i< $totalCouleur; $i++) {
                             if($rowCol = mysqli_fetch_assoc($listeCouleur)){
@@ -171,7 +180,7 @@
 
             <!-- Partie 4 -->
             <br><br>
-            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black " href="promoPage.php">Promotion</a></h5>
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black" href="promoPage.php">Promotion</a></h5>
             <?php 
                 if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
                     $totalPromotion= $totalPromo['total_promo'];
@@ -210,7 +219,7 @@
                 $total_no_of_pages = ceil($total_records / $total_records_per_page);
                 $second_last = $total_no_of_pages - 1; // total page minus 1
 
-                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 LIMIT $offset, $total_records_per_page ");
+                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 and `id_marque` = '$idMarque' LIMIT $offset, $total_records_per_page ");
                 while($afficheTot = mysqli_fetch_array($result)){
                     $modeleTot= $afficheTot['modele'];              
                     $imageTot= $afficheTot['image'];          
@@ -235,24 +244,45 @@
         </section>
 
         <!-- Pagination -->
+        <?php 
+            if($_SESSION['catItem']!=NULL){
+                $info_cat = $_SESSION['catItem'];
+                $info_mq = $_SESSION['mqItem'];
+                $info_col = $_SESSION['colItem'];
+            }
+            else if($_SESSION['mqItem']!=NULL){
+                    $info_cat = $_SESSION['catItem'];
+                    $info_mq = $_SESSION['mqItem'];
+                    $info_col = $_SESSION['colItem'];
+            }
+            else if($_SESSION['colItem']!=NULL){
+                    $info_cat = $_SESSION['catItem'];
+                    $info_mq = $_SESSION['mqItem'];
+                    $info_col = $_SESSION['colItem'];
+            }else{
+                    $info_cat = 0;
+                    $info_mq = 0;
+                    $info_col = 0;
+            }
+        ?>
         <section style="margin-top:100px; margin-bottom:118px;">
             <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
                     <?php
-                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1'>&#139;&#139; First Page</a></li>"; } 
-                    ?>
+                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1&amp;mqItem=$info_mq&amp;catItem=$info_cat&amp;colItem=$info_col'>&#139;&#139; First Page</a></li>"; } 
+                    ?>  
                     
                     <li class="page-item" <?php if($page_no <= 1){ echo "class='disabled page-item'"; } ?>>
-                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
+                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page&amp;mqItem=$info_mq&amp;catItem=$info_cat&amp;colItem=$info_col'"; } ?>>Previous</a>
                     </li>
 
                     <?php require('pagination.php');?>
-
+                    
                     <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
-                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
+                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page&amp;mqItem=$info_mq&amp;catItem=$info_cat&amp;colItem=$info_col'"; } ?>>Next</a>
                     </li>
                     <?php if($page_no < $total_no_of_pages){
-                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
+                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages&amp;mqItem=$info_mq&amp;catItem=$info_cat&amp;colItem=$info_col'>Last &rsaquo;&rsaquo;</a></li>";
                     } ?>
                 </ul>
             </nav>
@@ -319,6 +349,11 @@
     </div>
 
 </div>
+
+<!-- fermeture ligne 17 -->
+<?php
+    }
+?>
 
 <!-- Boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

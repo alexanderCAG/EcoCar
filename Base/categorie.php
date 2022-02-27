@@ -1,6 +1,23 @@
 <!-- Header -->
-<?php require('header.php'); ?>
+<?php require('header.php');
 
+    // recup categorie
+    $listeCategorie = mysqli_query($con, "SELECT DISTINCT(categorie) as liste_categorie FROM `voiture`");
+    $totalCategorie = mysqli_query($con, "SELECT count(DISTINCT(categorie)) as total_categorie FROM `voiture`");
+    // recup marque
+    $listeMarque = mysqli_query($con, "SELECT DISTINCT(marque) as liste_marque FROM `marque`");
+    $totalMarque = mysqli_query($con, "SELECT count(DISTINCT(marque)) as total_marque FROM `marque`");
+    // recup couleur
+    $listeCouleur = mysqli_query($con, "SELECT DISTINCT(couleur) as liste_couleur FROM `voiture`");
+    $totalCouleur = mysqli_query($con, "SELECT count(DISTINCT(couleur)) as total_couleur FROM `voiture`");
+
+    // recup promo
+    $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
+
+    // affiche general voiture
+    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+
+?>
 <!-- Navbar -->
 <nav class="bg_black navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -10,31 +27,37 @@
         </button>
         <div class="nav_ul" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 10px;">
             <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
             </li>
-            <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
+            <li class="nav-item" style="margin-top: 10px;">
+            <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style="margin-top: 10px;">
             <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorie
             </a>
             <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item color_white" href="categorie.php">Hybride</a></li>
-                <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
-                <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
-                <li><a class="dropdown-item color_white" href="#">Tout</a></li>
+                <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
+                <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
+                <li><a class="dropdown-item color_white" href="promoPage.php">Promotion</a></li>
+                <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
             </ul>
             </li>
             <!-- <li class="nav-item">
-            <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
+            <a class="color_white nav-link" aria-current="page" href="promotion.php">Promotion</a>
             </li> -->
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 10px;">
             <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
             </li>
-            <li class="nav-item" >
-                <a href="connexion.php"><i class="color_white bi bi-person-fill h2" id="icone_con"></i></a>
+            <li class="nav-item dropdown" style="margin-right: 25px;">
+                <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="color_white bi bi-person-fill h2" id="icone_con"></i>
+                </a>
+                <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item color_white" href="#">Mon compte</a></li>
+                    <li><a class="dropdown-item color_white" href="../Bdd/logout.php">Deconnexion</a></li>
+                </ul>
             </li>
         </ul>
         </div>
@@ -65,63 +88,101 @@
 
             <!-- Partie 1 -->
             <h5 onclick="cate_side1()" class="float-start categorie1_sideTot" style="cursor: pointer;">Catégories</h5>
-            <span class="float-end" style="margin-right: 30px;">2</span>
-
+            <?php 
+                if($totalCat = mysqli_fetch_assoc($totalCategorie)){
+                    $totalCategorie= $totalCat['total_categorie'];
+            ?> 
+            <span class="float-end" style="margin-right: 30px;"><?php echo $totalCategorie?></span>
+            
             <div class="categorie1_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie1">Hybride<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie1">Électrique<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie1">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
+                    <?php 
+                        for($i=0; $i< $totalCategorie; $i++) {
+                            if($rowCat = mysqli_fetch_assoc($listeCategorie)){
+                                $categorie= $rowCat['liste_categorie']; 
+                    ?>
+                        <a class="text-decoration-none" href="categoriePage.php?catItem=<?= $categorie ?>" type="button" style="color: #616161;"><li class="liste_categorie1"> <?php echo $categorie?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
+                    <?php 
+                        }
+                    }
+                    ?> 
                 </ul>
             </div>
+            <?php 
+                }
+            ?> 
 
             <!-- Partie 2 -->
             <br><br>
             <h5 onclick="cate_side2()" class="float-start categorie2_sideTot" style="cursor: pointer;">Marques</h5>
-            <span class="float-end" style="margin-right: 30px;">12</span>
+            <?php 
+                if($totalMq = mysqli_fetch_assoc($totalMarque)){
+                    $totalMarque= $totalMq['total_marque'];
+            ?>
+            <span class="float-end" style="margin-right: 30px;"><?php echo $totalMarque?></span>
 
             <div class="categorie2_side">
                 <ul class="list-unstyled" style="margin-left: 25px">
-                    <li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie2">Marque2<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie2">Marque3<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie2">Marque4<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie2">Marque5<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
-                    <li class="liste_categorie2">Marque6<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li>
+                    <a class="text-decoration-none text-dark" href="categorie.php"><li class="liste_categorie2">Tout<i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a>
+                    <?php 
+                        for($i=0; $i< $totalMarque; $i++) {
+                            if($rowMq = mysqli_fetch_assoc($listeMarque)){
+                                $marque= $rowMq['liste_marque']; 
+                    ?>
+                    <a class="text-decoration-none" href="marquePage.php?mqItem=<?= $marque ?>" type="button" style="color: #616161;"><li class="liste_categorie2"><?php echo $marque?><i class="bi bi-arrow-right float-end color_white" style="margin-right:20px"></i></li></a><br>
+                    <?php 
+                        }
+                    }
+                    ?> 
                 </ul>
             </div>
+            <?php 
+                }
+            ?> 
 
             <!-- Partie 3 -->
             <br><br>
             <h5 onclick="cate_side3()" class="float-start categorie3_sideTot" style="cursor: pointer;">Couleurs</h5>
-            <span class="float-end" style="margin-right: 30px;">6</span>
+            <?php 
+                if($totalCol = mysqli_fetch_assoc($totalCouleur)){
+                    $totalCouleur= $totalCol['total_couleur'];
+            ?>
+            <span class="float-end" style="margin-right: 30px;"><?php echo $totalCouleur?></span>
 
             <div class="categorie3_side">
                 <div class="row" style="margin-left: 25px;width: 170px;">
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: red;"></div>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: black;"></div>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: pink;"></div>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: white;"></div>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: purple;"></div>
-                    <div class="col-4 liste_categorie3 shadow" style="background-color: orange;"></div>
+                    <a class="col-4 liste_categorie3 shadow border-0" style="background-image:url('../Image/multicolor.png');background-size:cover" href="categorie.php"></a>
+                    <?php 
+                        for($i=0; $i< $totalCouleur; $i++) {
+                            if($rowCol = mysqli_fetch_assoc($listeCouleur)){
+                                $couleur= $rowCol['liste_couleur']; 
+                    ?>
+                    <a href="couleurPage.php?colItem=<?= $couleur ?>" type="button" class="col-4 liste_categorie3 shadow" style="background-color: #<?php echo $couleur?>;"></a>
+                    <?php 
+                        }
+                    }
+                    ?>
                 </div>
             </div>
+            <?php 
+                }
+            ?>
+
+            <!-- Partie 4 -->
+            <br><br>
+            <h5 class="float-start categorie3_sideTot" style="cursor: pointer; margin-top:40px;"><a class="text-decoration-none color_black " href="promoPage.php">Promotion</a></h5>
+            <?php 
+                if($totalPromo = mysqli_fetch_assoc($totalPromotion)){
+                    $totalPromotion= $totalPromo['total_promo'];
+            ?>
+            <span class="float-end" style="margin-right: 30px; margin-top:40px;"><?php echo $totalPromotion?></span>
+            <?php 
+                }
+            ?>
 
         </div>
-        
 
-
-        <!-- <p class="titre_sidebar2 text-uppercase">tableau de bord</p>
-        <ul class="text-uppercase list-unstyled liste_titre_sidebar">
-            <a href="liste_voiture.php" class="color_white text-decoration-none"><li class="liste_sidebar">Liste des véhicules</li></a>
-            <a href="liste_marque.php" class="color_white text-decoration-none"><li class="liste_sidebar">Nos Marques</li></a>
-            <a href="devis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Devis</li></a>
-            <a href="liste_client.php" class="color_white text-decoration-none"><li class="liste_sidebar">Clients</li></a>
-            <a href="avis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Avis</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Statistique</li></a>
-            <a href="compte_admin.php" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
-            <a href="../Base" class="color_white text-decoration-none"><li class="liste_sidebar">Deconnexion</li></a>
-        </ul> -->
     </nav>
 
     <div class="contenue_user bg_gray3">
@@ -130,96 +191,69 @@
         <section style="margin-top: 50px">
             <!-- 3 lignes max -->
             <div class="row px-5" style="margin-left: 15px">
+            <?php
+                if (isset($_GET['page_no']) && $_GET['page_no']!="") {
+                $page_no = $_GET['page_no'];
+                } else {
+                    $page_no = 1;
+                    }
+
+                $total_records_per_page = 6;
+                $offset = ($page_no-1) * $total_records_per_page;
+                $previous_page = $page_no - 1;
+                $next_page = $page_no + 1;
+                $adjacents = "2"; 
+
+                $result_count = mysqli_query($con,"SELECT COUNT(*) As total_records FROM `voiture`");
+                $total_records = mysqli_fetch_array($result_count);
+                $total_records = $total_records['total_records'];
+                $total_no_of_pages = ceil($total_records / $total_records_per_page);
+                $second_last = $total_no_of_pages - 1; // total page minus 1
+
+                $result = mysqli_query($con,"SELECT * FROM `voiture` WHERE `dispo` = 1 LIMIT $offset, $total_records_per_page ");
+                while($afficheTot = mysqli_fetch_array($result)){
+                    $modeleTot= $afficheTot['modele'];              
+                    $imageTot= $afficheTot['image'];          
+                    $idTot= $afficheTot['id'];
+            ?>
                 <div class="col-6 mb-4">
                     <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
+                        <div class="img_cate_voiture" style='background-image: url("<?php echo $imageTot ?>");'>
+                            <p class="titre_voiture"><?php echo $modeleTot ?></p>
                         </div>
                         <div class="contenu_cate_detailHover">
-                            <a href="detail_voiture.php" class="text-decoration-none">
+                            <a href="detail_voiture.php?idVoiture=<?php echo $idTot ?>" class="text-decoration-none">
                                 <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture" >
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 mb-4">
-                    <div class="div_contenu_detail shadow">
-                        <div class="img_cate_voiture">
-                            <p class="titre_voiture">Modèle voiture</p>
-                        </div>
-                        <div class="contenu_cate_detailHover">
-                            <a href="index.php" class="text-decoration-none">
-                                <p class="text-uppercase color_white textHover_cate">Voir la fiche</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <?php
+                }
+            ?>
             </div>
         </section>
 
         <!-- Pagination -->
         <section style="margin-top:100px; margin-bottom:118px;">
-            <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    <?php
+                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1'>&#139;&#139; First Page</a></li>"; } 
+                    ?>
+                    
+                    <li class="page-item" <?php if($page_no <= 1){ echo "class='disabled page-item'"; } ?>>
+                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
                     </li>
 
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <?php require('pagination.php');?>
 
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
+                    <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
+                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
                     </li>
+                    <?php if($page_no < $total_no_of_pages){
+                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
+                    } ?>
                 </ul>
             </nav>
         </section>
@@ -236,7 +270,7 @@
                                 <ul class="text-light text-uppercase list-unstyled">
                                     <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Présentation</a></small></li>
-                                    <li class="my-2"><small><a class="color_white nav_footer" href="">Promotion</a></small></li>
+                                    <li class="my-2"><small><a class="color_white nav_footer" href="promotion.php">Promotion</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture hybride</a></small></li>
                                     <li class="my-2"><small><a class="color_white nav_footer" href="">Voiture électrique</a></small></li>
                                 </ul> 

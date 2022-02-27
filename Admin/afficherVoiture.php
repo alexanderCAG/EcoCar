@@ -15,7 +15,7 @@
         ?>
         
         <!-- Partie Centrale contenu -->
-        <div class="card p-2 mt-3 shadow" style="width:96%;margin-left:2%;border-radius:10px;margin-bottom:493px">
+        <div class="card p-2 mt-3 shadow" style="width:96%;margin-left:2%;border-radius:10px;margin-bottom:492px">
             <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="h-100 bg_green1 pt-3" style="height:60px!important;">
@@ -55,86 +55,7 @@
                     <a href="" class="btn bg-success float-right text-light mx-4 text-uppercase" style="float:right;"> Accèder à la page</a>
                 </div>
             </div> -->
-        </div>
-
-        <!-- Ajouter produit  -->
-        <!-- <div class="card rounded w-100 p-2 mb-5">
-            <h5 class="titre t_bold" >&nbsp; Quelle catégorie de véhicule voulez-vous ajouter ? <br></h5>
-            <div class="w-75 mt-3"> &nbsp; &nbsp; 
-                <div class="btn bg_green1 py-3 text-light text-uppercase"> Catégorie 1</div>
-                <div class="btn btn-outline-success py-3 texte_green1 text-uppercase"> Catégorie 2</div>
-                <div class="btn btn-outline-success py-3 texte_green1 text-uppercase"> Catégorie 2</div>
-            </div>
-
-            <div class="row container mt-3 my-5 ">
-                <div class="col-md-8"> 
-                <form class="shadow m-2 p-4">
-                    <div class="form-row">
-                        <div class="row ">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Catégorie" value="catégorie1">
-                            </div>
-                            <div class="col">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choisir une marque</option>
-                                    <option>Marque 1</option>
-                                    <option>Marque 1</option>
-                                    <option>Marque 1</option>
-                                    <option>Marque 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row  mt-4">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Modèle">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Référence">
-                            </div>
-                        </div>
-                        <div class="row  mt-4">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Autonomie">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Puissance">
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Consommation">
-                            </div>
-                            <div class="col">
-                                <input type="number" class="form-control" placeholder="Nombre de place">
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="form-group col-md-4">
-                        <select id="inputState" class="form-control">
-                            <option selected>Couleur</option>
-                            <option>Rouge</option>
-                            <option>Bleu</option>
-                            <option>Orange</option>
-                            <option>Blanc</option>
-                        </select>
-                        </div>
-                    </div>
-
-                </form>
-                </div>
-                
-                <div class="col-md-4">
-                    
-                    <img src="https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive w-100 rounded mt-2 ">
-                    <a class="btn w-50 bg_green1 text-uppercase mt-5 text-light float-end" style="float:right!important"> Enregister</a>
-                </div>
-            </div> 
-            
-
-        </div> -->
-    <!-- Fin Ajouter produit  -->
-        
+        </div>  
         
 
 <!-- Footer -->
