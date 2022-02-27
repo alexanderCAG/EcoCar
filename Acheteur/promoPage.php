@@ -187,6 +187,14 @@
 
     <div class="contenue_user bg_gray3">
 
+        <?php
+            $idMarqueTot = mysqli_query($con, "SELECT COUNT(promotion) AS tot_idMarque FROM `voiture` WHERE promotion != 0");
+            if($recupIdMarqueTot = mysqli_fetch_assoc($idMarqueTot)){
+                $tot_idMarque= $recupIdMarqueTot['tot_idMarque'];
+
+                if($tot_idMarque!=0){
+        ?>
+
         <!-- Contenue -->
         <section style="margin-top: 50px">
             <!-- 3 lignes max -->
@@ -257,6 +265,19 @@
                 </ul>
             </nav>
         </section>
+
+        <?php
+                }else{
+        ?>
+
+        <section class="mb-5" style="margin-top: 50px">
+            <img class="d-block m-auto w-50" src="../Image/indispo2.png" alt="indispo">
+        </section>
+
+        <?php
+                }
+            }
+        ?>
 
         <!-- Footer -->
         <footer class="pt-4 bg_black">
