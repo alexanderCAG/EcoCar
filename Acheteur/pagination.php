@@ -2,18 +2,18 @@
 
         if($_SESSION['catItem']!=NULL){
                 $info_cat = $_SESSION['catItem'];
-                $info_mq = 0;
-                $info_col = 0;
+                $info_mq = $_SESSION['mqItem'];
+                $info_col = $_SESSION['colItem'];
         }
         else if($_SESSION['mqItem']!=NULL){
+                $info_cat = $_SESSION['catItem'];
                 $info_mq = $_SESSION['mqItem'];
-                $info_cat = 0;
-                $info_col = 0;
+                $info_col = $_SESSION['colItem'];
         }
         else if($_SESSION['colItem']!=NULL){
+                $info_cat = $_SESSION['catItem'];
+                $info_mq = $_SESSION['mqItem'];
                 $info_col = $_SESSION['colItem'];
-                $info_cat = 0;
-                $info_mq = 0;
         }else{
                 $info_cat = 0;
                 $info_mq = 0;

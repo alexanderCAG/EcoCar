@@ -243,22 +243,22 @@
         <?php 
             if($_SESSION['catItem']!=NULL){
                 $info_cat = $_SESSION['catItem'];
-                $info_mq = 0;
-                $info_col = 0;
+                $info_mq = $_SESSION['mqItem'];
+                $info_col = $_SESSION['colItem'];
             }
             else if($_SESSION['mqItem']!=NULL){
-                $info_mq = $_SESSION['mqItem'];
-                $info_cat = 0;
-                $info_col = 0;
+                    $info_cat = $_SESSION['catItem'];
+                    $info_mq = $_SESSION['mqItem'];
+                    $info_col = $_SESSION['colItem'];
             }
             else if($_SESSION['colItem']!=NULL){
-                $info_col = $_SESSION['colItem'];
-                $info_cat = 0;
-                $info_mq = 0;
+                    $info_cat = $_SESSION['catItem'];
+                    $info_mq = $_SESSION['mqItem'];
+                    $info_col = $_SESSION['colItem'];
             }else{
-                $info_cat = 0;
-                $info_mq = 0;
-                $info_col = 0;
+                    $info_cat = 0;
+                    $info_mq = 0;
+                    $info_col = 0;
             }
         ?>
         <section style="margin-top:100px; margin-bottom:118px;">
