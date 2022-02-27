@@ -1,4 +1,10 @@
-<?php require('header.php'); ?>
+<?php 
+
+    require('header.php');
+    $dernierDevis = mysqli_query($con, "SELECT * FROM admin ORDER BY id DESC LIMIT 1");
+    $totalLocation = mysqli_query($con, "SELECT `compteur_location`, `id_marque` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+
+?>
 
 <div class="total_categorie">
 
@@ -23,15 +29,31 @@
                         
                         <!-- Partie 1 -->
                         <div class="contenu_gauche1_admin shadow bg_white mx-2">
+                            <?php
+                                if($rowDernierDevis = mysqli_fetch_assoc($dernierDevis)){
+                                    $id_voiture_loue = $rowDernierDevis['id_voiture_loue'];
+                                    $id_inscription_loue = $rowDernierDevis['id_inscription_loue'];
+                                    $prix_voiture = $rowDernierDevis['prix_voiture'];
+
+                                    $dernierDevisInscription = mysqli_query($con, "SELECT * FROM inscription WHERE id='$id_inscription_loue'");
+                                    if($rowdernierDevisInscription = mysqli_fetch_assoc($dernierDevisInscription)){
+                                        $nom = $rowdernierDevisInscription['nom'];
+                                        $prenom = $rowdernierDevisInscription['prenom'];
+
+                                        $dernierDevisImg = mysqli_query($con, "SELECT * FROM voiture WHERE id='$id_voiture_loue'");
+                                        if($rowdernierDevisImg = mysqli_fetch_assoc($dernierDevisImg)){
+                                            $image = $rowdernierDevisImg['image'];
+
+                            ?>
                             <div class="row">
                                 <div class="col-3">
-                                    <img src="../Image/voiture_test.jpg" alt="last vehicule" class="img_last_save">
+                                    <img src="<?php echo $image ?>" alt="last vehicule" class="img_last_save">
                                 </div>
                                 <div class="col-9">
                                     <div class="gauche1_admin_texteUp text-uppercase titre">
                                         <h4>Dernier devis enregistré</h4>
-                                        <h6>Nom Prenom</h6>
-                                        <p class="prix_last_save"><span>500,50</span>€/Mois</p>
+                                        <h6><?php echo $nom ?> &nbsp; <?php echo $prenom ?></h6>
+                                        <p class="prix_last_save"><span><?php echo $prix_voiture ?></span>€</p>
                                     </div>
                                     <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
                                     <div class="info_last_save text-uppercase">
@@ -40,11 +62,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                         </div>
 
                         <!-- Partie 2 -->
                         <div class="mt-4 contenu_gauche2_admin shadow bg_white container mx-2">
-                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules</h4>
+                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules des 6 meilleures marques</h4>
                             
                             <div class="row align-items-center mt-5">
                                 <div class="col-9">
@@ -85,9 +112,9 @@
                                                 <span class="m-2 pl-4 p-2  text-light" style="background-color:#935116">Shoes</span>
                                             </div>
                                         </div> -->
-                                
+
+                                        <!-- 6 graphes -->
                                         <div class="container contain_bar h-100 pt-5" style="margin-left:2%;"> 
-                                            <!-- ##### Stat pillow #######-->
 
                                             <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
                                                 <div class="bar1_progress progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 50%; background-color:#c0dfcd">
@@ -98,23 +125,17 @@
                                                 </div>
                                             </div>
 
-                                            <!-- ##### Stat decoration #######-->
-
-                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                            <!-- <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 70%; background-color: #F39C12;">
                                                     <span class="">70%</span>
                                                 </div>
                                             </div>
-
-                                            <!-- ##### Stat sheet #######-->
-
+                                            
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 20%; background-color: #52BE80;">
                                                     <span class="">20%</span>
                                                 </div>
                                             </div>
-
-                                            <!-- ##### Stat Tshirt #######-->
 
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 65%; background-color: #A569BD;">
@@ -122,42 +143,38 @@
                                                 </div>
                                             </div>
 
-                                            <!-- ##### Stat Sweat-shirt #######-->
-
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 85%; background-color: #B03A2E;">
                                                     <span class="">85%</span>
                                                 </div>
                                             </div>
 
-                                            <!-- ##### Stat Shoes #######-->
-
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 45%; background-color: #935116;">
                                                     <span class="">45%</span>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
 
-                                        <div class="row" style="margin-top:-85px">
+                                        <!-- 6 Marques -->
+                                        <div class="row" style="margin-top:-85px;margin-right:50px">
+                                        <?php
+                                            for($i=0;$i<6;$i++){
+                                                if($rowtotalLocation = mysqli_fetch_assoc($totalLocation)){
+                                                    $id_marque = $rowtotalLocation['id_marque'];
+                
+                                                    $recupMarque = mysqli_query($con, "SELECT * FROM marque WHERE id='$id_marque'");
+                                                    if($rowrecupMarque = mysqli_fetch_assoc($recupMarque)){
+                                                        $marque = $rowrecupMarque['marque'];
+                                        ?>
                                             <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold float-end">Marque 1</span>
+                                                <span class="titre2 text-uppercase t_bold float-end"><?php echo $marque ?></span>
                                             </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold float-end" style="margin-right:10px">Marque 2</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-left:20px">Marque 3</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-left:10px">Marque 4</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold">Marque 5</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-right:20px">Marque 6</span>
-                                            </div>
+                                        <?php
+                                                    }
+                                                }
+                                            }
+                                        ?>
                                         </div>
 
                                     </div>
