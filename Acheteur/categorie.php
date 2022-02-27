@@ -15,7 +15,7 @@
         $totalPromotion = mysqli_query($con, "SELECT count(promotion) as total_promo FROM `voiture` WHERE `dispo` = 1 AND `promotion` > 0");
 
     // affiche general voiture
-    $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
+    // $afficheTotal = mysqli_query($con, "SELECT * FROM `voiture` WHERE `dispo` = 1");
 
 ?>
 <!-- Navbar -->
@@ -176,20 +176,7 @@
             ?>
 
         </div>
-        
 
-
-        <!-- <p class="titre_sidebar2 text-uppercase">tableau de bord</p>
-        <ul class="text-uppercase list-unstyled liste_titre_sidebar">
-            <a href="liste_voiture.php" class="color_white text-decoration-none"><li class="liste_sidebar">Liste des véhicules</li></a>
-            <a href="liste_marque.php" class="color_white text-decoration-none"><li class="liste_sidebar">Nos Marques</li></a>
-            <a href="devis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Devis</li></a>
-            <a href="liste_client.php" class="color_white text-decoration-none"><li class="liste_sidebar">Clients</li></a>
-            <a href="avis.php" class="color_white text-decoration-none"><li class="liste_sidebar">Avis</li></a>
-            <a href="" class="color_white text-decoration-none"><li class="liste_sidebar">Statistique</li></a>
-            <a href="compte_admin.php" class="color_white text-decoration-none"><li class="liste_sidebar">Mon compte</li></a>
-            <a href="../Base" class="color_white text-decoration-none"><li class="liste_sidebar">Deconnexion</li></a>
-        </ul> -->
     </nav>
 
     <div class="contenue_user bg_gray3">
@@ -245,14 +232,16 @@
         <section style="margin-top:100px; margin-bottom:118px;">
             <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
-                    <?php // if($page_no > 1){ echo "<li><a href='?page_no=1'>First Page</a></li>"; } ?>
+                    <?php
+                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1'>&#139;&#139; First Page</a></li>"; } 
+                    ?>
                     
                     <li class="page-item" <?php if($page_no <= 1){ echo "class='disabled page-item'"; } ?>>
                         <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
                     </li>
 
                     <?php require('pagination.php');?>
-                    
+
                     <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
                         <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
                     </li>
