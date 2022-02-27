@@ -1,5 +1,14 @@
-<?php require('header.php'); ?>
-<?php require('navbar.php'); ?>
+<?php 
+    require('header.php');
+    require('navbar.php');
+    
+    $avisAffichage = mysqli_query($con, "SELECT * FROM `avis` WHERE verif_commentaire = 1 ORDER BY id DESC LIMIT 4");
+    $promoDernier = mysqli_query($con, "SELECT * FROM `voiture` WHERE promotion != 0 ORDER BY id DESC LIMIT 1");
+    $promoAvantDernier = mysqli_query($con, "SELECT * FROM `voiture` WHERE promotion != 0 ORDER BY id DESC LIMIT 1,1");
+    $bestSeller = mysqli_query($con, "SELECT * FROM `voiture` WHERE compteur_location = ( SELECT MAX(compteur_location) FROM `voiture`)");
+    $demandeImgMarque = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4");
+    $demandeImgMarque2 = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4,4");
+ ?>
 
 <section class="carousel_accueil">
 
@@ -17,67 +26,165 @@
     <div class="carousel_tot" style="margin-top:-600px">
 
         <div class="container py-5" >
-            <div class="row align-items-center promo_tot"  id="promo_tot">
+            <?php 
+                if($rowPromoDernier = mysqli_fetch_assoc($promoDernier)){
+                    $id = $rowPromoDernier['id'];
+                    $id_marque = $rowPromoDernier['id_marque'];
+                    $modele = $rowPromoDernier['modele'];
+                    $categorie = $rowPromoDernier['categorie'];
+                    $promotion = $rowPromoDernier['promotion'];
+                    $image = $rowPromoDernier['image'];
+
+                    $promoDernier2 = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$id'");
+                    if($rowPromoDernier2 = mysqli_fetch_assoc($promoDernier2)){
+                        $autonomie = $rowPromoDernier2['autonomie'];
+                        $puissance = $rowPromoDernier2['puissance'];
+                        $place = $rowPromoDernier2['place'];
+
+                        $promoDernier3 = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
+                        if($rowPromoDernier3 = mysqli_fetch_assoc($promoDernier3)){
+                            $marque = $rowPromoDernier3['marque'];
+
+
+            ?>
+            <div class="row align-items-center promo_tot1"  id="promo_tot">
                 <div class="col-md-8">
-                    <img src="https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0 img_carousel_pres">
+                    <img src="<?php echo $image ?>" class="img-fluid p-0 img_carousel_pres">
                 </div>
                 <div class="col-md-4">
                     <div class="bg-light w-100 p-4" id="" style="border: 15px solid #EFEFEF;margin-left:-80px">
                 
                         <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
-
-                        <h1 class="text-uppercase titre text-dark">Promotion 1</h1>
-                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
+                        
+                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2"><?php echo $promotion ?>%</span></p>
+                        <p class="fw-normal"><?php echo $marque ?></p>
                         <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $categorie ?></i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $autonomie ?> km</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $puissance ?> ch</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $place ?> places</i></li>
                         </ul>
                     </div>
                 </div>
-            </div> 
+            </div>
+            <?php 
+                        }
+                    }
+                }
+            ?>
+            <?php 
+                if($rowPromoDernier = mysqli_fetch_assoc($bestSeller)){
+                    $id = $rowPromoDernier['id'];
+                    $id_marque = $rowPromoDernier['id_marque'];
+                    $modele = $rowPromoDernier['modele'];
+                    $categorie = $rowPromoDernier['categorie'];
+                    $compteur_location = $rowPromoDernier['compteur_location'];
+                    $image = $rowPromoDernier['image'];
+
+                    $promoDernier2 = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$id'");
+                    if($rowPromoDernier2 = mysqli_fetch_assoc($promoDernier2)){
+                        $autonomie = $rowPromoDernier2['autonomie'];
+                        $puissance = $rowPromoDernier2['puissance'];
+                        $place = $rowPromoDernier2['place'];
+
+                        $promoDernier3 = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
+                        if($rowPromoDernier3 = mysqli_fetch_assoc($promoDernier3)){
+                            $marque = $rowPromoDernier3['marque'];
+
+
+            ?>
             <div class="row align-items-center bestSeller_tot" id="bestSeller_tot">
                 <div class="col-md-8">
-                    <img src="https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid p-0 img_carousel_pres">
+                    <img src="<?php echo $image ?>" class="img-fluid p-0 img_carousel_pres">
                 </div>
                 <div class="col-md-4">
                     <div class="bg-light w-100 p-4"style="border: 15px solid #EFEFEF;margin-left:-80px">
                 
                         <img src="../Image/ico_bs.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
 
-                        <h1 class="text-uppercase titre text-dark">Best seller 1</h1>
-                        <p class="fw-normal">lOREM IPSUM lOREM IPSUM lOREM IPSUM lOREM IPSU</p>
+                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2">nombre location : <?php echo $compteur_location ?></span></p>
+                        <p class="fw-normal"><?php echo $marque ?></p>
                         <ul class="list-unstyled fw-light">
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
-                            <li><i class="bi bi-dot"></i><i>4 chambres, 3 salles de bains</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $categorie ?></i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $autonomie ?> km</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $puissance ?> ch</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $place ?> places</i></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <?php 
+                        }
+                    }
+                }
+            ?>
+            <?php 
+                if($rowPromoDernier = mysqli_fetch_assoc($promoAvantDernier)){
+                    $id = $rowPromoDernier['id'];
+                    $id_marque = $rowPromoDernier['id_marque'];
+                    $modele = $rowPromoDernier['modele'];
+                    $categorie = $rowPromoDernier['categorie'];
+                    $promotion = $rowPromoDernier['promotion'];
+                    $image = $rowPromoDernier['image'];
+
+                    $promoDernier2 = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$id'");
+                    if($rowPromoDernier2 = mysqli_fetch_assoc($promoDernier2)){
+                        $autonomie = $rowPromoDernier2['autonomie'];
+                        $puissance = $rowPromoDernier2['puissance'];
+                        $place = $rowPromoDernier2['place'];
+
+                        $promoDernier3 = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
+                        if($rowPromoDernier3 = mysqli_fetch_assoc($promoDernier3)){
+                            $marque = $rowPromoDernier3['marque'];
+
+
+            ?>
+            <div class="row align-items-center promo_tot2"  id="promo_tot">
+                <div class="col-md-8">
+                    <img src="<?php echo $image ?>" class="img-fluid p-0 img_carousel_pres">
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-light w-100 p-4" id="" style="border: 15px solid #EFEFEF;margin-left:-80px">
+                
+                        <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
+
+                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2"><?php echo $promotion ?>%</span></p>
+                        <p class="fw-normal"><?php echo $marque ?></p>
+                        <ul class="list-unstyled fw-light">
+                            <li><i class="bi bi-dot"></i><i><?php echo $categorie ?></i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $autonomie ?> km</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $puissance ?> ch</i></li>
+                            <li><i class="bi bi-dot"></i><i><?php echo $place ?> places</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <?php 
+                        }
+                    }
+                }
+            ?>
         </div>
 
     </div>
 
     <!-- Sous titre carousel -->
     <div class="row carousel_bas text-center">
-        <a href="" id="btn_promo1" onclick="ViewPromo()" class="col-4 bg_green3 text-decoration-none">
+        <button id="btn_promo1" onclick="ViewPromo1()" class="btn_carousel_bas1 col-4 bg_green3 border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" id="btn_bestSeller" onclick="ViewbestSeller()" class="col-4 bg_green2 text-decoration-none">
+        </button>
+        <button id="btn_bestSeller" onclick="ViewbestSeller()" class="btn_carousel_bas1 col-4 bg_green2 border-0">
             <span class="carousel_bas1 text-uppercase">Best Seller</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
-        <a href="" class="col-4 bg_green1 text-decoration-none">
+        </button>
+        <button id="btn_promo2" onclick="ViewPromo2()" class="btn_carousel_bas1 col-4 bg_green1 border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
             <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
-        </a>
+        </button>
     </div>
 
 </section>
@@ -90,7 +197,7 @@
                 <h1 class="titre_presentation text-uppercase">Presentation</h1>
                 <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
                 <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
-                <a href="" class="btn_vert30 btn_presention">Lire plus</a>
+                <a href="presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
             <div class="col-6">
                 <img src="../Image/voiture_test.jpg" alt="img_bg_carousel" class="img_presentation">
@@ -108,35 +215,35 @@
     </div>
 
     <div class="bg_green1">
-        <div class="row row_marque">
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+        <div class="row row_marque ">
+            <?php
+                for($i=0; $i<4; $i++){
+                    if($row = mysqli_fetch_assoc($demandeImgMarque)){
+                        $logoMarque=$row['logo'];  
+            ?>
+            <div class="col-3 ">
+                <img src="<?php echo $logoMarque ?>" alt="img_marque" class="img-responsive img-fluid img_marque" style="height:200px!important">
             </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
-            <div class="col-3">
-                <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-            </div>
+            <?php
+                    }
+                }
+            ?>
         </div>
         <div class="collapse" id="collapseExample">
             <div class="card card-body bg_green1 p-0">
                 <div class="row">
+                    <?php
+                        for($i=0; $i<4; $i++){
+                            if($row2 = mysqli_fetch_assoc($demandeImgMarque2)){
+                                $logoMarque2=$row2['logo'];  
+                    ?>
                     <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
+                        <img src="<?php echo $logoMarque2 ?>" alt="img_marque" class="img-fluid img_marque m-auto d-block" style="height:200px!important">
                     </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
-                    <div class="col-3">
-                        <img src="../Image/voiture_test.jpg" alt="img_marque" class="img_marque">
-                    </div>
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -173,233 +280,41 @@
                         <div class="carousel-inner">
                             <div class="item carousel-item active">
                                 <div class="row" >
-                                    <div class="col-sm-3 s">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    </ul>
+                                    <?php
+                                        for ($i=0; $i<4;$i++){
+                                            if($rowAvisAffichage = mysqli_fetch_assoc($avisAffichage)){
+                                                // $dateCommentaire = $rowAvisAffichage['dateCommentaire'];
+                                                $commentaire = $rowAvisAffichage['commentaire'];
+                                                $etoile = $rowAvisAffichage['etoile'];
+                                                $id_inscription = $rowAvisAffichage['id_inscription'];
+
+                                                $avisAffichage2 = mysqli_query($con, "SELECT * FROM `inscription` WHERE id='$id_inscription'");
+                                                if($rowAvisAffichage2 = mysqli_fetch_assoc($avisAffichage2)){
+                                                    $prenom = $rowAvisAffichage2['prenom'];
+                                                ?>
+                                                <div class="col-sm-3">
+                                                    <div class="thumb-wrapper" style="border-bottom:10px solid #33985D; width:241px; height:250px">                                                    
+                                                        <div class="thumb-content">
+                                                            <h4 class="text-uppercase titre text-dark text-center"><?php echo $prenom ?></h4>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <?php    
+                                                                            for ($j=0; $j<$etoile;$j++){
+                                                                    ?>
+                                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <?php } ?>
+                                                                </ul>
+                                                            </div>
+                                                            <p class="fst-italic fw-normal text-dark "><?php echo $commentaire ?></p>
+                                                        </div>	
+                                                    </div>
+                                                    <div class="triangle_commentaire"></div>
                                                 </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Alex98</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                        
-                                </div>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Marine20</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                        
-                                </div>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper" style="border-bottom:10px solid #33985D;">
-                                            <div class="thumb-content">
-                                                <h4 class="text-uppercase titre text-dark text-center">Yvi16</h4>
-                                                <div class="star-rating">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <p class="fst-italic fw-normal text-dark ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation+</p>
-                                            </div>						
-                                        </div>
-                                        <div class="triangle_commentaire"></div>
-                                    </div>
-                        
+                                                <?php
+                                                }
+                                            }
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>

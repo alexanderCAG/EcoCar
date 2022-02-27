@@ -3,11 +3,11 @@
 <!-- Navbar -->
 <?php require('navbar.php'); ?>
 
-<section>
+<section> 
     <div class="inscription_tot row">
         <div class="col-5 my-auto">
             <div class="container">
-                <form action="">
+                <form action="../Bdd/login.php" method="POST">
                     
                     <h1 class="titre_inscription titre text-center">S'inscrire</h1>
                     <small><p class="text-center"><i>Inscrit-toi vite pour louer la voiture de tes rêves</i></p></small>
@@ -24,7 +24,7 @@
 
                         <!-- Tel/Date Permis -->
                         <input class="border_ligne input_inscription" type="text" placeholder="Téléphone" name="telephone" required>
-                        <input class="border_ligne input_inscription input_inscri_espace" type="text" placeholder="Date Permis" name="date_permis" required>
+                        <input class="border_ligne input_inscription input_inscri_espace" type="date" placeholder="Date Permis" name="date_permis" required>
                         <br>
                         <small><span class="erreur_inscription">texte</span></small>
                         <small><span class="erreur_inscription span_inscri_espace">texte</span></small>
@@ -48,7 +48,7 @@
                         <input type="checkbox" id="scales check_inscri" name="scales">
                         <small><label for="scales">Je confirme avoir plus de 18 ans</label></small>
                         <br><br>
-                        <button class="btn_vert10 mt-3 border-0">S'inscrire</button>
+                        <button type="submit" name="inscription" class="btn_vert10 mt-3 border-0">S'inscrire</button>
                         <a class="co_inscription" href="connexion.php" style="color:#000000;">Je suis déjà membre</a> 
                     </div>
                         

@@ -12,22 +12,22 @@
           <a class="color_white nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Presentation</a>
+          <a class="color_white nav-link" aria-current="page" href="presentation.php">Presentation</a>
         </li>
         <li class="nav-item dropdown">
           <a class="color_white nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorie
           </a>
           <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item color_white" href="#">Hybride</a></li>
-            <li><a class="dropdown-item color_white" href="#">Electrique</a></li>
-            <li><a class="dropdown-item color_white" href="#">Promotion</a></li>
-            <li><a class="dropdown-item color_white" href="#">Tout</a></li>
+            <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Hybride">Hybride</a></li>
+            <li><a class="dropdown-item color_white" href="categoriePage.php?catItem=Electrique">Electrique</a></li>
+            <li><a class="dropdown-item color_white" href="promoPage.php">Promotion</a></li>
+            <li><a class="dropdown-item color_white" href="categorie.php">Tout</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="color_white nav-link" aria-current="page" href="#">Promotion</a>
-        </li>
+        <!-- <li class="nav-item">
+          <a class="color_white nav-link" aria-current="page" href="promotion.php">Promotion</a>
+        </li> -->
         <li class="nav-item">
           <a class="color_white nav-link" aria-current="page" href="#avis_redirection">Avis</a>
         </li>

@@ -2,7 +2,7 @@
 
 <?php
 
-    $con = mysqli_connect("localhost","root","","...");
+    $con = mysqli_connect("localhost","root","","ecocar");
 
     // verif de la cnx
     if (mysqli_connect_errno())
