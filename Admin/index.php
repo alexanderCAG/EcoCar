@@ -2,7 +2,8 @@
 
     require('header.php');
     $dernierDevis = mysqli_query($con, "SELECT * FROM admin ORDER BY id DESC LIMIT 1");
-    $totalLocation = mysqli_query($con, "SELECT `compteur_location`, `id_marque` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+    $totalLocationCat = mysqli_query($con, "SELECT `compteur_location`, `categorie` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+    $totalLocationMod = mysqli_query($con, "SELECT `compteur_location`, `modele` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
 
 ?>
 
@@ -71,7 +72,7 @@
 
                         <!-- Partie 2 -->
                         <div class="mt-4 contenu_gauche2_admin shadow bg_white container mx-2">
-                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules des 6 meilleures marques</h4>
+                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total des meilleures locations </h4>
                             
                             <div class="row align-items-center mt-5">
                                 <div class="col-9">
@@ -116,14 +117,49 @@
                                         <!-- 6 graphes -->
                                         <div class="container contain_bar h-100 pt-5" style="margin-left:2%;"> 
 
+                                        <?php
+                                            for($i=0;$i<6;$i++){
+                                                if($rowtotalLocation1 = mysqli_fetch_assoc($totalLocationCat)){
+                                                    $categorieBest = $rowtotalLocation1['categorie'];
+                                                    $compteur_locationBest = $rowtotalLocation1['compteur_location'];
+                                                    $compteur_locationBest2 = intdiv($compteur_locationBest,60);
+                                                    round($compteur_locationBest2);
+
+                                                    if($categorieBest=='Electrique'){
+                
+                                        ?>
                                             <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
-                                                <div class="bar1_progress progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 50%; background-color:#c0dfcd">
-                                                    <span class="">50%</span>
-                                                </div>
-                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 80%; background-color:#79bb94">
-                                                    <span class="">80%</span>
+                                                <div class="bar1_progress progress-bar progress-bar-striped active position-relative" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $compteur_locationBest2 ?>px; background-color:#c0dfcd">
+                                                <?php 
+                                                    if($i==0){
+                                                ?>
+                                                    <img src="../Image/ico_bs.png" alt="ico_bs" width="50px" height="50px" class="position-absolute top-0 end-0">
+                                                <?php
+                                                    }
+                                                ?>
+                                                <span class="color_black"><?php echo $compteur_locationBest ?></span>
                                                 </div>
                                             </div>
+                                        <?php
+                                            }else if($categorieBest=='Hybride'){
+                                        ?>
+                                            <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active position-relative" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $compteur_locationBest2 ?>px; background-color:#79bb94">
+                                                <?php 
+                                                    if($i==0){
+                                                ?>
+                                                    <img src="../Image/ico_bs.png" alt="ico_bs" width="50px" height="50px" class="position-absolute top-0 end-0">
+                                                <?php
+                                                    }
+                                                ?>
+                                                <span class=""><?php echo $compteur_locationBest ?></span>
+                                                </div>
+                                            </div>
+                                        <?php
+                                                    }
+                                                }
+                                            }
+                                        ?>
 
                                             <!-- <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 70%; background-color: #F39C12;">
@@ -160,18 +196,13 @@
                                         <div class="row" style="margin-top:-85px;margin-right:50px">
                                         <?php
                                             for($i=0;$i<6;$i++){
-                                                if($rowtotalLocation = mysqli_fetch_assoc($totalLocation)){
-                                                    $id_marque = $rowtotalLocation['id_marque'];
-                
-                                                    $recupMarque = mysqli_query($con, "SELECT * FROM marque WHERE id='$id_marque'");
-                                                    if($rowrecupMarque = mysqli_fetch_assoc($recupMarque)){
-                                                        $marque = $rowrecupMarque['marque'];
+                                                if($rowtotalLocation2 = mysqli_fetch_assoc($totalLocationMod)){
+                                                    $modeleBest = $rowtotalLocation2['modele'];
                                         ?>
                                             <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold float-end"><?php echo $marque ?></span>
+                                                <span class="titre2 text-uppercase t_bold float-end"><?php echo $modeleBest ?></span>
                                             </div>
                                         <?php
-                                                    }
                                                 }
                                             }
                                         ?>
