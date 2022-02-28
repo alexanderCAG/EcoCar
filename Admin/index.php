@@ -1,9 +1,21 @@
 <?php 
 
     require('header.php');
+    // G P1
     $dernierDevis = mysqli_query($con, "SELECT * FROM admin ORDER BY id DESC LIMIT 1");
+    // G P2
     $totalLocationCat = mysqli_query($con, "SELECT `compteur_location`, `categorie` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
     $totalLocationMod = mysqli_query($con, "SELECT `compteur_location`, `modele` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+    // G P3
+    $countVoiture = mysqli_query($con, "SELECT count(id) as total_voiture FROM `voiture`");
+    $infoLastVoiture = mysqli_query($con, "SELECT * FROM voiture order by id desc LIMIT 6");
+    // D P1
+    $infoAvis = mysqli_query($con, "SELECT * FROM avis order by id desc LIMIT 4");
+    // D P2
+    $infoListeDevis = mysqli_query($con, "SELECT * FROM admin order by id desc LIMIT 14");
+    // D P3
+    $infoListeClient = mysqli_query($con, "SELECT * FROM inscription WHERE `administrateur` = 0 order by id desc LIMIT 4 ");
+
 
 ?>
 
@@ -221,61 +233,44 @@
                                     <h4 class="text-uppercase pt-4 t_bold titre">Liste des véhicules</h4>
                                 </div>
                                 <div class="col-6">
-                                    <span class="bg_black info_liste_car color_white mt-4">45</span>
+                                    <?php
+                                        if($rowcountVoiture = mysqli_fetch_assoc($countVoiture)){
+                                            $total_voiture = $rowcountVoiture['total_voiture'];
+                                    ?>
+                                    <span class="bg_black info_liste_car color_white mt-4"><?= $total_voiture ?></span>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
 
                             <div class="row text-uppercase" style="margin-left: 15px">
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                            <?php
+                                for($i=0;$i<6;$i++){
+                                    if($rowinfoLastVoiture = mysqli_fetch_assoc($infoLastVoiture)){
+                                        $id_marque = $rowinfoLastVoiture['id_marque'];
+                                        $imageVoiture = $rowinfoLastVoiture['image'];
+                                        $referenceVoiture = $rowinfoLastVoiture['reference'];
+                                        $modeleVoiture = $rowinfoLastVoiture['modele'];
 
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                                        $recupMarqueVoiture = mysqli_query($con, "SELECT * FROM marque WHERE id='$id_marque'");
+                                        if($rowrecupMarqueVoiture = mysqli_fetch_assoc($recupMarqueVoiture)){
+                                            $marqueVoiture = $rowrecupMarqueVoiture['marque'];
 
+                            ?>
                                 <div class="col-6 liste_vehicule_admin mt-3">
                                     <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="<?= $imageVoiture ?>" alt="logo"></div>
+                                        <div class="col-3"><?= $marqueVoiture ?></div>
+                                        <div class="col-3"><?= $modeleVoiture ?></div>
+                                        <div class="col-4"><?= $referenceVoiture ?></div>
                                     </div>
                                 </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
@@ -296,30 +291,32 @@
                             </div>  
 
                             <div class="row liste_droit1_admin mx-2">
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoAvis = mysqli_fetch_assoc($infoAvis)){
+                                        $id_inscription = $rowinfoAvis['id_inscription'];
+                                        $dateCommentaire = $rowinfoAvis['dateCommentaire'];
+                                        $timestamp = strtotime($dateCommentaire); 
+                                        $newDate = date("d-m-Y", $timestamp );
+
+                                        $recupInfoInscit = mysqli_query($con, "SELECT * FROM inscription WHERE id='$id_inscription'");
+                                        if($rowrecupInfoInscit = mysqli_fetch_assoc($recupInfoInscit)){
+                                            $nomInscrit = $rowrecupInfoInscit['nom'];
+                                            $prenomInscrit = $rowrecupInfoInscit['prenom'];
+
+                            ?>
                                 <div class="col-8">
-                                    <p>Demande d'information</p>
+                                    <p><?= $nomInscrit ?> <?= $prenomInscrit ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                    <!-- <span class="partie_droit_droit_admin   echo date('m.d.y');"></span> -->
+                                    <small><span class="partie_droit_droit_admin"><?php echo $newDate ?></span></small>
                                 </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
@@ -336,90 +333,32 @@
 
                             <!-- Pas plus de 14 devis -->
                             <div class="row liste_droit1_admin mx-2">
-                                <div class="col-8">
-                                    <p>Référence</p>
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoListeDevis = mysqli_fetch_assoc($infoListeDevis)){
+                                        $id_voiture_loue = $rowinfoListeDevis['id_voiture_loue'];
+
+                                        $recupInfoVoitureLoue = mysqli_query($con, "SELECT * FROM voiture WHERE id='$id_voiture_loue'");
+                                        if($rowrecupInfoVoitureLoue = mysqli_fetch_assoc($recupInfoVoitureLoue)){
+                                            $modeleVoitureLoue = $rowrecupInfoVoitureLoue['modele'];
+                                            $referenceVoitureLoue = $rowrecupInfoVoitureLoue['reference'];
+                                            $categorieVoitureLoue = $rowrecupInfoVoitureLoue['categorie'];
+
+                            ?>
+                                <div class="col-4">
+                                    <p><?= $modeleVoitureLoue ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
+                                    <p><?= $categorieVoitureLoue ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                    <span class="partie_droit_droit_admin"><?= $referenceVoitureLoue ?></span>
                                 </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
@@ -435,31 +374,24 @@
                             </div> 
 
                             <div class="row liste_droit1_admin mx-2">
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoListeClient = mysqli_fetch_assoc($infoListeClient)){
+                                        $nomListeClient = $rowinfoListeClient['nom'];
+                                        $prenomListeClient = $rowinfoListeClient['prenom'];
+                                        $phoneListeClient = $rowinfoListeClient['phone'];
+
+                            ?>
                                 <div class="col-8">
-                                    <p>Nom Prénom</p>
+                                    <p><?= $nomListeClient ?> <?= $prenomListeClient ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                    <span class="partie_droit_droit_admin"><?= $phoneListeClient ?></span>
                                 </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                            </div>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </div>
 
                     </div>
