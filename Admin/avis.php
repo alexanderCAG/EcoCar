@@ -41,7 +41,8 @@
 
                     $result = mysqli_query($con,"SELECT * FROM `avis` WHERE `verif_commentaire` = 0 LIMIT $offset, $total_records_per_page ");
                     while($afficheTot = mysqli_fetch_array($result)){
-                        $idinscriptioTot= $afficheTot['id_inscription'];              
+                        $idTot= $afficheTot['id'];      
+                        $idinscriptioTot= $afficheTot['id_inscription'];          
                         $commentaireTot= $afficheTot['commentaire'];      
                         $etoileTot= $afficheTot['etoile'];      
                         $dateCommentaireTot= $afficheTot['dateCommentaire'];
@@ -55,30 +56,33 @@
 
                 ?>
                 <div class="col-3 bg_white shadow col_avis" style="margin-bottom: 50px;">
-                    <div class="row text-uppercase mt-3 mx-2 t_bold" style="border-bottom: solid 2px black; padding-bottom: 10px">
-                        <div class="col-12">
-                            <small><span><?= $nom ?> <?= $prenom ?></span></small>
+                    <form action="../Bdd/validationAvis.php" method="POST">
+                        <div class="row text-uppercase mt-3 mx-2 t_bold" style="border-bottom: solid 2px black; padding-bottom: 10px">
+                            <div class="col-12">
+                                <small><span><?= $nom ?> <?= $prenom ?></span></small>
+                            </div>
+                            <div class="col-6">
+                                <?php    
+                                    for ($j=0; $j<$etoileTot;$j++){
+                                ?>
+                                    <small style="color: orange;"><i class="fa fa-star"></i></small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-6">
+                                <small class="float-end" style="font-size:12px;margin-top:5px;"><?= $newDate ?></small>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <?php    
-                                for ($j=0; $j<$etoileTot;$j++){
-                            ?>
-                                <small style="color: orange;"><i class="fa fa-star"></i></small>
-                            <?php } ?>
+                        <p class="texte_avis mx-2 mt-3" style="text-align: justify;height:120px;"><?= $commentaireTot ?></p>
+                        <input type="hidden" name="idAvis" value="<?= $idTot ?>">
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="submit" name="valideAvis" class="btn_avis bg-success">Valider</button>
+                            </div>
+                            <div class="col-6">
+                                <center><a type="button" href="../Bdd/delete.php?idAvis=<?= $idTot ?>" class="btn_avis bg-danger float-end text-decoration-none">Refuser</a></center>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <small class="float-end" style="font-size:12px;margin-top:5px;"><?= $newDate ?></small>
-                        </div>
-                    </div>
-                    <p class="texte_avis mx-2 mt-3" style="text-align: justify;height:120px;"><?= $commentaireTot ?></p>
-                    <div class="row">
-                        <div class="col-6">
-                            <button class="btn_avis bg-success">Valider</button>
-                        </div>
-                        <div class="col-6">
-                            <button class="btn_avis bg-danger float-end">Refuser</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <?php
                         }
