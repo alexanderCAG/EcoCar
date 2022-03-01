@@ -38,7 +38,7 @@
                 <div class="row">
 
                     <!-- Gauche -->
-                    <div class="col-9 div_gauche_admin">
+                    <div class="col col-md-12 col-xs-12 col-sm-12 col-lg-9 div_gauche_admin">
                         
                         <!-- Partie 1 -->
                         <div class="contenu_gauche1_admin shadow bg_white mx-2">
@@ -277,7 +277,7 @@
                     </div>
 
                     <!-- Droit -->
-                    <div class="col-3 bg_green3 droit_admin_div">
+                    <div class="col col-md-12 col-xs-12 col-sm-12 col-lg-3 bg_green3 droit_admin_div">
 
                         <!-- Partie 1 -->
                         <div class="contenu_droit1_admin shadow bg_white">
