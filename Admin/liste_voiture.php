@@ -78,14 +78,14 @@
                         <td><span class="text-uppercase"><?= $marque ?></span></td>
                         <td><span class="text-uppercase"><?= $reference ?></span></td>
                         <td><span class="text-uppercase"><?= $modele ?></span></td>
-                        <td><div class="text-uppercase" style="width:20px;height:20px;background-color:#<?= $couleur ?>;border: solid 1px black; border-radius:30px;"></div></td>
+                        <td><div class="text-uppercase shadow" style="width:20px;height:20px;background-color:#<?= $couleur ?>;border: solid 1px black; border-radius:30px;"></div></td>
                         <td><span><?= $compteur_location ?></span></td>
                         <td><span class="text-uppercase"><?= $promotion ?></span>%</td>
                         <td>
                             <?php
                                 if($dispo==1){
                             ?>
-                            <div class="statut_info_listeVoiture bg-success color_white"><span>Disponible</span></div>
+                            <div class="statut_info_listeVoiture bg-success color_white "><span>Disponible</span></div>
                             <?php
                                 }else if($dispo==0){
                             ?>
@@ -132,20 +132,20 @@
             <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
                     <?php
-                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1>&#139;&#139; First Page</a></li>"; } 
-                    ?>  
+                        if($page_no > 1){ echo "<li class='page-item'><a class='page-link' href='?page_no=1'> &#139;&#139; First Page</a></li>"; } 
+                    ?>
                     
                     <li class="page-item" <?php if($page_no <= 1){ echo "class='disabled page-item'"; } ?>>
-                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page"; } ?>>Previous</a>
+                        <a class="page-link" <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
                     </li>
 
                     <?php require('pagination.php');?>
-                    
+
                     <li class='page-item' <?php if($page_no >= $total_no_of_pages){ echo "class='disabled page-item'"; } ?>>
-                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page"; } ?>>Next</a>
+                        <a class='page-link' <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
                     </li>
                     <?php if($page_no < $total_no_of_pages){
-                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages>Last &rsaquo;&rsaquo;</a></li>";
+                        echo "<li class='page-item'><a class='page-link' href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
                     } ?>
                 </ul>
             </nav>
