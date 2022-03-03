@@ -92,17 +92,18 @@
                             </div>
 
                             <div class="row form-row mt-4">
-                                <div class="form-group col-md-4 col-4" style="margin-top: 52px; height:38px;">
+                            <div class="form-group col-md-4 col-4" style="margin-top: 25px; height:38px;">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-unstyled">
                                             <div class="row">
                                                 <div class="col-md-15">
+                                                    <div class="text-uppercase shadow mb-1" style="width:100px;height:20px;background-color:#;border: solid 1px black; border-radius:10px;"></div>
                                                     <label class="w-100 label_color">
-                                                        <input class="color form-control-file color_ajoutVoiture" id="color_ajoutVoiture" name="background_seller" placeholder="Color" data-value="#xxxxxx" value=""/>
+                                                        <input class="color form-control-file color_ajoutVoiture" id="color_modifVoiture" name="background_seller" placeholder="Color" data-value="#xxxxxx" value=""/>
                                                     </label> 
                                                 </div>
                                             </div>
-                                            <small><span class="ajoutVoiture_span" id="ErreurAjout_5"></span></small>
+                                            <small><span class="ajoutVoiture_span" id="Erreurmodif_5"></span></small>
                                             <br>
                                         </li>
                                     </ul>
@@ -115,7 +116,7 @@
                                                 <input type="file" name="ajoutVoiture_img" id="file_interrieur_imgAdminAjout" accept="image/png, image/jpg, image/jpeg">
                                             </span>
                                         </span>
-                                        <input type="text" class="form-control" readonly value="">
+                                        <input type="text" class="form-control" id="file_interrieur_imgAdminmodif2" name="modifImage" readonly value="">
                                         <small><span class="infoPerso_span" id="imageErreur_ajoutVoiture"></span></small>
                                         <br>
                                     </div>
