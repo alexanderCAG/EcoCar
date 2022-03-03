@@ -41,7 +41,7 @@
                     $ajoutPrixInsert = mysqli_query($con,"INSERT INTO prix (id_voiture, prixJour, prixSemaine, prixMois)
                                         VALUES ('$idTot', '$ajoutPrixJ', '$ajoutPrixS', '$ajoutPrixM')");
 
-                    // echo "<script language='javascript' type='text/javascript'> location.href='../Admin' </script>";            
+                    echo "<script language='javascript' type='text/javascript'> location.href='../Admin' </script>";            
                     
                 }
         }
