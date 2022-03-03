@@ -200,7 +200,7 @@
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border: solid 2px #33985d;
+    /* border: solid 2px #33985d; */
     border-radius: 150px;
     float: left;
 }
