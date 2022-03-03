@@ -36,7 +36,7 @@
                 $UpdateModifPrix = mysqli_query($con, "UPDATE prix SET prixJour='$modifPrixJ', prixSemaine='$modifPrixS', prixMois='$modifPrixM'
                                         WHERE id_voiture='$hideID'");
                 $UpdateModifModel = mysqli_query($con, "UPDATE model SET autonomie='$modifAutonomie', puissance='$modifPuissance'
-                                        consommation='$modifConsommation', place='$modifPlace',WHERE id_voiture='$hideID'");
+                                        consommation='$modifConsommation', place='$modifPlace' WHERE id_voiture='$hideID'");
 
                 echo "<script language='javascript' type='text/javascript'> location.href='../Admin/liste_voiture.php' </script>";            
             }else{

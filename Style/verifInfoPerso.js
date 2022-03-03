@@ -17,43 +17,43 @@ function verifInfo(event){
     var verifInfoPerso_Admin=true;
 
     // input
-    let infoPerso_1 = document.getElementById('infoPerso_1');
+    // let infoPerso_1 = document.getElementById('infoPerso_1');
     let infoPerso_2 = document.getElementById('infoPerso_2');
     let infoPerso_3 = document.getElementById('infoPerso_3');
     let infoPerso_4 = document.getElementById('infoPerso_4');
     let infoPerso_5 = document.getElementById('infoPerso_5');
-    let file_interrieur_imgAdmin = document.getElementById('file_interrieur_imgAdmin');
+    // let file_interrieur_imgAdmin = document.getElementById('file_interrieur_imgAdmin2');
 
     // span
-    let ErreurCon_1 = document.getElementById('ErreurCon_1');
+    // let ErreurCon_1 = document.getElementById('ErreurCon_1');
     let ErreurCon_2 = document.getElementById('ErreurCon_2');
     let ErreurCon_3 = document.getElementById('ErreurCon_3');
     let ErreurCon_4 = document.getElementById('ErreurCon_4');
     let ErreurCon_5 = document.getElementById('ErreurCon_5');
-    let imageErreur_infoPerso = document.getElementById('imageErreur_infoPerso');
+    // let imageErreur_infoPerso = document.getElementById('imageErreur_infoPerso');
 
     // reset span
-    ErreurCon_1.innerHTML="";
+    // ErreurCon_1.innerHTML="";
     ErreurCon_2.innerHTML="";
     ErreurCon_3.innerHTML="";
     ErreurCon_4.innerHTML="";
     ErreurCon_5.innerHTML="";
-    imageErreur_infoPerso.innerHTML="";
+    // imageErreur_infoPerso.innerHTML="";
 
 
     // Nom du site verif
-    if(infoPerso_1.value.trim()==""){
-        ErreurCon_1.innerHTML = "Remplir le champs";
-        verifInfoPerso_Admin=false;
-    }else if(regex_mixte.test(infoPerso_1.value)==false){
-        ErreurCon_1.innerHTML = "Caractere spéciaux pas pris en compte";
-        verifInfoPerso_Admin=false;
-    }else if(infoPerso_1.value.length >= 25){
-        ErreurCon_1.innerHTML = "Trop long";
-        verifInfoPerso_Admin=false;
-    }else{
-        ErreurCon_1.innerHTML = "";
-    }
+    // if(infoPerso_1.value.trim()==""){
+    //     ErreurCon_1.innerHTML = "Remplir le champs";
+    //     verifInfoPerso_Admin=false;
+    // }else if(regex_mixte.test(infoPerso_1.value)==false){
+    //     ErreurCon_1.innerHTML = "Caractere spéciaux pas pris en compte";
+    //     verifInfoPerso_Admin=false;
+    // }else if(infoPerso_1.value.length >= 25){
+    //     ErreurCon_1.innerHTML = "Trop long";
+    //     verifInfoPerso_Admin=false;
+    // }else{
+    //     ErreurCon_1.innerHTML = "";
+    // }
 
     // telephone verif
     if(infoPerso_2.value.trim()==""){
@@ -76,7 +76,7 @@ function verifInfo(event){
     }else if(regex_mail.test(infoPerso_3.value)==false){
         ErreurCon_3.innerHTML = "Email pas correct";
         verifInfoPerso_Admin=false;
-    }else if(infoPerso_3.value.length >= 25){
+    }else if(infoPerso_3.value.length >= 40){
         ErreurCon_3.innerHTML = "Trop long";
         verifInfoPerso_Admin=false;
     }else{
@@ -135,12 +135,12 @@ function verifInfo(event){
     }
 
     // image verif
-    if(file_interrieur_imgAdmin.value.length==""){
-        imageErreur_infoPerso.innerHTML = "Remplir le champs";
-        verifInfoPerso_Admin=false;
-    }else{
-        imageErreur_infoPerso.innerHTML = "";
-    }
+    // if(file_interrieur_imgAdmin.value.length==""){
+    //     imageErreur_infoPerso.innerHTML = "Remplir le champs";
+    //     verifInfoPerso_Admin=false;
+    // }else{
+    //     imageErreur_infoPerso.innerHTML = "";
+    // }
 
 
     // verif event

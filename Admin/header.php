@@ -41,6 +41,9 @@
 <?php
     include("../Bdd/cnx.php");
     session_start();
+
+    $idSession=$_SESSION['emailUser'];
+    $infoHeader = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$idSession'");
 ?>
 
 <section class="header_tot bg_gray2">
@@ -65,8 +68,16 @@
     
     <div class="identification_con_admin">
         <a href="compte_admin.php" class="text-decoration-none color_black redirection_con_admin">
-            <img class="img_user_admin" src="../Image/voiture_test.jpg" alt="user">
-            <span class="nom_admin">Nom Prenom</span>
+            <img class="img_user_admin" src="../Image/logo2.png" alt="user">
+            <?php
+                if($infoHeaderTot = mysqli_fetch_assoc($infoHeader)){
+                    $nom= $infoHeaderTot['nom'];
+                    $prenom= $infoHeaderTot['prenom'];
+            ?>
+            <span class="nom_admin"><?= $prenom ?> <?= $nom ?></span>
+            <?php
+                }
+            ?>
         </a>
     </div>
     
