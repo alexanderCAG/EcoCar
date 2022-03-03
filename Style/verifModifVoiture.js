@@ -29,7 +29,7 @@ function verifAjoutVoiture(event){
     let ajoutVoiture10 = document.getElementById('modifVoiture10');
     let ajoutVoiture11 = document.getElementById('modifVoiture11');
     let color_ajoutVoiture = document.getElementById('color_modifVoiture');
-    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif');
+    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif2');
 
     // span
     let ErreurAjout_1 = document.getElementById('Erreurmodif_1');
@@ -62,28 +62,25 @@ function verifAjoutVoiture(event){
     imageErreur_ajoutVoiture.innerHTML="";
 
 
-    // marque (select) verif
-    if(ajoutVoiture1.value == "choixMarque"){
-        ErreurAjout_1.innerHTML = "Choisir une marque";
-        verifAjoutVoiture_Admin=false;
-    }else{
-        ErreurAjout_1.innerHTML = "";
-    }
+    // // marque (select) verif
+    // if(ajoutVoiture1.value == "choixMarque"){
+    //     ErreurAjout_1.innerHTML = "Choisir une marque";
+    //     verifAjoutVoiture_Admin=false;
+    // }else{
+    //     ErreurAjout_1.innerHTML = "";
+    // }
 
-    // catégorie (select) verif
-    if(ajoutVoiture2.value == "choixCategorie"){
-        ErreurAjout_2.innerHTML = "Choisir une catégorie";
-        verifAjoutVoiture_Admin=false;
-    }else{
-        ErreurAjout_2.innerHTML = "";
-    }
+    // // catégorie (select) verif
+    // if(ajoutVoiture2.value == "choixCategorie"){
+    //     ErreurAjout_2.innerHTML = "Choisir une catégorie";
+    //     verifAjoutVoiture_Admin=false;
+    // }else{
+    //     ErreurAjout_2.innerHTML = "";
+    // }
 
     // Modèle verif
     if(ajoutVoiture3.value.trim()==""){
         ErreurAjout_3.innerHTML = "Remplir le champs";
-        verifAjoutVoiture_Admin=false;
-    }else if(regex_mixte.test(ajoutVoiture3.value)==false){
-        ErreurAjout_3.innerHTML = "Caractere spéciaux pas pris en compte";
         verifAjoutVoiture_Admin=false;
     }else if(ajoutVoiture3.value.length >= 25){
         ErreurAjout_3.innerHTML = "Trop long";

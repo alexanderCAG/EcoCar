@@ -1,4 +1,23 @@
-<?php require('header.php'); ?>
+<?php 
+
+    require('header.php');
+    // G P1
+    $dernierDevis = mysqli_query($con, "SELECT * FROM admin ORDER BY id DESC LIMIT 1");
+    // G P2
+    $totalLocationCat = mysqli_query($con, "SELECT `compteur_location`, `categorie` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+    $totalLocationMod = mysqli_query($con, "SELECT `compteur_location`, `modele` FROM `voiture` Order by `compteur_location` DESC LIMIT 6");
+    // G P3
+    $countVoiture = mysqli_query($con, "SELECT count(id) as total_voiture FROM `voiture`");
+    $infoLastVoiture = mysqli_query($con, "SELECT * FROM voiture order by id desc LIMIT 6");
+    // D P1
+    $infoAvis = mysqli_query($con, "SELECT * FROM avis order by id desc LIMIT 4");
+    // D P2
+    $infoListeDevis = mysqli_query($con, "SELECT * FROM admin order by id desc LIMIT 14");
+    // D P3
+    $infoListeClient = mysqli_query($con, "SELECT * FROM inscription WHERE `administrateur` = 0 order by id desc LIMIT 4 ");
+
+
+?>
 
 <div class="total_categorie">
 
@@ -19,19 +38,35 @@
                 <div class="row">
 
                     <!-- Gauche -->
-                    <div class="col-9 div_gauche_admin">
+                    <div class="col col-md-12 col-xs-12 col-sm-12 col-lg-9 div_gauche_admin">
                         
                         <!-- Partie 1 -->
                         <div class="contenu_gauche1_admin shadow bg_white mx-2">
+                            <?php
+                                if($rowDernierDevis = mysqli_fetch_assoc($dernierDevis)){
+                                    $id_voiture_loue = $rowDernierDevis['id_voiture_loue'];
+                                    $id_inscription_loue = $rowDernierDevis['id_inscription_loue'];
+                                    $prix_voiture = $rowDernierDevis['prix_voiture'];
+
+                                    $dernierDevisInscription = mysqli_query($con, "SELECT * FROM inscription WHERE id='$id_inscription_loue'");
+                                    if($rowdernierDevisInscription = mysqli_fetch_assoc($dernierDevisInscription)){
+                                        $nom = $rowdernierDevisInscription['nom'];
+                                        $prenom = $rowdernierDevisInscription['prenom'];
+
+                                        $dernierDevisImg = mysqli_query($con, "SELECT * FROM voiture WHERE id='$id_voiture_loue'");
+                                        if($rowdernierDevisImg = mysqli_fetch_assoc($dernierDevisImg)){
+                                            $image = $rowdernierDevisImg['image'];
+
+                            ?>
                             <div class="row">
                                 <div class="col-3">
-                                    <img src="../Image/voiture_test.jpg" alt="last vehicule" class="img_last_save">
+                                    <img src="<?php echo $image ?>" alt="last vehicule" class="img_last_save">
                                 </div>
                                 <div class="col-9">
                                     <div class="gauche1_admin_texteUp text-uppercase titre">
                                         <h4>Dernier devis enregistré</h4>
-                                        <h6>Nom Prenom</h6>
-                                        <p class="prix_last_save"><span>500,50</span>€/Mois</p>
+                                        <h6><?php echo $nom ?> &nbsp; <?php echo $prenom ?></h6>
+                                        <p class="prix_last_save"><span><?php echo $prix_voiture ?></span>€</p>
                                     </div>
                                     <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
                                     <div class="info_last_save text-uppercase">
@@ -40,11 +75,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                         </div>
 
                         <!-- Partie 2 -->
                         <div class="mt-4 contenu_gauche2_admin shadow bg_white container mx-2">
-                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total de location des véhicules</h4>
+                            <h4 class="text-uppercase mx-4 pt-4 t_bold titre">Total des meilleures locations </h4>
                             
                             <div class="row align-items-center mt-5">
                                 <div class="col-9">
@@ -85,36 +125,65 @@
                                                 <span class="m-2 pl-4 p-2  text-light" style="background-color:#935116">Shoes</span>
                                             </div>
                                         </div> -->
-                                
-                                        <div class="container contain_bar h-100 pt-5" style="margin-left:2%;"> 
-                                            <!-- ##### Stat pillow #######-->
 
+                                        <!-- 6 graphes -->
+                                        <div class="container contain_bar h-100 pt-5" style="margin-left:2%;"> 
+
+                                        <?php
+                                            for($i=0;$i<6;$i++){
+                                                if($rowtotalLocation1 = mysqli_fetch_assoc($totalLocationCat)){
+                                                    $categorieBest = $rowtotalLocation1['categorie'];
+                                                    $compteur_locationBest = $rowtotalLocation1['compteur_location'];
+                                                    $compteur_locationBest2 = intdiv($compteur_locationBest,60);
+                                                    round($compteur_locationBest2);
+
+                                                    if($categorieBest=='Electrique'){
+                
+                                        ?>
                                             <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
-                                                <div class="bar1_progress progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 50%; background-color:#c0dfcd">
-                                                    <span class="">50%</span>
-                                                </div>
-                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 80%; background-color:#79bb94">
-                                                    <span class="">80%</span>
+                                                <div class="bar1_progress progress-bar progress-bar-striped active position-relative" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $compteur_locationBest2 ?>px; background-color:#c0dfcd">
+                                                <?php 
+                                                    if($i==0){
+                                                ?>
+                                                    <img src="../Image/ico_bs.png" alt="ico_bs" width="50px" height="50px" class="position-absolute top-0 end-0">
+                                                <?php
+                                                    }
+                                                ?>
+                                                <span class="color_black"><?php echo $compteur_locationBest ?></span>
                                                 </div>
                                             </div>
+                                        <?php
+                                            }else if($categorieBest=='Hybride'){
+                                        ?>
+                                            <div class="progress progress-bar-vertical h-75 bg-transparent" style="width:120px">
+                                                <div class="progress-bar progress-bar-striped active position-relative" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: <?php echo $compteur_locationBest2 ?>px; background-color:#79bb94">
+                                                <?php 
+                                                    if($i==0){
+                                                ?>
+                                                    <img src="../Image/ico_bs.png" alt="ico_bs" width="50px" height="50px" class="position-absolute top-0 end-0">
+                                                <?php
+                                                    }
+                                                ?>
+                                                <span class=""><?php echo $compteur_locationBest ?></span>
+                                                </div>
+                                            </div>
+                                        <?php
+                                                    }
+                                                }
+                                            }
+                                        ?>
 
-                                            <!-- ##### Stat decoration #######-->
-
-                                            <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
+                                            <!-- <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 70%; background-color: #F39C12;">
                                                     <span class="">70%</span>
                                                 </div>
                                             </div>
-
-                                            <!-- ##### Stat sheet #######-->
-
+                                            
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 20%; background-color: #52BE80;">
                                                     <span class="">20%</span>
                                                 </div>
                                             </div>
-
-                                            <!-- ##### Stat Tshirt #######-->
 
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 65%; background-color: #A569BD;">
@@ -122,42 +191,33 @@
                                                 </div>
                                             </div>
 
-                                            <!-- ##### Stat Sweat-shirt #######-->
-
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 85%; background-color: #B03A2E;">
                                                     <span class="">85%</span>
                                                 </div>
                                             </div>
 
-                                            <!-- ##### Stat Shoes #######-->
-
                                             <div class="progress progress-bar-vertical h-75 bg-light shadow-lg" style="width:120px">
                                                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 45%; background-color: #935116;">
                                                     <span class="">45%</span>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
 
-                                        <div class="row" style="margin-top:-85px">
+                                        <!-- 6 Marques -->
+                                        <div class="row" style="margin-top:-85px;margin-right:50px">
+                                        <?php
+                                            for($i=0;$i<6;$i++){
+                                                if($rowtotalLocation2 = mysqli_fetch_assoc($totalLocationMod)){
+                                                    $modeleBest = $rowtotalLocation2['modele'];
+                                        ?>
                                             <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold float-end">Marque 1</span>
+                                                <span class="titre2 text-uppercase t_bold float-end"><?php echo $modeleBest ?></span>
                                             </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold float-end" style="margin-right:10px">Marque 2</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-left:20px">Marque 3</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-left:10px">Marque 4</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold">Marque 5</span>
-                                            </div>
-                                            <div class="col-2">
-                                                <span class="titre2 text-uppercase t_bold" style="margin-right:20px">Marque 6</span>
-                                            </div>
+                                        <?php
+                                                }
+                                            }
+                                        ?>
                                         </div>
 
                                     </div>
@@ -173,68 +233,51 @@
                                     <h4 class="text-uppercase pt-4 t_bold titre">Liste des véhicules</h4>
                                 </div>
                                 <div class="col-6">
-                                    <span class="bg_black info_liste_car color_white mt-4">45</span>
+                                    <?php
+                                        if($rowcountVoiture = mysqli_fetch_assoc($countVoiture)){
+                                            $total_voiture = $rowcountVoiture['total_voiture'];
+                                    ?>
+                                    <span class="bg_black info_liste_car color_white mt-4"><?= $total_voiture ?></span>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
 
                             <div class="row text-uppercase" style="margin-left: 15px">
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                            <?php
+                                for($i=0;$i<6;$i++){
+                                    if($rowinfoLastVoiture = mysqli_fetch_assoc($infoLastVoiture)){
+                                        $id_marque = $rowinfoLastVoiture['id_marque'];
+                                        $imageVoiture = $rowinfoLastVoiture['image'];
+                                        $referenceVoiture = $rowinfoLastVoiture['reference'];
+                                        $modeleVoiture = $rowinfoLastVoiture['modele'];
 
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                                        $recupMarqueVoiture = mysqli_query($con, "SELECT * FROM marque WHERE id='$id_marque'");
+                                        if($rowrecupMarqueVoiture = mysqli_fetch_assoc($recupMarqueVoiture)){
+                                            $marqueVoiture = $rowrecupMarqueVoiture['marque'];
 
+                            ?>
                                 <div class="col-6 liste_vehicule_admin mt-3">
                                     <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
+                                        <div class="col-2"><img class="img_logo_listeVoiture" src="<?= $imageVoiture ?>" alt="logo"></div>
+                                        <div class="col-3"><?= $marqueVoiture ?></div>
+                                        <div class="col-3"><?= $modeleVoiture ?></div>
+                                        <div class="col-4"><?= $referenceVoiture ?></div>
                                     </div>
                                 </div>
-                                <div class="col-6 liste_vehicule_admin mt-3">
-                                    <div class="row liste2_vehicule_admin bg_gray2">
-                                        <div class="col-2"><img class="img_logo_listeVoiture" src="../Image/voiture_test.jpg" alt="logo"></div>
-                                        <div class="col-3">marque</div>
-                                        <div class="col-3">Modele</div>
-                                        <div class="col-4">Reference</div>
-                                    </div>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- Droit -->
-                    <div class="col-3 bg_green3 droit_admin_div">
+                    <div class="col col-md-12 col-xs-12 col-sm-12 col-lg-3 bg_green3 droit_admin_div">
 
                         <!-- Partie 1 -->
                         <div class="contenu_droit1_admin shadow bg_white">
@@ -248,30 +291,32 @@
                             </div>  
 
                             <div class="row liste_droit1_admin mx-2">
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoAvis = mysqli_fetch_assoc($infoAvis)){
+                                        $id_inscription = $rowinfoAvis['id_inscription'];
+                                        $dateCommentaire = $rowinfoAvis['dateCommentaire'];
+                                        $timestamp = strtotime($dateCommentaire); 
+                                        $newDate = date("d-m-Y", $timestamp );
+
+                                        $recupInfoInscit = mysqli_query($con, "SELECT * FROM inscription WHERE id='$id_inscription'");
+                                        if($rowrecupInfoInscit = mysqli_fetch_assoc($recupInfoInscit)){
+                                            $nomInscrit = $rowrecupInfoInscit['nom'];
+                                            $prenomInscrit = $rowrecupInfoInscit['prenom'];
+
+                            ?>
                                 <div class="col-8">
-                                    <p>Demande d'information</p>
+                                    <p><?= $nomInscrit ?> <?= $prenomInscrit ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
+                                    <!-- <span class="partie_droit_droit_admin   echo date('m.d.y');"></span> -->
+                                    <small><span class="partie_droit_droit_admin"><?php echo $newDate ?></span></small>
                                 </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Demande d'information</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin"><?php echo date("m.d.y"); ?></span>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
@@ -288,90 +333,32 @@
 
                             <!-- Pas plus de 14 devis -->
                             <div class="row liste_droit1_admin mx-2">
-                                <div class="col-8">
-                                    <p>Référence</p>
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoListeDevis = mysqli_fetch_assoc($infoListeDevis)){
+                                        $id_voiture_loue = $rowinfoListeDevis['id_voiture_loue'];
+
+                                        $recupInfoVoitureLoue = mysqli_query($con, "SELECT * FROM voiture WHERE id='$id_voiture_loue'");
+                                        if($rowrecupInfoVoitureLoue = mysqli_fetch_assoc($recupInfoVoitureLoue)){
+                                            $modeleVoitureLoue = $rowrecupInfoVoitureLoue['modele'];
+                                            $referenceVoitureLoue = $rowrecupInfoVoitureLoue['reference'];
+                                            $categorieVoitureLoue = $rowrecupInfoVoitureLoue['categorie'];
+
+                            ?>
+                                <div class="col-4">
+                                    <p><?= $modeleVoitureLoue ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
+                                    <p><?= $categorieVoitureLoue ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
+                                    <span class="partie_droit_droit_admin"><?= $referenceVoitureLoue ?></span>
                                 </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Référence</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Modèle</span>
-                                </div>
+                            <?php
+                                        }
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
 
@@ -387,31 +374,24 @@
                             </div> 
 
                             <div class="row liste_droit1_admin mx-2">
+                            <?php
+                                for($i=0;$i<4;$i++){
+                                    if($rowinfoListeClient = mysqli_fetch_assoc($infoListeClient)){
+                                        $nomListeClient = $rowinfoListeClient['nom'];
+                                        $prenomListeClient = $rowinfoListeClient['prenom'];
+                                        $phoneListeClient = $rowinfoListeClient['phone'];
+
+                            ?>
                                 <div class="col-8">
-                                    <p>Nom Prénom</p>
+                                    <p><?= $nomListeClient ?> <?= $prenomListeClient ?></p>
                                 </div>
                                 <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
+                                    <span class="partie_droit_droit_admin"><?= $phoneListeClient ?></span>
                                 </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                                <div class="col-8">
-                                    <p>Nom Prénom</p>
-                                </div>
-                                <div class="col-4">
-                                    <span class="partie_droit_droit_admin">Téléphone</span>
-                                </div>
-                            </div>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </div>
 
                     </div>
