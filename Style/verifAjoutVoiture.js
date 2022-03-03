@@ -21,7 +21,12 @@ function simulateClick1() {
     $('#btn_categorie_ajouter1').css('background-color', '#33985d');
     $('#btn_categorie_ajouter1').css('color', 'white');
 
-    $('#ajoutVoiture2').val('Hybride');
+    // document.getElementById('ajoutVoiture2').value="Hybride";
+    let test = $('#ajoutVoiture2').val('Hybride');
+    // alert('test');
+    // let test = document.getElementById('ajoutVoiture2').value();
+    // alert(test);
+    alert(JSON.stringify(test));
     document.getElementById('categorieInsert').disabled=true;
 }
 
@@ -37,13 +42,14 @@ function simulateClick2() {
     $('#btn_categorie_ajouter2').css('background-color', '#33985d');
     $('#btn_categorie_ajouter2').css('color', 'white');
 
-    $('#ajoutVoiture2').val('Électrique');
+    // document.getElementById('ajoutVoiture2').innerHTML="Electrique";
+    $('#ajoutVoiture2').val('Electrique');
     document.getElementById('categorieInsert').disabled=true;
 }
 
 
 // Ajouter Véhicule
-document.getElementById('submit_valider_ajoutVoiture').addEventListener('click', verifAjoutVoiture)
+// document.getElementById('submit_valider_ajoutVoiture').addEventListener('click', verifAjoutVoiture)
 function verifAjoutVoiture(event){
 
     var verifAjoutVoiture_Admin=true;
@@ -62,7 +68,7 @@ function verifAjoutVoiture(event){
     let ajoutVoiture11 = document.getElementById('ajoutVoiture11');
     let color_ajoutVoiture = document.getElementById('color_ajoutVoiture');
     let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif2');
-
+    
     // span
     let ErreurAjout_1 = document.getElementById('ErreurAjout_1');
     let ErreurAjout_2 = document.getElementById('ErreurAjout_2');
@@ -77,7 +83,7 @@ function verifAjoutVoiture(event){
     let ErreurAjout_11 = document.getElementById('ErreurAjout_11');
     let ErreurAjout_12 = document.getElementById('ErreurAjout_12');
     let imageErreur_ajoutVoiture = document.getElementById('imageErreur_ajoutVoiture');
-
+    
     // reset span
     ErreurAjout_1.innerHTML="";
     ErreurAjout_2.innerHTML="";
@@ -92,7 +98,7 @@ function verifAjoutVoiture(event){
     ErreurAjout_11.innerHTML="";
     ErreurAjout_12.innerHTML="";
     imageErreur_ajoutVoiture.innerHTML="";
-
+    
 
     // marque (select) verif
     if(ajoutVoiture1.value == "choixMarque"){
