@@ -61,7 +61,7 @@ function verifAjoutVoiture(event){
     let ajoutVoiture10 = document.getElementById('ajoutVoiture10');
     let ajoutVoiture11 = document.getElementById('ajoutVoiture11');
     let color_ajoutVoiture = document.getElementById('color_ajoutVoiture');
-    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminAjout');
+    let file_interrieur_imgAdminAjout = document.getElementById('file_interrieur_imgAdminmodif2');
 
     // span
     let ErreurAjout_1 = document.getElementById('ErreurAjout_1');
@@ -113,9 +113,6 @@ function verifAjoutVoiture(event){
     // Modèle verif
     if(ajoutVoiture3.value.trim()==""){
         ErreurAjout_3.innerHTML = "Remplir le champs";
-        verifAjoutVoiture_Admin=false;
-    }else if(regex_mixte.test(ajoutVoiture3.value)==false){
-        ErreurAjout_3.innerHTML = "Caractere spéciaux pas pris en compte";
         verifAjoutVoiture_Admin=false;
     }else if(ajoutVoiture3.value.length >= 25){
         ErreurAjout_3.innerHTML = "Trop long";
