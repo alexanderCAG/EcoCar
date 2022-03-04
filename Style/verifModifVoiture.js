@@ -126,7 +126,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture5.value)==false){
         ErreurAjout_6.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture5.value.length >= 10){
+    }else if(ajoutVoiture5.value.length >= 7){
         ErreurAjout_6.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{
@@ -140,7 +140,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture6.value)==false){
         ErreurAjout_7.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture6.value.length >= 10){
+    }else if(ajoutVoiture6.value.length >= 7){
         ErreurAjout_7.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{
@@ -154,7 +154,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture7.value)==false){
         ErreurAjout_8.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture7.value.length >= 10){
+    }else if(ajoutVoiture7.value.length >= 7){
         ErreurAjout_8.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{

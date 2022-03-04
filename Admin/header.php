@@ -45,42 +45,45 @@
     $idSession=$_SESSION['emailUser'];
     $infoHeader = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$idSession'");
 ?>
-
-<section class="header_tot bg_gray2">
-    <a href="index.php"><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
-    <!-- Pour devis -->
-    <a href="devis.php">
-        <div class="bg_white div_notif_admin">
-            <i class="bi bi-bell-fill icone_notif"></i>
-            <span>5</span>
-            <div class="notif_admin"></div>
-        </div>
-    </a>
-    <!-- Pour avis -->
-    <a href="avis.php">
-        <div class="bg_white div_notif_admin">
-            <i class="bi bi-envelope-fill icone_notif"></i>
-            <span>5</span>
-            <div class="notif_admin"></div>
-        </div>
-    </a>
-    <small><input type="text" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
-    
-    <div class="identification_con_admin">
-        <a href="compte_admin.php" class="text-decoration-none color_black redirection_con_admin">
-            <img class="img_user_admin" src="../Image/logo2.png" alt="user">
-            <?php
-                if($infoHeaderTot = mysqli_fetch_assoc($infoHeader)){
-                    $nom= $infoHeaderTot['nom'];
-                    $prenom= $infoHeaderTot['prenom'];
-            ?>
-            <span class="nom_admin"><?= $prenom ?> <?= $nom ?></span>
-            <?php
-                }
-            ?>
+<form action="recherche.php" method="POST">
+    <section class="header_tot bg_gray2">
+        <a href="index.php"><img src="../Image/logo.png" alt="logo" class="img_logo_admin"></a>
+        <!-- Pour devis -->
+        <a href="devis.php">
+            <div class="bg_white div_notif_admin">
+                <i class="bi bi-bell-fill icone_notif"></i>
+                <span>5</span>
+                <div class="notif_admin"></div>
+            </div>
         </a>
-    </div>
-    
-</section>
+        <!-- Pour avis -->
+        <a href="avis.php">
+            <div class="bg_white div_notif_admin">
+                <i class="bi bi-envelope-fill icone_notif"></i>
+                <span>5</span>
+                <div class="notif_admin"></div>
+            </div>
+        </a>
+        <!-- Pour la recherche -->
+        <small><input type="text" name="rechercher" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
+        <button type="submit" name="btnRechercher" class="btn_recherche_admin">Rechercher</button>
+        
 
+        <div class="identification_con_admin">
+            <a href="compte_admin.php" class="text-decoration-none color_black redirection_con_admin">
+                <img class="img_user_admin" src="../Image/logo2.png" alt="user">
+                <?php
+                    if($infoHeaderTot = mysqli_fetch_assoc($infoHeader)){
+                        $nom= $infoHeaderTot['nom'];
+                        $prenom= $infoHeaderTot['prenom'];
+                ?>
+                <span class="nom_admin"><?= $prenom ?> <?= $nom ?></span>
+                <?php
+                    }
+                ?>
+            </a>
+        </div>
+        
+    </section>
+</form>
   
