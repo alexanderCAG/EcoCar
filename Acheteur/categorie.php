@@ -278,6 +278,7 @@
 <script src="../Style/affiche_marque.js"></script>
 <script src="../Style/carousel.js"></script>
 <script src="../Style/categorie.js"></script>
+<script src="../Style/verifAvis.js"></script>
 
 
 
