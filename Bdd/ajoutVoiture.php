@@ -25,25 +25,27 @@
         $ajoutPrixS = $_POST['ajoutPrixS'];
         $ajoutPrixM = $_POST['ajoutPrixM'];
 
-        $ajoutVoitureID = mysqli_query($con, "SELECT * FROM `marque` WHERE marque='$ajoutMarque'");
-        if($ajoutMqTot = mysqli_fetch_assoc($ajoutVoitureID)){
-            $id_marque= $ajoutMqTot['id'];
+        if(move_uploaded_file($_FILES['ajoutVoiture_img']['tmp_name'], $targetImg)){
+            $ajoutVoitureID = mysqli_query($con, "SELECT * FROM `marque` WHERE marque='$ajoutMarque'");
+            if($ajoutMqTot = mysqli_fetch_assoc($ajoutVoitureID)){
+                $id_marque= $ajoutMqTot['id'];
 
-            $ajoutVoitureInsert = mysqli_query($con,"INSERT INTO voiture (id_marque, modele, categorie, couleur, promotion, compteur_location, dispo, reference, image) 
-                                VALUES ('$id_marque', '$ajoutModele', 'Hybride', '$background_seller', '$promo', '0', '1', '$ajoutReference', '$targetImg')");
+                $ajoutVoitureInsert = mysqli_query($con,"INSERT INTO voiture (id_marque, modele, categorie, couleur, promotion, compteur_location, dispo, reference, image) 
+                                    VALUES ('$id_marque', '$ajoutModele', 'Hybride', '$background_seller', '$promo', '0', '1', '$ajoutReference', '$targetImg')");
 
-                $rechercheVoitureID = mysqli_query($con, "SELECT * FROM voiture order by id desc LIMIT 1");
-                if($rechercheVoitureIDTot = mysqli_fetch_assoc($rechercheVoitureID)){
-                    $idTot= $rechercheVoitureIDTot['id'];
+                    $rechercheVoitureID = mysqli_query($con, "SELECT * FROM voiture order by id desc LIMIT 1");
+                    if($rechercheVoitureIDTot = mysqli_fetch_assoc($rechercheVoitureID)){
+                        $idTot= $rechercheVoitureIDTot['id'];
 
-                    $ajoutModelInsert = mysqli_query($con,"INSERT INTO model (id_voiture, autonomie, puissance, consommation, place) 
-                                        VALUES ('$idTot', '$ajoutAutonomie', '$ajoutPuissance', '$ajoutConsommation', '$ajoutPlace')");
-                    $ajoutPrixInsert = mysqli_query($con,"INSERT INTO prix (id_voiture, prixJour, prixSemaine, prixMois)
-                                        VALUES ('$idTot', '$ajoutPrixJ', '$ajoutPrixS', '$ajoutPrixM')");
+                        $ajoutModelInsert = mysqli_query($con,"INSERT INTO model (id_voiture, autonomie, puissance, consommation, place) 
+                                            VALUES ('$idTot', '$ajoutAutonomie', '$ajoutPuissance', '$ajoutConsommation', '$ajoutPlace')");
+                        $ajoutPrixInsert = mysqli_query($con,"INSERT INTO prix (id_voiture, prixJour, prixSemaine, prixMois)
+                                            VALUES ('$idTot', '$ajoutPrixJ', '$ajoutPrixS', '$ajoutPrixM')");
 
-                    echo "<script language='javascript' type='text/javascript'> location.href='../Admin' </script>";            
-                    
-                }
+                        echo "<script language='javascript' type='text/javascript'> location.href='../Admin' </script>";            
+                        
+                    }
+            }
         }
     }
 ?>

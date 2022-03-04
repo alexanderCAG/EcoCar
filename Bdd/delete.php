@@ -15,9 +15,10 @@ if(isset($_GET['idVoitureDelete'])){
     session_start();
 
     $idVoiture = $_GET['idVoitureDelete'];
-    $queryDeleteVoiture = mysqli_query($con, "delete from voiture WHERE id='$idVoiture'");
+    
     $queryDeleteModel = mysqli_query($con, "delete from model WHERE id_voiture='$idVoiture'");
     $queryDeletePrix = mysqli_query($con, "delete from prix WHERE id_voiture='$idVoiture'");
+    $queryDeleteVoiture = mysqli_query($con, "delete from voiture WHERE id='$idVoiture'");
     echo "<script language='javascript' type='text/javascript'> location.href='../Admin/liste_voiture.php' </script>";
 }
 
