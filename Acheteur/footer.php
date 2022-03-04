@@ -31,7 +31,7 @@
                 <h2 class="titre_footer text-center">Donnez votre avis !</h2>
                 <small><p class="text-center text-light"><i>Laissez-nous un commentaire</i> </p></small>
                 <form class="pl-5" action="../Bdd/login.php" method="POST">
-                    <div class="row ll-5" >
+                    <div class="row" >
                         <div class="col-6">
                         <?php
                             $nomuser=$_SESSION['emailUser'];
@@ -45,11 +45,13 @@
                         <?php
                             }
                         ?>
-                        <div class="col-6">
+                        <div class="col-6" style="height:50px">
                             <input type="note" placeholder="Note sur 5" name="avisnote" class="form-control" id="exampleInputNote" aria-describedby="noteHelp">
+                            <small><span class="infoAvis_span" id="noteAvis"></span></small>
                         </div>
                     </div>
                     <textarea class="form-control mt-3" placeholder="Commentaire..." name="aviscommentaire" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <small><span class="infoAvis_span" id="texteAvis"></span></small>
                     <button type="submit" name="avis" id="avisEnvoie" class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
                 </form>
             </div>
@@ -79,6 +81,7 @@
 <!-- JS -->
 <script src="../Style/affiche_marque.js"></script>
 <script src="../Style/carousel.js"></script>
+<script src="../Style/verifAvis.js"></script>
 
 
 

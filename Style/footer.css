@@ -20,3 +20,8 @@
 .float_right{
     float:right!important;
 }
+
+.infoAvis_span{
+    color: orange;
+    font-size: 12px;
+}
