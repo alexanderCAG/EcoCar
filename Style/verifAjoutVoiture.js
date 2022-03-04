@@ -26,7 +26,7 @@ function simulateClick1() {
     // alert('test');
     // let test = document.getElementById('ajoutVoiture2').value();
     // alert(test);
-    alert(JSON.stringify(test));
+    // alert(JSON.stringify(test));
     document.getElementById('categorieInsert').disabled=true;
 }
 
@@ -49,7 +49,7 @@ function simulateClick2() {
 
 
 // Ajouter Véhicule
-// document.getElementById('submit_valider_ajoutVoiture').addEventListener('click', verifAjoutVoiture)
+document.getElementById('submit_valider_ajoutVoiture').addEventListener('click', verifAjoutVoiture)
 function verifAjoutVoiture(event){
 
     var verifAjoutVoiture_Admin=true;
@@ -178,7 +178,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture6.value)==false){
         ErreurAjout_7.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture6.value.length >= 10){
+    }else if(ajoutVoiture6.value.length >= 7){
         ErreurAjout_7.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{
@@ -192,7 +192,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture7.value)==false){
         ErreurAjout_8.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture7.value.length >= 10){
+    }else if(ajoutVoiture7.value.length >= 7){
         ErreurAjout_8.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{
@@ -206,7 +206,7 @@ function verifAjoutVoiture(event){
     }else if(regex_chiffre.test(ajoutVoiture8.value)==false){
         ErreurAjout_9.innerHTML = "Seulement les chiffres";
         verifAjoutVoiture_Admin=false;
-    }else if(ajoutVoiture8.value.length >= 10){
+    }else if(ajoutVoiture8.value.length >= 7){
         ErreurAjout_9.innerHTML = "Trop long";
         verifAjoutVoiture_Admin=false;
     }else{

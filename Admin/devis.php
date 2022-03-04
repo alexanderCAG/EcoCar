@@ -57,6 +57,12 @@
                             $recupVoiture = mysqli_query($con,"SELECT * FROM `voiture` WHERE id='$idvoitureloueTot' ");
                             if($rowrecupVoiture = mysqli_fetch_assoc($recupVoiture)){
                                 $image = $rowrecupVoiture['image'];
+                                $modele = $rowrecupVoiture['modele'];
+                                $id_marque = $rowrecupVoiture['id_marque'];
+
+                                $recupVoiture = mysqli_query($con,"SELECT * FROM `marque` WHERE id='$id_marque' ");
+                                if($rowrecupVoiture = mysqli_fetch_assoc($recupVoiture)){
+                                    $marque = $rowrecupVoiture['marque'];
                 ?>
                     <div class="col-6 mb-4">
                         <div class="row row_devis bg_white shadow">
@@ -65,9 +71,9 @@
                             </div>
                             <div class="col-8">
                                 <div class="devis_texteUp text-uppercase titre">
-                                    <h5>Dernier devis enregistré</h5>
-                                    <h6><?= $nom ?> <?= $prenom ?></h6>
+                                    <h5><?= $marque ?> <?= $modele ?></h5>
                                     <p class="prix_devis"><span><?= $prixvoitureTot ?></span>€</p>
+                                    <h6><?= $nom ?> <?= $prenom ?></h6>
                                 </div>
                                 <p class="texte_devis">im placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
                                 <div class="info_devis text-uppercase">
@@ -78,6 +84,7 @@
                         </div>
                     </div>
                 <?php
+                                }
                             }
                         }
                     }
