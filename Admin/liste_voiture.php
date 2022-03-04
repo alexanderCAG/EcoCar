@@ -42,7 +42,7 @@
                         $page_no = 1;
                         }
 
-                        $total_records_per_page = 15;
+                        $total_records_per_page = 14;
                         $offset = ($page_no-1) * $total_records_per_page;
                         $previous_page = $page_no - 1;
                         $next_page = $page_no + 1;
@@ -128,7 +128,7 @@
         </section>
 
         <!-- Pagination -->
-        <section style="margin-top:100px; margin-bottom:118px;">
+        <section style="margin-top:100px; margin-bottom:90px;">
             <nav aria-label="Page navigation example">                
                 <ul class="pagination justify-content-center">
                     <?php
