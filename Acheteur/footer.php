@@ -3,8 +3,8 @@
         <div class="row">
 
             <div class="col-7">
-               <img src="../Image/logo.png" class="img-fluid img-responsive w-25"/>
-               <div class="row mt-3">
+                <img src="../Image/logo.png" class="img-fluid img-responsive w-25"/>
+                <div class="row mt-3">
                     <div class="col-5">
                         <ul class="text-light text-uppercase list-unstyled">
                             <li class="my-2"><small><a class="color_white nav_footer" href="index.php">Accueil</a></small></li>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <textarea class="form-control mt-3" placeholder="Commentaire..." name="aviscommentaire" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <button type="submit" name="avis" class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
+                    <button type="submit" name="avis" id="avisEnvoie" class="btn_vert10 float_right mt-3 border-0"> Envoyer</button>
                 </form>
             </div>
 
