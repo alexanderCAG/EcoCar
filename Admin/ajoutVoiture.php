@@ -28,7 +28,7 @@
                             <div class="form-row">
                                 <div class="row ">
                                     <div class="col" style="height:38px;">
-                                        <input type="text" name="ajoutCategorie" id="ajoutVoiture2" class="form-control bg-light" placeholder="Catégorie" value="" disabled>
+                                        <input type="text" name="ajoutCategorie" id="ajoutVoiture2" class="form-control bg-light" placeholder="Catégorie" value="" readonly="readonly">
                                         <small><span class="ajoutVoiture_span" id="ErreurAjout_2"></span></small>
                                     </div>
                                     <div class="col" style="height:38px;">

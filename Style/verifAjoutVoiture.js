@@ -21,13 +21,7 @@ function simulateClick1() {
     $('#btn_categorie_ajouter1').css('background-color', '#33985d');
     $('#btn_categorie_ajouter1').css('color', 'white');
 
-    // document.getElementById('ajoutVoiture2').value="Hybride";
     let test = $('#ajoutVoiture2').val('Hybride');
-    // alert('test');
-    // let test = document.getElementById('ajoutVoiture2').value();
-    // alert(test);
-    // alert(JSON.stringify(test));
-    document.getElementById('categorieInsert').disabled=true;
 }
 
 document.getElementById("btn_categorie_ajouter2").addEventListener('click', simulateClick2);
@@ -42,9 +36,7 @@ function simulateClick2() {
     $('#btn_categorie_ajouter2').css('background-color', '#33985d');
     $('#btn_categorie_ajouter2').css('color', 'white');
 
-    // document.getElementById('ajoutVoiture2').innerHTML="Electrique";
     $('#ajoutVoiture2').val('Electrique');
-    document.getElementById('categorieInsert').disabled=true;
 }
 
 
