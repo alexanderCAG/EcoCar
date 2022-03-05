@@ -138,7 +138,7 @@
                     </div>
                     
                     <div class="col-md-4">
-                        <img id="infoPerso_image" src="" class="img-responsive rounded mt-2" style="width:400px; height:266px; object-fit: cover;">
+                        <img id="infoPerso_image" src="../Image/img_default.png" class="img-responsive rounded mt-2" style="width:400px; height:266px; object-fit: cover;">
                         <button type="submit" name="submit_valider_ajoutVoiture" id="submit_valider_ajoutVoiture" class="btn w-50 bg_green1 text-uppercase mt-5 text-light float-end" style="float:right!important"> Enregister</button>
                     </div>
                 </div> 
