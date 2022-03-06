@@ -51,10 +51,11 @@
         session_destroy();
         header("Location: ../Base");
         exit();
-    }else{
-        $idSession=$_SESSION['emailUser'];
-        $infoHeader = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$idSession'");
     }
+
+    $idSession=$_SESSION['emailUser'];
+    $infoHeader = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$idSession'");
+    
 ?>
 <form action="recherche.php" method="POST">
     <section class="header_tot bg_gray2">
