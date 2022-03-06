@@ -4,7 +4,7 @@
         include("cnx.php");
         session_start();
 
-        // $ajoutCategorie = $_POST['ajoutCategorie'];
+        $ajoutCategorie = $_POST['ajoutCategorie'];
         $ajoutMarque = $_POST['ajoutMarque'];
         $ajoutModele = $_POST['ajoutModele'];
         $ajoutReference = $_POST['ajoutReference'];
@@ -31,7 +31,7 @@
                 $id_marque= $ajoutMqTot['id'];
 
                 $ajoutVoitureInsert = mysqli_query($con,"INSERT INTO voiture (id_marque, modele, categorie, couleur, promotion, compteur_location, dispo, reference, image) 
-                                    VALUES ('$id_marque', '$ajoutModele', 'Hybride', '$background_seller', '$promo', '0', '1', '$ajoutReference', '$targetImg')");
+                                    VALUES ('$id_marque', '$ajoutModele', '$ajoutCategorie', '$background_seller', '$promo', '0', '1', '$ajoutReference', '$targetImg')");
 
                     $rechercheVoitureID = mysqli_query($con, "SELECT * FROM voiture order by id desc LIMIT 1");
                     if($rechercheVoitureIDTot = mysqli_fetch_assoc($rechercheVoitureID)){

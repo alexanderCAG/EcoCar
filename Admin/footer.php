@@ -1,6 +1,6 @@
 
         <!-- Footer -->
-        <section>
+        <section class="foot_section">
             <div class="footer_admin bg_green1 ">
                 <div class="row row_foot">
                     <div class="col-9 color_white mt-2">

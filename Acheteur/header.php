@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../Style/categorie.css">
     <link rel="stylesheet" href="../Style/presentation.css">
     <link rel="stylesheet" href="../Style/detail_voiture.css">
+    <link rel="stylesheet" href="../Style/compteUser.css">
     <link rel="shortcut icon" href="../Image/logo2.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,6 +50,16 @@
 <?php
     include("../Bdd/cnx.php");
     session_start();
-?>
 
-  
+    if(empty($_SESSION['emailUser'])){
+        session_start();
+        session_unset();
+        // unset($_SESSION);
+        // unset($_COOKIE);
+        $_SESSION = array();
+        session_destroy();
+        header("Location: ../Base");
+        exit();
+    }
+
+?>

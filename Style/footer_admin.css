@@ -1,3 +1,7 @@
+.foot_section{
+    position: inherit!important;
+    bottom: 0!important;
+}
 
 .footer_admin{
     width: 100%;
