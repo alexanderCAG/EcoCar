@@ -16,9 +16,9 @@
 <section class="bg-light">
     <div class="container card rounded shadow my-5">
         <!-- alert (notif) -->
-        <div class="alert alert-success notif_like" role="alert">
+        <!-- <div class="alert alert-success notif_like" role="alert">
             <i class="bi bi-patch-check-fill"></i> &nbsp; Ajouté aux favoris
-        </div>
+        </div> -->
         <form action="../Bdd/infoPerso.php" method="POST">
             <div class="row m-4">
                 <div class="col-md-12">

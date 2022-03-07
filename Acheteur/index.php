@@ -8,7 +8,7 @@
     $bestSeller = mysqli_query($con, "SELECT * FROM `voiture` WHERE compteur_location = ( SELECT MAX(compteur_location) FROM `voiture`)");
     $demandeImgMarque = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4");
     $demandeImgMarque2 = mysqli_query($con, "SELECT * FROM marque order by id desc LIMIT 4,4");
- ?>
+?>
 
 <section class="carousel_accueil">
 
