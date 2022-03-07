@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../Style/presentation.css">
     <link rel="stylesheet" href="../Style/detail_voiture.css">
     <link rel="stylesheet" href="../Style/compteUser.css">
+    <link rel="stylesheet" href="../Style/historique.css">
     <link rel="shortcut icon" href="../Image/logo2.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
