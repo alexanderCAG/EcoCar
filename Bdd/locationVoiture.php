@@ -13,11 +13,11 @@ if(isset($_POST['btnLocation'])){
 
     $jour = strtotime($dateFin) - strtotime($dateDebut);
 
-    var_dump(strtotime($dateFin));
-    var_dump(strtotime($dateDebut));
+    // var_dump(strtotime($dateFin));
+    // var_dump(strtotime($dateDebut));
 
     $jour = $jour / 86400;
-    var_dump($jour);
+    // var_dump($jour);
 
     $recupPrix = mysqli_query($con, "SELECT * FROM prix WHERE id='$idVoiture'");
     if($InfoRecupPrix = mysqli_fetch_assoc($recupPrix)){
