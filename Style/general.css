@@ -100,3 +100,10 @@
     margin-top: -10px;
 }
 
+.notif_like{
+    width: 230px;
+    position: fixed!important;
+    top: 40px;
+    font-weight: bold;
+    z-index: 999;
+}

@@ -56,7 +56,7 @@
                 
                         <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
                         
-                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2"><?php echo $promotion ?>%</span></p>
+                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2">-<?php echo $promotion ?>%</span></p>
                         <p class="fw-normal"><?php echo $marque ?></p>
                         <ul class="list-unstyled fw-light">
                             <li><i class="bi bi-dot"></i><i><?php echo $categorie ?></i></li>
@@ -148,7 +148,7 @@
                 
                         <img src="../Image/ico_promo.png" alt="promotion" class="img-fluid m-auto d-block" style="width:40%; margin-top:-95px!important;">
 
-                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2"><?php echo $promotion ?>%</span></p>
+                        <p class="text-uppercase titre text-dark"><span class="h1"> <?php echo $modele ?></span><span class="badge bg-warning text-dark h5 mx-2">-<?php echo $promotion ?>%</span></p>
                         <p class="fw-normal"><?php echo $marque ?></p>
                         <ul class="list-unstyled fw-light">
                             <li><i class="bi bi-dot"></i><i><?php echo $categorie ?></i></li>
