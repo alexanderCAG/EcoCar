@@ -22,6 +22,7 @@ function verifAjoutInscription(event){
     let infoPerso_3 = document.getElementById('emailInscrit');
     let infoPerso_4 = document.getElementById('mdpInscrit');
     let infoPerso_5 = document.getElementById('verif_mdpInscrit');
+    let infoPerso_7 = document.getElementById('check_inscri');
     // span
     let ErreurCon_1 = document.getElementById('erreur_nom');
     let ErreurCon_6 = document.getElementById('erreur_prenom');
@@ -29,6 +30,7 @@ function verifAjoutInscription(event){
     let ErreurCon_3 = document.getElementById('erreur_email');
     let ErreurCon_4 = document.getElementById('erreur_mdp');
     let ErreurCon_5 = document.getElementById('erreur_verif_mdp');
+    let ErreurCon_7 = document.getElementById('erreurCheckbox');
     // reset span
     ErreurCon_1.innerHTML="";
     ErreurCon_6.innerHTML="";
@@ -36,6 +38,7 @@ function verifAjoutInscription(event){
     ErreurCon_3.innerHTML="";
     ErreurCon_4.innerHTML="";
     ErreurCon_5.innerHTML="";
+    // ErreurCon_7.innerHTML="";
 
     // Nom verif
     if(infoPerso_1.value.trim()==""){
@@ -91,6 +94,15 @@ function verifAjoutInscription(event){
         verifInscrit=false;
     }else{
         ErreurCon_3.innerHTML = "";
+    }
+
+    if(infoPerso_7.checked != 1){
+        ErreurCon_7.innerHTML = "Je confirme avoir plus de 18 ans";
+        ErreurCon_7.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else{
+        ErreurCon_7.innerHTML = "Je confirme avoir plus de 18 ans";
+        ErreurCon_7.setAttribute("style","color:black");
     }
 
     // mdp verif

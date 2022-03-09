@@ -44,8 +44,8 @@
                         <br>
                         
                         <!-- Btn -->
-                        <input type="checkbox" id="scales check_inscri" name="scales" checked>
-                        <small><label for="scales">Je confirme avoir plus de 18 ans</label></small>
+                        <input type="checkbox" id="check_inscri">
+                        <small><label id="erreurCheckbox">Je confirme avoir plus de 18 ans</label></small>
                         <br><br>
                         <button type="submit" name="inscription" id="submit_validerInscription" class="btn_vert10 mt-3 border-0">S'inscrire</button>
                         <a class="co_inscription" href="connexion.php" style="color:#000000;">Je suis déjà membre</a> 
