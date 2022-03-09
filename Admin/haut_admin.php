@@ -1,5 +1,10 @@
 
 <section>
+    <?php
+        $recupNombreInscription = mysqli_query($con,"SELECT COUNT(*) AS tot_inscription FROM `inscription` WHERE administrateur='0'");
+        if($rowrecupNombreInscription = mysqli_fetch_assoc($recupNombreInscription)){
+            $valeurInscription = $rowrecupNombreInscription['tot_inscription'];
+    ?>
     <div class="div_accueil_color bg_green1 changCol">
         
         <div class="row">
@@ -25,7 +30,7 @@
                 <a href="liste_client.php">
                     <div class="bg_gray2 div_notif_admin2 shadow">
                         <i class="fas fa-user-friends icone_notif2"></i>
-                        <span>50</span>
+                        <span><?php echo $valeurInscription ?></span>
                     </div>
                 </a>
                 <label class="tgl" style="position:relative; top:35px; left:60px;">
@@ -42,4 +47,7 @@
         </div>
 
     </div>
+    <?php
+        }
+    ?>
 </section>
