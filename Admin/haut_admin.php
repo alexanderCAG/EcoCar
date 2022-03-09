@@ -15,16 +15,6 @@
                     <?php endif ?>
                 </h4>
 
-                <label class="tgl">
-                    <input type="checkbox" id="checkBody" checked/>
-                    <span class="tgl_body">
-                        <span class="tgl_switch" onclick="changementBody()"></span>
-                        <span class="tgl_track">
-                            <span class="tgl_bgd"></span>
-                            <span class="tgl_bgd tgl_bgd-negative"></span>
-                        </span>
-                    </span>
-                </label>
             </div>
             <div class="col-4">
                 <a href="ajoutVoiture.php">
@@ -38,6 +28,16 @@
                         <span>50</span>
                     </div>
                 </a>
+                <label class="tgl" style="position:relative; top:35px; left:60px;">
+                    <input type="checkbox" id="checkBody" checked/>
+                    <span class="tgl_body" onclick="changementBody()">
+                        <span class="tgl_switch"></span>
+                        <span class="tgl_track">
+                            <span class="tgl_bgd"></span>
+                            <span class="tgl_bgd tgl_bgd-negative"></span>
+                        </span>
+                    </span>
+                </label>
             </div>
         </div>
 

@@ -24,4 +24,16 @@ function changementBody(){
         $('.div_accueil_color').addClass('bg_green1');
         compteurBody++;
     }
+
+    // if(document.getElementById("checkBody").checked === true){
+    //     alert('1');
+    //     $('.div_accueil_color').addClass('changCol');
+    //     $('.div_accueil_color').removeClass('bg_green1');
+    //     compteurBody++;
+    // }else if(document.getElementById("checkBody").checked === false){
+    //     alert('2');
+    //     $('.div_accueil_color').removeClass('changCol');
+    //     $('.div_accueil_color').addClass('bg_green1');
+    //     compteurBody++;
+    // }
 }

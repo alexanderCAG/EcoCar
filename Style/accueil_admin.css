@@ -282,8 +282,8 @@
     visibility: hidden;
   }
   .tgl .tgl_body {
-    width: 60px;
-    height: 30px;
+    width: 50px;
+    height: 20px;
     background: white;
     border: 1px solid #dadde1;
     display: inline-block;
@@ -291,8 +291,8 @@
     border-radius: 50px;
   }
   .tgl .tgl_switch {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     background-color: white;
     position: absolute;
