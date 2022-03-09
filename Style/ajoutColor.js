@@ -22,6 +22,20 @@ function changementBody(){
         $('.header_tot').removeClass('bg_gray2');
         $('.btn_recherche_admin').addClass('changCol3');
         $('.btn_recherche_admin').removeClass('bg_green1');
+        $('.contenu_gauche1_admin').addClass('changCol4');
+        $('.contenu_gauche1_admin').removeClass('bg_white');
+        $('.contenu_gauche2_admin').addClass('changCol4');
+        $('.contenu_gauche2_admin').removeClass('bg_white');
+        $('.contenu_gauche3_admin').addClass('changCol4');
+        $('.contenu_gauche3_admin').removeClass('bg_white');
+        $('.contenu_droit1_admin').addClass('changCol4');
+        $('.contenu_droit1_admin').removeClass('bg_white');
+        $('.contenu_droit2_admin').addClass('changCol4');
+        $('.contenu_droit2_admin').removeClass('bg_white');
+        $('.contenu_droit3_admin').addClass('changCol4');
+        $('.contenu_droit3_admin').removeClass('bg_white');
+        $('.footer_admin').addClass('changCol3');
+        $('.footer_admin').removeClass('bg_green1');
         compteurBody++;
     }else{
         $('.div_accueil_color').removeClass('changCol');
@@ -30,6 +44,20 @@ function changementBody(){
         $('.header_tot').removeClass('changCol2');
         $('.btn_recherche_admin').addClass('bg_green1');
         $('.btn_recherche_admin').removeClass('changCol3');
+        $('.contenu_gauche1_admin').addClass('bg_white');
+        $('.contenu_gauche1_admin').removeClass('changCol4');
+        $('.contenu_gauche2_admin').addClass('bg_white');
+        $('.contenu_gauche2_admin').removeClass('changCol4');
+        $('.contenu_gauche3_admin').addClass('bg_white');
+        $('.contenu_gauche3_admin').removeClass('changCol4');
+        $('.contenu_droit1_admin').addClass('bg_white');
+        $('.contenu_droit1_admin').removeClass('changCol4');
+        $('.contenu_droit2_admin').addClass('bg_white');
+        $('.contenu_droit2_admin').removeClass('changCol4');
+        $('.contenu_droit3_admin').addClass('bg_white');
+        $('.contenu_droit3_admin').removeClass('changCol4');
+        $('.footer_admin').addClass('bg_green1');
+        $('.footer_admin').removeClass('changCol3');
         compteurBody++;
     }
 
