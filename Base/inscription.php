@@ -15,40 +15,39 @@
                     <div class="contenue_inscri">
 
                         <!-- Nom/Prenom -->
-                        <input class="border_ligne input_inscription" type="text" placeholder="Nom" name="nom" required>
-                        <input class="border_ligne input_inscription input_inscri_espace" type="text" placeholder="Prenom" name="prenom" required>
+                        <input class="border_ligne input_inscription" type="text" placeholder="Nom" name="nom" id="nom">
+                        <input class="border_ligne input_inscription input_inscri_espace" type="text" placeholder="Prenom" name="prenom" id="prenom">
                         <br>
-                        <small><span class="erreur_inscription">texte</span></small>
-                        <small><span class="erreur_inscription span_inscri_espace">texte</span></small>
+                        <small><span class="erreur_inscription" id="erreur_nom"></span></small>
+                        <small><span class="erreur_inscription span_inscri_espace" id="erreur_prenom"></span></small>
                         <br>
 
                         <!-- Tel/Date Permis -->
-                        <input class="border_ligne input_inscription" type="text" placeholder="Téléphone" name="telephone" required>
-                        <input class="border_ligne input_inscription input_inscri_espace" type="date" placeholder="Date Permis" name="date_permis" required>
+                        <input class="border_ligne input_inscription" type="text" placeholder="Téléphone" name="telephone" id="telephone">
+                        <input class="border_ligne input_inscription input_inscri_espace" type="text" value="Permis B" name="date_permis" readonly>
                         <br>
-                        <small><span class="erreur_inscription">texte</span></small>
-                        <small><span class="erreur_inscription span_inscri_espace">texte</span></small>
+                        <small><span class="erreur_inscription" id="erreur_telephone"></span></small>
                         <br>
 
                         <!-- Email -->
-                        <input class="border_ligne input_inscription2 text-center" type="email" placeholder="Email" name="email" required>
+                        <input class="border_ligne input_inscription2 text-center" type="email" placeholder="Email" name="email" id="email">
                         <br>
-                        <small><span class="erreur_inscription">texte</span></small>
+                        <small><span class="erreur_inscription" id="erreur_email"></span></small>
                         <br>
 
                         <!-- Mdp -->
-                        <input class="border_ligne input_inscription" type="text" placeholder="Mot de passe" name="mdp" required>
-                        <input class="border_ligne input_inscription input_inscri_espace" type="text" placeholder="Mot de passe (vérification)" name="mdp2" required>
+                        <input class="border_ligne input_inscription" type="text" placeholder="Mot de passe" name="mdp" id="mdp">
+                        <input class="border_ligne input_inscription input_inscri_espace" type="text" placeholder="Mot de passe (vérification)" name="mdp2" id="verif_mdp">
                         <br>
-                        <small><span class="erreur_inscription">texte</span></small>
-                        <small><span class="erreur_inscription span_inscri_espace">texte</span></small>
+                        <small><span class="erreur_inscription" id="erreur_mdp"></span></small>
+                        <small><span class="erreur_inscription span_inscri_espace" id="erreur_verif_mdp"></span></small>
                         <br>
                         
                         <!-- Btn -->
                         <input type="checkbox" id="scales check_inscri" name="scales">
                         <small><label for="scales">Je confirme avoir plus de 18 ans</label></small>
                         <br><br>
-                        <button type="submit" name="inscription" class="btn_vert10 mt-3 border-0">S'inscrire</button>
+                        <button type="submit" name="inscription" id="submit_valider_ajoutInscription" class="btn_vert10 mt-3 border-0">S'inscrire</button>
                         <a class="co_inscription" href="connexion.php" style="color:#000000;">Je suis déjà membre</a> 
                     </div>
                         

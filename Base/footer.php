@@ -70,6 +70,7 @@
 <script src="../Style/affiche_marque.js"></script>
 <script src="../Style/carousel.js"></script>
 <script src="../Style/notif.js"></script>
+<script src="../Style/inscription.js"></script>
 
 
 
