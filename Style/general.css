@@ -10,6 +10,14 @@
     background-color: #333333;
 }
 
+.changCol2{
+    background-color: #8f8f8f;
+}
+
+.changCol3{
+    background-color: #5d816c;
+}
+
 /* General */
 .t_bold{
     font-weight: bold;

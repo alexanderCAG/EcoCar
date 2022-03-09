@@ -266,6 +266,8 @@
             border-radius: 20px;
         }
 
+
+        
 /* Changement couleur */
 
 .tgl {
@@ -273,15 +275,15 @@
     display: inline-block;
     height: 30px;
     cursor: pointer;
-  }
-  .tgl > input {
+}
+.tgl > input {
     position: absolute;
     opacity: 0;
     z-index: -1;
     /* Put the input behind the label so it doesn't overlay text */
     visibility: hidden;
-  }
-  .tgl .tgl_body {
+}
+.tgl .tgl_body {
     width: 50px;
     height: 20px;
     background: white;
@@ -289,8 +291,8 @@
     display: inline-block;
     position: relative;
     border-radius: 50px;
-  }
-  .tgl .tgl_switch {
+}
+.tgl .tgl_switch {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -309,8 +311,8 @@
     -webkit-transition-delay: 250ms, 250ms;
     transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;
     z-index: 1;
-  }
-  .tgl .tgl_track {
+}
+.tgl .tgl_track {
     position: absolute;
     left: 0;
     top: 0;
@@ -318,8 +320,8 @@
     bottom: 0;
     overflow: hidden;
     border-radius: 50px;
-  }
-  .tgl .tgl_bgd {
+}
+.tgl .tgl_bgd {
     position: absolute;
     right: -10px;
     top: 0;
@@ -331,32 +333,32 @@
     -webkit-transition-delay: 250ms, 250ms;
     transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, right cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;
     background: #33985d url("http://petelada.com/images/toggle/tgl_check.png") center center no-repeat;
-  }
-  .tgl .tgl_bgd-negative {
+}
+.tgl .tgl_bgd-negative {
     right: auto;
     left: -45px;
     background: white url("http://petelada.com/images/toggle/tgl_x.png") center center no-repeat;
-  }
-  .tgl:hover .tgl_switch {
+}
+.tgl:hover .tgl_switch {
     border-color: #b5bbc3;
     -moz-transform: scale(1.06);
     -ms-transform: scale(1.06);
     -webkit-transform: scale(1.06);
     transform: scale(1.06);
-  }
-  .tgl:active .tgl_switch {
+}
+.tgl:active .tgl_switch {
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
-  }
-  .tgl > :not(:checked) ~ .tgl_body > .tgl_switch {
+}
+.tgl > :not(:checked) ~ .tgl_body > .tgl_switch {
     left: 30px;
-  }
-  .tgl > :not(:checked) ~ .tgl_body .tgl_bgd {
+}
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd {
     right: -45px;
-  }
-  .tgl > :not(:checked) ~ .tgl_body .tgl_bgd.tgl_bgd-negative {
+}
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd.tgl_bgd-negative {
     right: auto;
     left: -10px;
-  }
+}

@@ -18,10 +18,18 @@ function changementBody(){
     if(compteurBody%2==0){
         $('.div_accueil_color').addClass('changCol');
         $('.div_accueil_color').removeClass('bg_green1');
+        $('.header_tot').addClass('changCol2');
+        $('.header_tot').removeClass('bg_gray2');
+        $('.btn_recherche_admin').addClass('changCol3');
+        $('.btn_recherche_admin').removeClass('bg_green1');
         compteurBody++;
     }else{
         $('.div_accueil_color').removeClass('changCol');
         $('.div_accueil_color').addClass('bg_green1');
+        $('.header_tot').addClass('bg_gray2');
+        $('.header_tot').removeClass('changCol2');
+        $('.btn_recherche_admin').addClass('bg_green1');
+        $('.btn_recherche_admin').removeClass('changCol3');
         compteurBody++;
     }
 
