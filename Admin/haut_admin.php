@@ -1,6 +1,6 @@
 
 <section>
-    <div class="div_accueil_color bg_green1">
+    <div class="div_accueil_color bg_green1 changCol">
         
         <div class="row">
             <div class="col-8">
@@ -14,6 +14,17 @@
                         Partie Admin
                     <?php endif ?>
                 </h4>
+
+                <label class="tgl">
+                    <input type="checkbox" id="checkBody" checked/>
+                    <span class="tgl_body">
+                        <span class="tgl_switch" onclick="changementBody()"></span>
+                        <span class="tgl_track">
+                            <span class="tgl_bgd"></span>
+                            <span class="tgl_bgd tgl_bgd-negative"></span>
+                        </span>
+                    </span>
+                </label>
             </div>
             <div class="col-4">
                 <a href="ajoutVoiture.php">

@@ -12,3 +12,16 @@ $("input.color").each(function() {
     this.type = "text";
 });
 
+
+var compteurBody = 0;
+function changementBody(){
+    if(compteurBody%2==0){
+        $('.div_accueil_color').addClass('changCol');
+        $('.div_accueil_color').removeClass('bg_green1');
+        compteurBody++;
+    }else{
+        $('.div_accueil_color').removeClass('changCol');
+        $('.div_accueil_color').addClass('bg_green1');
+        compteurBody++;
+    }
+}
