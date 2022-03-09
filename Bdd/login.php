@@ -34,8 +34,8 @@
         $useremail=$_POST['email'];
         $usermdp=$_POST['mdp'];
 
-        $userInscription = mysqli_query($con,"INSERT INTO inscription (nom, prenom, email, phone, mdp, administrateur) 
-                            VALUES ('$usernom', '$userprenom', '$useremail', '$userphone', '$usermdp', '0')");
+        // $userInscription = mysqli_query($con,"INSERT INTO inscription (nom, prenom, email, phone, mdp, administrateur) 
+        //                     VALUES ('$usernom', '$userprenom', '$useremail', '$userphone', '$usermdp', '0')");
 
         echo "<script language='javascript' type='text/javascript'> location.href='../Base/connexion.php'</script>";
     }

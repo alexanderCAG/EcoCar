@@ -22,4 +22,16 @@ if(isset($_GET['idVoitureDelete'])){
     echo "<script language='javascript' type='text/javascript'> location.href='../Admin/liste_voiture.php' </script>";
 }
 
+if(isset($_GET['idAcheteurDelete'])){
+    include("cnx.php");
+    session_start();
+
+    $idAcheteurDelete = $_GET['idAcheteurDelete'];
+    
+    $queryDeleteItemAvis = mysqli_query($con, "delete from avis WHERE id_inscription='$idAcheteurDelete'");
+    $queryDeleteItemAdmin = mysqli_query($con, "delete from admin WHERE id_inscription_loue ='$idAcheteurDelete'");
+    $queryDeleteItemInscription = mysqli_query($con, "delete from inscription WHERE id='$idAcheteurDelete'");
+    echo "<script language='javascript' type='text/javascript'> location.href='../Admin/liste_client.php' </script>";
+}
+
 ?>
