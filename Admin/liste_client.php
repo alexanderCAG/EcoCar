@@ -67,7 +67,7 @@
                     ?>
 
                     <tr>
-                        <td><img class="img_listeClient" src="../Image/voiture_test.jpg" alt="user"></td>
+                        <td><i class="bi bi-person-circle fa-2x"></i></td>
                         <td><span class="text-uppercase"><?php echo $nom ?></span></td>
                         <td><span class="text-uppercase"><?php echo $prenom ?></span></td>
                         <td><span class="text-uppercase">Permis B</span></td>

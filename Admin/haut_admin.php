@@ -5,7 +5,7 @@
         if($rowrecupNombreInscription = mysqli_fetch_assoc($recupNombreInscription)){
             $valeurInscription = $rowrecupNombreInscription['tot_inscription'];
     ?>
-    <div class="div_accueil_color bg_green1">
+    <div class="div_accueil_color bg_green1 changCol">
         
         <div class="row">
             <div class="col-8">
@@ -19,6 +19,7 @@
                         Partie Admin
                     <?php endif ?>
                 </h4>
+
             </div>
             <div class="col-4">
                 <a href="ajoutVoiture.php">
@@ -32,6 +33,16 @@
                         <span><?php echo $valeurInscription ?></span>
                     </div>
                 </a>
+                <label class="tgl" style="position:relative; top:35px; left:60px;">
+                    <input type="checkbox" id="checkBody" checked/>
+                    <span class="tgl_body" onclick="changementBody()">
+                        <span class="tgl_switch"></span>
+                        <span class="tgl_track">
+                            <span class="tgl_bgd"></span>
+                            <span class="tgl_bgd tgl_bgd-negative"></span>
+                        </span>
+                    </span>
+                </label>
             </div>
         </div>
 

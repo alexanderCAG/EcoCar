@@ -86,7 +86,7 @@
         </a>
         <!-- Pour la recherche -->
         <small><input type="text" name="rechercher" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
-        <button type="submit" name="btnRechercher" class="btn_recherche_admin">Rechercher</button>
+        <button type="submit" name="btnRechercher" class="btn_recherche_admin bg_green1">Rechercher</button>
         
 
         <div class="identification_con_admin">
@@ -107,6 +107,8 @@
         
     </section>
 </form>
+
 <?php
     }
 ?>
+

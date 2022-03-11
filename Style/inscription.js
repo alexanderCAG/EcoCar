@@ -9,143 +9,155 @@ var regex_mail = /^([a-zA-Z0-9])+\@(([a-z-])+\.)+([a-z]{2,3})+$/;
 var regex_mdp = /[\s@&\.-]/;
 var regex_tot = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-\s]+$/;
 
-
-// Ajouter Véhicule
-document.getElementById('submit_valider_ajoutInscription').addEventListener('click', verifAjoutInscription)
+// Ajouter inscrit
+document.getElementById('submit_validerInscription').addEventListener('click', verifAjoutInscription)
 function verifAjoutInscription(event){
 
-    var verifAjoutInscription_Admin=true;
+    var verifInscrit=true;
 
     // input
-    let ajoutInscription1 = document.getElementById('nom');
-    let ajoutInscription2 = document.getElementById('prenom');
-    let ajoutInscription3 = document.getElementById('telephone');
-    let ajoutInscription4 = document.getElementById('email');
-    let ajoutInscription5 = document.getElementById('mdp');
-    let ajoutInscription6 = document.getElementById('verif_mdp');
-
+    let infoPerso_1 = document.getElementById('nomInscrit');
+    let infoPerso_6 = document.getElementById('prenomInscrit');
+    let infoPerso_2 = document.getElementById('telephoneInscrit');
+    let infoPerso_3 = document.getElementById('emailInscrit');
+    let infoPerso_4 = document.getElementById('mdpInscrit');
+    let infoPerso_5 = document.getElementById('verif_mdpInscrit');
+    let infoPerso_7 = document.getElementById('check_inscri');
     // span
-    let ErreurAjout_1 = document.getElementById('erreur_nom');
-    let ErreurAjout_2 = document.getElementById('erreur_prenom');
-    let ErreurAjout_3 = document.getElementById('erreur_telephone');
-    let ErreurAjout_4 = document.getElementById('erreur_email');
-    let ErreurAjout_5 = document.getElementById('erreur_mdp');
-    let ErreurAjout_6 = document.getElementById('erreur_verif_mdp');
-    
+    let ErreurCon_1 = document.getElementById('erreur_nom');
+    let ErreurCon_6 = document.getElementById('erreur_prenom');
+    let ErreurCon_2 = document.getElementById('erreur_telephone');
+    let ErreurCon_3 = document.getElementById('erreur_email');
+    let ErreurCon_4 = document.getElementById('erreur_mdp');
+    let ErreurCon_5 = document.getElementById('erreur_verif_mdp');
+    let ErreurCon_7 = document.getElementById('erreurCheckbox');
     // reset span
-    ErreurAjout_1.innerHTML="";
-    ErreurAjout_2.innerHTML="";
-    ErreurAjout_3.innerHTML="";
-    ErreurAjout_4.innerHTML="";
-    ErreurAjout_5.innerHTML="";
-    ErreurAjout_6.innerHTML="";
-    
+    ErreurCon_1.innerHTML="";
+    ErreurCon_6.innerHTML="";
+    ErreurCon_2.innerHTML="";
+    ErreurCon_3.innerHTML="";
+    ErreurCon_4.innerHTML="";
+    ErreurCon_5.innerHTML="";
+    // ErreurCon_7.innerHTML="";
+
     // Nom verif
-    if(ajoutInscription1.value.trim()==""){
-        ErreurAjout_1.innerHTML = "Remplir le champs";
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription1.value.length >= 25){
-        ErreurAjout_1.innerHTML = "Trop long";
-        verifAjoutInscription_Admin=false;
+    if(infoPerso_1.value.trim()==""){
+        ErreurCon_1.innerHTML = "Remplir le champs";
+        verifInscrit=false;
+    }else if(regex_mixte.test(infoPerso_1.value)==false){
+        ErreurCon_1.innerHTML = "Caractere spéciaux pas pris en compte";
+        verifInscrit=false;
+    }else if(infoPerso_1.value.length >= 25){
+        ErreurCon_1.innerHTML = "Trop long";
+        verifInscrit=false;
     }else{
-        ErreurAjout_1.innerHTML = "";
+        ErreurCon_1.innerHTML = "";
     }
 
     // Prenom verif
-    if(ajoutInscription2.value.trim()==""){
-        ErreurAjout_2.innerHTML = "Remplir le champs";
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription2.value.length >= 25){
-        ErreurAjout_2.innerHTML = "Trop long";
-        verifAjoutInscription_Admin=false;
+    if(infoPerso_6.value.trim()==""){
+        ErreurCon_6.innerHTML = "Remplir le champs";
+        verifInscrit=false;
+    }else if(regex_mixte.test(infoPerso_6.value)==false){
+        ErreurCon_6.innerHTML = "Caractere spéciaux pas pris en compte";
+        verifInscrit=false;
+    }else if(infoPerso_6.value.length >= 25){
+        ErreurCon_6.innerHTML = "Trop long";
+        verifInscrit=false;
     }else{
-        ErreurAjout_2.innerHTML = "";
+        ErreurCon_6.innerHTML = "";
     }
 
-    // Telephone verif
-    if(ajoutInscription3.value.trim()==""){
-        ErreurAjout_3.innerHTML = "Remplir le champs";
-        verifAjoutInscription_Admin=false;
-    }else if(regex_chiffre.test(ajoutInscription3.value)==false){
-        ErreurAjout_3.innerHTML = "Seulement les chiffres";
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription3.value.length > 10){
-        ErreurAjout_3.innerHTML = "Trop long";
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription3.value.length < 10){
-        ErreurAjout_3.innerHTML = "Trop court";
-        verifAjoutInscription_Admin=false;
+    // telephone verif
+    if(infoPerso_2.value.trim()==""){
+        ErreurCon_2.innerHTML = "Remplir le champs";
+        verifInscrit=false;
+    }else if(regex_chiffre.test(infoPerso_2.value)==false){
+        ErreurCon_2.innerHTML = "Lettre pas pris en compte";
+        verifInscrit=false;
+    }else if(infoPerso_2.value.length != 10){
+        ErreurCon_2.innerHTML = "N'existe pas";
+        verifInscrit=false;
     }else{
-        ErreurAjout_3.innerHTML = "";
+        ErreurCon_2.innerHTML = "";
     }
 
-    // Email verif
-    if(ajoutInscription4.value.trim()==""){
-        ErreurAjout_4.innerHTML = "Remplir le champs";
-        verifAjoutInscription_Admin=false;
-    }else if(regex_mail.test(ajoutInscription3.value)==false){
-        ErreurAjout_4.innerHTML = "Email incorrecte nom de diou !";
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription4.value.length >= 40){
-        ErreurAjout_4.innerHTML = "Trop long BEAUCOUP TROP LONG";
-        verifAjoutInscription_Admin=false;
+    // mail verif
+    if(infoPerso_3.value.trim()==""){
+        ErreurCon_3.innerHTML = "Remplir le champs";
+        verifInscrit=false;
+    }else if(regex_mail.test(infoPerso_3.value)==false){
+        ErreurCon_3.innerHTML = "Email pas correct";
+        verifInscrit=false;
+    }else if(infoPerso_3.value.length >= 40){
+        ErreurCon_3.innerHTML = "Trop long";
+        verifInscrit=false;
     }else{
-        ErreurAjout_4.innerHTML = "";
+        ErreurCon_3.innerHTML = "";
     }
 
-    // Mdp verif
-    if(ajoutInscription5.value.trim()==""){
-        ErreurAjout_5.innerHTML = "Remplir le champs";
-        verifAjoutInscription_Admin=false;
-    }else if(!/[a-z]/.test(ajoutInscription5.value)){
-        ErreurAjout_5.innerHTML = "Ajouter des minuscules";
-        verifAjoutInscription_Admin=false;
-        ErreurAjout_5.setAttribute("style","color:red");
-    }else if(!/[A-Z]/.test(ajoutInscription5.value)){
-        ErreurAjout_5.innerHTML = "Ajouter des majuscules";
-        verifAjoutInscription_Admin=false;
-        ErreurAjout_5.setAttribute("style","color:red");
-    }else if(!/[1-9]/.test(ajoutInscription5.value)){
-        ErreurAjout_5.innerHTML = "Ajouter des chiffres";
-        verifAjoutInscription_Admin=false;
-        ErreurAjout_5.setAttribute("style","color:red");
-    }else if(/[1-9]/.test(ajoutInscription5.value) && regex_mdp.test(ajoutInscription5.value)==false){
-        ErreurAjout_5.innerHTML = "Moyen";
-        ErreurAjout_5.setAttribute("style","color:orange");
-    }else if(regex_mdp.test(ajoutInscription5.value)){
-        ErreurAjout_5.innerHTML = "Fort";
-        ErreurAjout_5.setAttribute("style","color:green");
+    if(infoPerso_7.checked != 1){
+        ErreurCon_7.innerHTML = "Je confirme avoir plus de 18 ans";
+        ErreurCon_7.setAttribute("style","color:red");
+        verifInscrit=false;
     }else{
-        ErreurAjout_5.innerHTML = "";
+        ErreurCon_7.innerHTML = "Je confirme avoir plus de 18 ans";
+        ErreurCon_7.setAttribute("style","color:black");
     }
 
-    // Mdp verif
-    if(ajoutInscription6.value.trim()==""){
-        ErreurAjout_6.innerHTML = "Remplir le champs";
-        ErreurAjout_6.setAttribute("style","color:red");
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription5.value.trim() != ajoutInscription6.value.trim()){
-        ErreurAjout_6.innerHTML = "Mot de passe différent";
-        ErreurAjout_6.setAttribute("style","color:red");
-        verifAjoutInscription_Admin=false;
-    }else if(ajoutInscription5.value.trim() == ajoutInscription6.value.trim()){
-        ErreurAjout_6.innerHTML = "Correcte";
-        ErreurAjout_6.setAttribute("style","color:green");
-    }else if(regex_mdp.test(ajoutInscription5.value) != regex_mdp.test(ajoutInscription6.value)){
-        ErreurAjout_6.innerHTML = "Mot de passe pas sécurisé";
-        ErreurAjout_6.setAttribute("style","color:red");
-        verifAjoutInscription_Admin=false;
-    }else if(/[1-9]/.test(ajoutInscription5.value) && regex_mdp.test(ajoutInscription5.value)==false != /[1-9]/.test(ajoutInscription6.value) && regex_mdp.test(ajoutInscription6.value)==false){
-        ErreurAjout_6.innerHTML = "Mot de passe pas sécurisé";
-        ErreurAjout_6.setAttribute("style","color:red");
-        verifAjoutInscription_Admin=false;
+    // mdp verif
+    if(infoPerso_4.value.trim()==""){
+        ErreurCon_4.innerHTML = "Remplir le champs";
+        ErreurCon_4.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else if(!/[a-z]/.test(infoPerso_4.value)){
+        ErreurCon_4.innerHTML = "Ajouter des minuscules";
+        verifInscrit=false;
+        ErreurCon_4.setAttribute("style","color:red");
+    }else if(!/[A-Z]/.test(infoPerso_4.value)){
+        ErreurCon_4.innerHTML = "Ajouter des majuscules";
+        verifInscrit=false;
+        ErreurCon_4.setAttribute("style","color:red");
+    }else if(!/[1-9]/.test(infoPerso_4.value)){
+        ErreurCon_4.innerHTML = "Ajouter des chiffres";
+        verifInscrit=false;
+        ErreurCon_4.setAttribute("style","color:red");
+    }else if(/[1-9]/.test(infoPerso_4.value) && regex_mdp.test(infoPerso_4.value)==false){
+        ErreurCon_4.innerHTML = "Moyen";
+        ErreurCon_4.setAttribute("style","color:orange");
+    }else if(regex_mdp.test(infoPerso_4.value)){
+        ErreurCon_4.innerHTML = "Fort";
+        ErreurCon_4.setAttribute("style","color:green");
     }else{
-        ErreurAjout_6.innerHTML = "";
+        ErreurCon_4.innerHTML = "";
     }
-    
+
+    // mdp verif 2
+    if(infoPerso_5.value.trim()==""){
+        ErreurCon_5.innerHTML = "Remplir le champs";
+        ErreurCon_5.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else if(infoPerso_4.value.trim() != infoPerso_5.value.trim()){
+        ErreurCon_5.innerHTML = "Mot de passe différent";
+        ErreurCon_5.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else if(infoPerso_4.value.trim() == infoPerso_5.value.trim()){
+        ErreurCon_5.innerHTML = "Correcte";
+        ErreurCon_5.setAttribute("style","color:green");
+    }else if(regex_mdp.test(infoPerso_4.value) != regex_mdp.test(infoPerso_5.value)){
+        ErreurCon_5.innerHTML = "Mot de passe pas sécurisé";
+        ErreurCon_5.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else if(/[1-9]/.test(infoPerso_4.value) && regex_mdp.test(infoPerso_4.value)==false != /[1-9]/.test(infoPerso_5.value) && regex_mdp.test(infoPerso_5.value)==false){
+        ErreurCon_5.innerHTML = "Mot de passe pas sécurisé";
+        ErreurCon_5.setAttribute("style","color:red");
+        verifInscrit=false;
+    }else{
+        ErreurCon_5.innerHTML = "";
+    }
+
     // verif event
-    if(verifAjoutInscription_Admin == false){
+    if(verifInscrit == false){
         event.preventDefault();
     }
-
 }
