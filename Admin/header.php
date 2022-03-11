@@ -55,6 +55,14 @@
 
     $idSession=$_SESSION['emailUser'];
     $infoHeader = mysqli_query($con, "SELECT * FROM `inscription` WHERE email='$idSession'");
+
+    $recupNombreDevis = mysqli_query($con,"SELECT COUNT(*) AS tot_devis FROM `admin`");
+    if($rowrecupNombreDevis = mysqli_fetch_assoc($recupNombreDevis)){
+        $valeurDevis = $rowrecupNombreDevis['tot_devis'];
+
+        $recupNombreAvis = mysqli_query($con,"SELECT COUNT(*) AS tot_avis FROM `avis` WHERE verif_commentaire='0'");
+            if($rowrecupNombreAvis = mysqli_fetch_assoc($recupNombreAvis)){
+                $valeurAvis = $rowrecupNombreAvis['tot_avis'];
     
 ?>
 <form action="recherche.php" method="POST">
@@ -64,7 +72,7 @@
         <a href="devis.php">
             <div class="bg_white div_notif_admin">
                 <i class="bi bi-bell-fill icone_notif"></i>
-                <span>5</span>
+                <span><?php echo $valeurDevis ?></span>
                 <div class="notif_admin"></div>
             </div>
         </a>
@@ -72,13 +80,13 @@
         <a href="avis.php">
             <div class="bg_white div_notif_admin">
                 <i class="bi bi-envelope-fill icone_notif"></i>
-                <span>5</span>
+                <span><?php echo $valeurAvis ?></span>
                 <div class="notif_admin"></div>
             </div>
         </a>
         <!-- Pour la recherche -->
         <small><input type="text" name="rechercher" class="recherche_header_admin bg_white" placeholder="Recherche rapide"></small>
-        <button type="submit" name="btnRechercher" class="btn_recherche_admin">Rechercher</button>
+        <button type="submit" name="btnRechercher" class="btn_recherche_admin bg_green1">Rechercher</button>
         
 
         <div class="identification_con_admin">
@@ -91,6 +99,7 @@
                 ?>
                 <span class="nom_admin"><?= $prenom ?> <?= $nom ?></span>
                 <?php
+                        }
                     }
                 ?>
             </a>
@@ -98,4 +107,8 @@
         
     </section>
 </form>
-  
+
+<?php
+    }
+?>
+

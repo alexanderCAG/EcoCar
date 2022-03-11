@@ -55,6 +55,7 @@
                     <i class="color_white bi bi-person-fill h2" id="icone_con"></i>
                 </a>
                 <ul class="dropdown-menu bg_black" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item color_white" href="historique.php">Historique</a></li>
                     <li><a class="dropdown-item color_white" href="comptePerso.php">Mon compte</a></li>
                     <li><a class="dropdown-item color_white" href="../Bdd/logout.php">Deconnexion</a></li>
                 </ul>

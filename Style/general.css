@@ -3,7 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 .body{
-    overflow-x: hidden; 
+    overflow-x: hidden;
+}
+
+.changCol{
+    background-color: #333333;
+}
+
+.changCol2{
+    background-color: #8f8f8f;
+}
+
+.changCol3{
+    background-color: #5d816c;
+}
+
+.changCol4{
+    background-color: #c4c4c4;
 }
 
 /* General */
@@ -100,3 +116,10 @@
     margin-top: -10px;
 }
 
+.notif_like{
+    width: 230px;
+    position: fixed!important;
+    top: 40px;
+    font-weight: bold;
+    z-index: 999;
+}

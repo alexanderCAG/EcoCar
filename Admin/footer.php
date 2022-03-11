@@ -36,7 +36,7 @@
 <script src="../Style/verifAjoutVoiture.js"></script>
 <script src="../Style/afficherVoiture.js"></script>
 <script src="../Style/verifModifVoiture.js"></script>
-
+<script src="../Style/notif.js"></script>
 
 
 

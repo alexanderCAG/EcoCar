@@ -83,6 +83,7 @@
 <script src="../Style/carousel.js"></script>
 <script src="../Style/verifAvis.js"></script>
 <script src="../Style/infoUser.js"></script>
+<script src="../Style/notif.js"></script>
 
 
 
