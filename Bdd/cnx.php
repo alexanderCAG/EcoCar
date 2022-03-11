@@ -1,4 +1,4 @@
-<!-- connextion to database -->
+<!-- connexion to database -->
 
 <?php
 

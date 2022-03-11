@@ -78,7 +78,7 @@
                                 <p class="texte_devis">im placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
                                 <div class="info_devis text-uppercase">
                                     <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
-                                    <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
+                                    <small><span>Garantie 24 mois | 2022</span></small>
                                 </div>
                             </div>
                         </div>
