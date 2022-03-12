@@ -71,7 +71,7 @@
                                     <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
                                     <div class="info_last_save text-uppercase">
                                         <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
-                                        <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
+                                        <small><span>Garantie 24 mois | 2022</span></small>
                                     </div>
                                 </div>
                             </div>
