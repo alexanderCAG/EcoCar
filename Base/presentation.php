@@ -131,7 +131,7 @@
                 Aucune émissions de gaz à effet de serre lorsque vous roulez jusqu'à votre lieu de travail. 
                 Vous voulez être un acteur important et jouer en rôle dans le changement climatique ? 
                 N'hésitez plus et choisissez de louer une voiture électrique à tout moment, quand vous en avez besoin !
-            </p>
+            </p> 
         </div>
         <div class="col-6">
             <img src="../Image/img_voiture_electrique.jpg" alt="image_voiture_électrique" class="img1_partie2">
