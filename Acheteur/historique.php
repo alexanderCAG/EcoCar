@@ -33,6 +33,7 @@
                         if($infoHistoriqueTot = mysqli_fetch_assoc($infoHistorique)){
                             $id_voiture_loue= $infoHistoriqueTot['id_voiture_loue'];
                             $prix_voiture= $infoHistoriqueTot['prix_voiture'];
+                            $id= $infoHistoriqueTot['id'];
 
                             $recupVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$id_voiture_loue'");
                             if($recupVoitureTot = mysqli_fetch_assoc($recupVoiture)){
@@ -47,7 +48,7 @@
 
         ?>
             <div class="col-3 card afficheHistorique shadow">
-            
+            <?= $id ?>
                 <img src="<?= $image ?>" alt="" class="imgHistorique">
                 <p class="mt-2" style="font-size: 22px"><?= $marque ?> <?= $modele ?></p>
                 <p style="font-size: 18px;margin-top:-15px">Référence : <?= $reference ?></p>
