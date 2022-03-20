@@ -18,40 +18,49 @@
 <section>
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-3 card afficheHistorique shadow">
-            <?php
-
+        <?php
                 
-                if ($rowinfoUser = mysqli_fetch_assoc($infoUser)){
-                    $idMail = $rowinfoUser['id'];
+            if ($rowinfoUser = mysqli_fetch_assoc($infoUser)){
+                $idMail = $rowinfoUser['id'];
 
-                    $infoHistorique = mysqli_query($con, "SELECT * FROM `admin` WHERE id_inscription_loue='$idMail'");
-                    if($infoHistoriqueTot = mysqli_fetch_assoc($infoHistorique)){
-                        $id_voiture_loue= $infoHistoriqueTot['id_voiture_loue'];
-                        $prix_voiture= $infoHistoriqueTot['prix_voiture'];
+                $countHistorique = mysqli_query($con, "SELECT count(id_inscription_loue) as tot_histo FROM `admin` WHERE `id_inscription_loue`='$idMail'");
+                if($countHistoriqueTot = mysqli_fetch_assoc($countHistorique)){
+                    $tot_histo= $countHistoriqueTot['tot_histo'];
 
-                        $recupVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$id_voiture_loue'");
-                        if($recupVoitureTot = mysqli_fetch_assoc($recupVoiture)){
-                            $modele= $recupVoitureTot['modele'];
-                            $id_marque= $recupVoitureTot['id_marque'];
-                            $reference= $recupVoitureTot['reference'];
-                            $image= $recupVoitureTot['image'];
+                    for($i=0;$i<$tot_histo;$i++){
 
-                            $recupMarque = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
-                            if($recupMarqueTot = mysqli_fetch_assoc($recupMarque)){
-                                $marque= $recupMarqueTot['marque'];
-            ?>
+                        $infoHistorique = mysqli_query($con, "SELECT * FROM `admin` WHERE id_inscription_loue='$idMail'");
+                        if($infoHistoriqueTot = mysqli_fetch_assoc($infoHistorique)){
+                            $id_voiture_loue= $infoHistoriqueTot['id_voiture_loue'];
+                            $prix_voiture= $infoHistoriqueTot['prix_voiture'];
+
+                            $recupVoiture = mysqli_query($con, "SELECT * FROM `voiture` WHERE id='$id_voiture_loue'");
+                            if($recupVoitureTot = mysqli_fetch_assoc($recupVoiture)){
+                                $modele= $recupVoitureTot['modele'];
+                                $id_marque= $recupVoitureTot['id_marque'];
+                                $reference= $recupVoitureTot['reference'];
+                                $image= $recupVoitureTot['image'];
+
+                                $recupMarque = mysqli_query($con, "SELECT * FROM `marque` WHERE id='$id_marque'");
+                                if($recupMarqueTot = mysqli_fetch_assoc($recupMarque)){
+                                    $marque= $recupMarqueTot['marque'];
+
+        ?>
+            <div class="col-3 card afficheHistorique shadow">
+            
                 <img src="<?= $image ?>" alt="" class="imgHistorique">
                 <p class="mt-2" style="font-size: 22px"><?= $marque ?> <?= $modele ?></p>
                 <p style="font-size: 18px;margin-top:-15px">Référence : <?= $reference ?></p>
                 <p style="font-size: 18px;">Prix de location : <?= $prix_voiture ?> €</p>
-            <?php
+            </div>
+        <?php
+                                }
                             }
                         }
                     }
                 }
-            ?>
-            </div>
+            }
+        ?>
         </div>
     </div>
 </section>
