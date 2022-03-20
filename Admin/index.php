@@ -57,6 +57,13 @@
                                         if($rowdernierDevisImg = mysqli_fetch_assoc($dernierDevisImg)){
                                             $image = $rowdernierDevisImg['image'];
 
+                                            $dernierDevisModel = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$id_voiture_loue'");
+                                            if($rowDernierDevisModel = mysqli_fetch_assoc($dernierDevisModel)){
+                                                $autonomie = $rowDernierDevisModel['autonomie'];
+                                                $puissance = $rowDernierDevisModel['puissance'];
+                                                $consommation = $rowDernierDevisModel['consommation'];
+                                                $place = $rowDernierDevisModel['place'];
+
                             ?>
                             <div class="row">
                                 <div class="col-3">
@@ -68,14 +75,21 @@
                                         <h6><?php echo $nom ?> &nbsp; <?php echo $prenom ?></h6>
                                         <p class="prix_last_save"><span><?php echo $prix_voiture ?></span>€</p>
                                     </div>
-                                    <p class="texte_last_save">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate impedit iure ad cumque iusto reiciendis explicabo expedita harum praesentium nihil necessitatibus enim placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
-                                    <div class="info_last_save text-uppercase">
+                                    <p class="texte_last_save">
+                                        <br><br>
+                                        Autonimie : <?php echo $autonomie ?> km <br>
+                                        Puissance : <?php echo $puissance ?> ch <br>
+                                        Consommation : <?php echo $consommation ?> kWh/100km<br>
+                                        <?php echo $place ?> places<br>
+                                    </p>
+                                    <!-- <div class="info_last_save text-uppercase">
                                         <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
-                                        <small><span>Garantie 24 mois | 2021 | 14 137 km</span></small>
-                                    </div>
+                                        <small><span>Garantie 24 mois | 2022</span></small>
+                                    </div> -->
                                 </div>
                             </div>
                             <?php
+                                            }
                                         }
                                     }
                                 }
