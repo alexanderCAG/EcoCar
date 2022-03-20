@@ -63,6 +63,13 @@
                                 $recupVoiture = mysqli_query($con,"SELECT * FROM `marque` WHERE id='$id_marque' ");
                                 if($rowrecupVoiture = mysqli_fetch_assoc($recupVoiture)){
                                     $marque = $rowrecupVoiture['marque'];
+
+                                    $dernierDevisModel = mysqli_query($con, "SELECT * FROM `model` WHERE id_voiture='$idvoitureloueTot'");
+                                    if($rowDernierDevisModel = mysqli_fetch_assoc($dernierDevisModel)){
+                                        $autonomie = $rowDernierDevisModel['autonomie'];
+                                        $puissance = $rowDernierDevisModel['puissance'];
+                                        $consommation = $rowDernierDevisModel['consommation'];
+                                        $place = $rowDernierDevisModel['place'];
                 ?>
                     <div class="col-6 mb-4">
                         <div class="row row_devis bg_white shadow">
@@ -75,15 +82,22 @@
                                     <p class="prix_devis"><span><?= $prixvoitureTot ?></span>€</p>
                                     <h6><?= $nom ?> <?= $prenom ?></h6>
                                 </div>
-                                <p class="texte_devis">im placeat neque debitis, tenetur nisi aliquam eaque! Soluta?</p>
-                                <div class="info_devis text-uppercase">
+                                <p class="texte_devis">
+                                    <br><br>
+                                        Autonimie : <?php echo $autonomie ?> km <br>
+                                        Puissance : <?php echo $puissance ?> ch <br>
+                                        Consommation : <?php echo $consommation ?> kWh/100km<br>
+                                        <?php echo $place ?> places<br>
+                                </p>
+                                <!-- <div class="info_devis text-uppercase">
                                     <i class="bi bi-shield-fill-check fa-2x color_green1"></i>
                                     <small><span>Garantie 24 mois | 2022</span></small>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 <?php
+                                    }
                                 }
                             }
                         }
