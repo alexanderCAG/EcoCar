@@ -197,11 +197,11 @@
                 <h1 class="titre_presentation text-uppercase">Presentation</h1>
                 <small><p class="petit_texte"><i>Allons vers une consommation verte</i> </p></small>
                 <p class="texte_presentation">
-                Vous n'avait pas les moyens de payer une voiture électrique ou hybride face à une voiture thermique qui peut être bien moins cher ? 
-                Vous ne voulez pas faire un prêt pour une voiture que vous n'utiliserez pas quotidiennement ? 
-                Vous avez envi de rouler sans polluer et protéger votre environnement ? 
-                Alors n'hésitez pas un instant et louer votre première voiture électrique faite pour allier calme et sérénité ! 
-                Découvrez de nouvelles sensations en conduisant une voiture saine pour la planète et ne doutez plus de leurs perfomances, les voitures électriques et hybrides sont l'avenir qui vous fera très vite changer d'avis et rêver au volant.
+                    Vous n'avait pas les moyens de payer une voiture électrique ou hybride face à une voiture thermique qui peut être bien moins cher ? 
+                    Vous ne voulez pas faire un prêt pour une voiture que vous n'utiliserez pas quotidiennement ? 
+                    Vous avez envi de rouler sans polluer et protéger votre environnement ? 
+                    Alors n'hésitez pas un instant et louer votre première voiture électrique faite pour allier calme et sérénité ! 
+                    Découvrez de nouvelles sensations en conduisant une voiture saine pour la planète et ne doutez plus de leurs perfomances, les voitures électriques et hybrides sont l'avenir qui vous fera très vite changer d'avis et rêver au volant.
                 </p>
                 <a href="presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
