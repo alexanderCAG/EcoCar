@@ -49,7 +49,7 @@ typewriter();
 var regex_lettre = /^[a-zA-Z]+$/;
 var regex_chiffre = /^[0-9]+$/;
 var regex_mixte = /^[a-zA-Z0-9]+$/;
-var regex_mail = /^([a-zA-Z0-9])+\@(([a-z-])+\.)+([a-z]{2,3})+$/;
+var regex_mail = /^([a-zA-Z0-9])+\@(([a-z-])+\.)+([a-z]{2,9})+$/;
 var regex_mdp = /[\s@&\.-]/;
 var regex_tot = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-\s]+$/;
 
