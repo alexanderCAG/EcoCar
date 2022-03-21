@@ -28,7 +28,7 @@
                         $page_no = 1;
                         }
 
-                        $total_records_per_page = 12;
+                        $total_records_per_page = 9;
                         $offset = ($page_no-1) * $total_records_per_page;
                         $previous_page = $page_no - 1;
                         $next_page = $page_no + 1;
