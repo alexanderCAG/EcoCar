@@ -70,7 +70,13 @@
             <div class="doit_titre_haut bg_green1"></div>
         </div>
         <p class="para_categorie">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quos, nobis et vero sapiente ipsam incidunt cumque beatae doloremque sit voluptates mollitia cupiditate modi facilis repudiandae exercitationem culpa possimus magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iure voluptatibus sed ducimus voluptates eligendi odio architecto molestias, suscipit numquam veniam delectus nemo commodi dicta consequatur dignissimos beatae quam ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eum adipisci vitae quaerat alias, itaque aut error fugiat nisi voluptate et nesciunt enim quo, suscipit reprehenderit accusamus odit labore dignissimos?
+            Les plus grande marques de voiture hurbaine sont dans nos garage près de chez vous. 
+            Elle n'attendent qu'une chose, que vous l'emmeniez rouler sur les routes. 
+            Vous avez seule mission avant de partir à l'aventire avec une voiture électrique ou hybride, choisir la marque de votre voiture, sa couleur mais bien évidemment sa catégorie !
+            Vous être plus hybride ou électrique ? A vous de juger ! 
+            Venez dans nos garages éssayer les voitures (sans obligation d'achat) et repartez avec celle qui vous convient le mieux. 
+            N'oubliez pas, vous avaez l'assistance 24h/24. Dans tous nos garages, un problème, une réparation sans frais suplémentaire. 
+            Qu'attendez vous pour louer la voiture de vos rêve ?
         </p>
      </div>
 </div>
