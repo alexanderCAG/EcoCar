@@ -54,7 +54,7 @@
                         $total_no_of_pages = ceil($total_records / $total_records_per_page);
                         $second_last = $total_no_of_pages - 1; // total page minus 1
 
-                        $result = mysqli_query($con,"SELECT * FROM `voiture` LIMIT $offset, $total_records_per_page ");
+                        $result = mysqli_query($con,"SELECT * FROM `voiture` ORDER BY id DESC LIMIT $offset, $total_records_per_page ");
                         while($afficheTot = mysqli_fetch_array($result)){
                             $idTotVoiture= $afficheTot['id'];
                             $id_marque= $afficheTot['id_marque'];

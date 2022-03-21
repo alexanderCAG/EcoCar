@@ -173,17 +173,17 @@
         <button href="" id="btn_promo1" onclick="ViewPromo1()" class="col-4 bg_green3 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
+            <span class="carousel_bas2 text-uppercase">A ne surtout pas rater !</span>
         </button>
         <button href="" id="btn_bestSeller" onclick="ViewbestSeller()" class="col-4 bg_green2 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Best Seller</span>
             <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
+            <span class="carousel_bas2 text-uppercase">La voiture que nos client préfère</span>
         </button>
         <button onclick="ViewPromo2()" class="col-4 bg_green1 text-decoration-none border-0">
             <span class="carousel_bas1 text-uppercase">Promo</span>
             <br>
-            <span class="carousel_bas2 text-uppercase">texte essaie test texte</span>
+            <span class="carousel_bas2 text-uppercase">Il n'en reste bientôt plus de libre !</span>
         </button>
     </div>
 
@@ -195,8 +195,8 @@
         <div class="row">
             <div class="col-6">
                 <h1 class="titre_presentation text-uppercase">Presentation</h1>
-                <small><p class="petit_texte"><i>Petit texte ici</i> </p></small>
-                <p class="texte_presentation">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente pariatur, aperiam alias ullam et odit dolorum facilis, ea minus expedita laudantium quia atque provident fugit sit! Impedit placeat aliquam corporis Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea delectus expedita odit maiores accusantium suscipit veniam dolore non quia eveniet reiciendis nisi, fugit iusto aliquid itaque ut ex. Maxime? , ipsum dolor sit amet consectetur adipisicing elit. Cumque, quisquam id? Minima itaque nam quia, laboriosam consectetur rerum quod quo esse quaerat eius sint sed, ex excepturi nesciunt temporibus. Omnis.</p>
+                <small><p class="petit_texte"><i>Allons vers une consommation verte</i> </p></small>
+                <p class="texte_presentation">Vous n'avait pas les moyens de payer une voiture électrique ou hybride face à une voiture thermique qui peut être bien moins cher ? Vous ne voulez pas faire un prêt pour une voiture que vous n'utiliserez pas quotidiennement ? Vous avez envi de rouler sans polluer et protéger votre environnement ? Alors n'hésitez pas un instant et louer votre première voiture électrique faite pour allier calme et sérénité ! Découvrez de nouvelles sensations en conduisant une voiture saine pour la planète et ne doutez plus de leurs perfomances, les voitures électriques et hybrides sont l'avenir qui vous fera très vite changer d'avis et rêver au volant.</p>
                 <a href="presentation.php" class="btn_vert30 btn_presention">Lire plus</a>
             </div>
             <div class="col-6">
@@ -211,7 +211,7 @@
     <img class="image_fond_marque1" id="image_fond_marque1" src="../Image/image_fond_vert.png" alt="image_fond_vert">
     <div class="marque_titre text-center">
         <h1 class="text-uppercase text_marque_gen color_white">Nos Marques</h1>
-        <small><p class="petit_texte text-light"><i>Petit texte ici</i> </p></small>
+        <small><p class="petit_texte text-light"><i>Les plus engagées de notre ère</i> </p></small>
     </div>
 
     <div class="bg_green1">
